@@ -6,7 +6,6 @@ exec --no-startup-id compton
 exec --no-startup-id nitrogen --restore
 
 
-
 set $mod Mod4
 set $TERMINAL termite
 set $BROWSER chromium
