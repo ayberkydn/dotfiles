@@ -4,6 +4,8 @@ exec --no-startup-id nm-applet
 exec --no-startup-id xset r rate 250 50
 exec --no-startup-id compton
 exec --no-startup-id nitrogen --restore
+exec --no-startup-id dropbox start
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 
 set $mod Mod4
@@ -67,6 +69,10 @@ bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
+
+#navigate workspaces next / previous
+bindsym $mod+Ctrl+Right workspace next
+bindsym $mod+Ctrl+Left workspace prev
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -171,6 +177,3 @@ for_window [window_type="dialog"] floating enable
 for_window [window_type="menu"] floating enable
 
 
-bar {
-        status_command i3blocks
-}
