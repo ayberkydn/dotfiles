@@ -2,7 +2,7 @@
 #order += "arch_updates"
 #order += "lm_sensors"
 #order += "spotify"
-order += "sysdata"
+#order += "sysdata"
 #order += "net_rate"
 #order += "online_status"
 order += "volume_status"

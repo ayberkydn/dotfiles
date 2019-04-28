@@ -7,5 +7,11 @@ set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
 
+" Keep indendation
+set autoindent
+
 " Syntax highlight
 syntax on
+
+" Highlight search
+set hlsearch
