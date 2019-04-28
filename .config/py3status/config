@@ -1,0 +1,53 @@
+#order += "window_title"
+#order += "arch_updates"
+#order += "lm_sensors"
+#order += "spotify"
+order += "sysdata"
+#order += "net_rate"
+#order += "online_status"
+order += "volume_status"
+order += "backlight"
+order += "battery_level"
+order += "time"
+order += "keyboard_layout"
+
+
+
+arch_updates {
+    format = "AUR:{aur} / PACMAN:{pacman}"
+}
+
+backlight {
+    format = ": {level}"
+}
+
+battery_level {
+    cache_timeout = 2
+    format = " {percent}%"
+}
+
+keyboard_layout {
+
+}
+
+lm_sensors {
+    sensors = ['processor_fan', 'cpu']
+    chips = ['dell_smm-virtual-0']
+    format_chip = "{format_sensor}"
+
+
+}
+
+sysdata {
+    format= ":{cpu_temp}{temp_unit}"
+}
+
+volume_status {
+    format = "🔉: {percentage}"
+    format_muted = "🔇: {percentage}"
+    thresholds = [(0,'good')]
+}
+
+time {
+    format = "%a - %d %b - %H:%M"
+}

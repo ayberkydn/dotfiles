@@ -5,7 +5,6 @@ exec --no-startup-id xset r rate 250 50
 exec --no-startup-id compton
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id dropbox start
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 
 set $mod Mod4
@@ -14,7 +13,7 @@ set $BROWSER chromium
 set $EDITOR vim
 
 # Font for titles (and bar unless a font is stated in bar section)
-font pango:DejaVu Sans Mono 10
+font pango:DejaVu Sans Mono 11
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -28,15 +27,22 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec dmenu_run
 
 
+#increase sound volume
+bindsym XF86AudioRaiseVolume    exec --no-startup-id "amixer sset Master 5%+ ; py3-cmd refresh volume_status"
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer sset Master 5%+ #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id  amixer sset Master 5%- #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id amixer sset Master toggle # mute sound
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 -time 0
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 -time 0
+#decrease sound volume
+bindsym XF86AudioLowerVolume    exec --no-startup-id "amixer sset Master 5%- ; py3-cmd refresh volume_status"
+
+# mute sound
+bindsym XF86AudioMute           exec --no-startup-id "amixer sset Master toggle ; py3-cmd refresh volume_status"
+
+# increase brightness
+bindsym XF86MonBrightnessUp     exec --no-startup-id "xbacklight -inc 10 -time 0 ; py3-cmd refresh backlight"
+
+# decrease brightness
+bindsym XF86MonBrightnessDown   exec --no-startup-id "xbacklight -dec 10 -time 0 ; py3-cmd refresh backlight"
 
 bindsym Print exec flameshot gui
-
 
 bindsym $mod+q split toggle
 
@@ -177,3 +183,6 @@ for_window [window_type="dialog"] floating enable
 for_window [window_type="menu"] floating enable
 
 
+bar {
+    status_command py3status
+}
