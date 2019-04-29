@@ -1,10 +1,24 @@
 ################################################################################
 
 exec --no-startup-id nm-applet
-exec --no-startup-id xset r rate 250 50
+
+exec --no-startup-id xset r rate 250 50                      #keyboard repeat rate
+
+exec --no-startup-id xset b off                              #disable that fucking scary loud beep
+
+exec --no-startup-id xset s 1200                             #blank screen after 20 mins
+
+set $lockcmd "i3lock -c 321132 -ef"
+exec --no-startup-id xautolock -time 25 -locker $lockcmd     #lock screen after 25 mins
+
 exec --no-startup-id compton
+
 exec --no-startup-id nitrogen --restore
+
 exec --no-startup-id dropbox start
+ 
+
+
 
 
 set $mod Mod4
@@ -42,9 +56,12 @@ bindsym XF86MonBrightnessUp     exec --no-startup-id "xbacklight -inc 10 -time 0
 # decrease brightness
 bindsym XF86MonBrightnessDown   exec --no-startup-id "xbacklight -dec 10 -time 0 ; py3-cmd refresh backlight"
 
-bindsym Print exec flameshot gui
+# screenshot
+bindsym Print exec --no-startup-id flameshot gui
 
 bindsym $mod+q split toggle
+
+
 
 ## Application specific shortcuts
 
@@ -103,7 +120,6 @@ new_float normal
 smart_gaps on
 smart_borders on
 
-
 gaps inner 10
 gaps outer -4
 
@@ -144,9 +160,11 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+# restart i3 inplace
 bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
+
+#lock
+bindsym Mod1+l exec --no-startup-id $lockcmd
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -182,7 +200,15 @@ for_window [window_role="Preferences"] floating enable
 for_window [window_type="dialog"] floating enable
 for_window [window_type="menu"] floating enable
 
+# class                 border  bground text    indicator child_border
+client.focused          #4C7899 #285577 #FFFFFF #2E9EF4   #FF0000
+client.focused_inactive #333333 #5F676A #FFFFFF #484E50   #5F676A
+client.unfocused        #333333 #222222 #888888 #292D2E   #222222
+client.urgent           #2F343A #900000 #FFFFFF #900000   #900000
+client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 
 bar {
     status_command py3status
 }
+
+

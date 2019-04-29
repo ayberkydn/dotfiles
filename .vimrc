@@ -15,3 +15,18 @@ syntax on
 
 " Highlight search
 set hlsearch
+
+" Move cursor when typing search pattern (incremental search)
+set incsearch
+
+" Search is case sensitive only when pattern has uppercase letter
+set smartcase
+
+" Line numbering
+set number
+
+" Mouse support
+set mouse=a
+
+" Show commands
+set showcmd
