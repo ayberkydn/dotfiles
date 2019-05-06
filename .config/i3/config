@@ -9,10 +9,10 @@ exec --no-startup-id xset r rate 250 50                      #keyboard repeat ra
 
 exec --no-startup-id xset b off                              #disable that fucking scary loud beep
 
-exec --no-startup-id xset s 1200                             #blank screen after 20 mins
+exec --no-startup-id xset s 900                             #blank screen after 20 mins
 
 set $lockcmd "i3lock -c 432243 -ef"
-exec --no-startup-id xautolock -time 25 -locker $lockcmd     #lock screen after 25 mins
+exec --no-startup-id xautolock -time 20 -locker $lockcmd     #lock screen after 20 mins
 
 exec --no-startup-id compton
 
@@ -169,7 +169,7 @@ set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
-set $ws8 "8"
+set $ws8 "8:"
 set $ws9 "9"
 set $ws10 "10"
 
@@ -260,7 +260,7 @@ assign [class="Chromium"] $ws2
 ################################################################################
 
 # class                 border  bground text    indicator child_border
-client.focused          #4C7899 #285577 #FFFFFF #2E9EF4   #FF00FF
+client.focused          #4C7899 #285577 #FFFFFF #FF0000   #FF00FF
 client.focused_inactive #333333 #5F676A #FFFFFF #484E50   #5F676A
 client.unfocused        #333333 #222222 #888888 #292D2E   #222222
 client.urgent           #2F343A #900000 #FFFFFF #900000   #900000

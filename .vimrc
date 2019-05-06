@@ -14,7 +14,7 @@ set autoindent
 syntax on
 
 " Highlight search
-set hlsearch
+"set hlsearch
 
 " Move cursor when typing search pattern (incremental search)
 set incsearch
