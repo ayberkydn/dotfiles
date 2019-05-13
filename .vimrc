@@ -30,3 +30,6 @@ set mouse=a
 
 " Show commands
 set showcmd
+
+" Enable menu that appears when completing ex commands
+set wildmenu
