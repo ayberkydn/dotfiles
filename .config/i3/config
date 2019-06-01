@@ -22,7 +22,8 @@ exec --no-startup-id dropbox start
 
 exec --no-startup-id redshift-gtk
 
- 
+exec --no-startup-id light -N 5 #Set minimum brightness to 1 (default is 0)
+
 
 
 ################################################################################
@@ -70,10 +71,11 @@ bindsym XF86AudioLowerVolume    exec --no-startup-id "amixer sset Master 5%- ; p
 bindsym XF86AudioMute           exec --no-startup-id "amixer sset Master toggle ; py3-cmd refresh volume_status"
 
 # increase brightness
-bindsym XF86MonBrightnessUp     exec --no-startup-id "xbacklight -inc 10 -time 0 ; py3-cmd refresh backlight"
+bindsym XF86MonBrightnessUp     exec --no-startup-id "light -A 10; py3-cmd refresh backlight"
 
 # decrease brightness
-bindsym XF86MonBrightnessDown   exec --no-startup-id "xbacklight -dec 10 -time 0 ; py3-cmd refresh backlight"
+bindsym XF86MonBrightnessDown   exec --no-startup-id "light -U 10; py3-cmd refresh backlight"
+
 
 # screenshot
 bindsym Print exec --no-startup-id flameshot gui
