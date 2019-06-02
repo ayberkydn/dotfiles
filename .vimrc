@@ -33,3 +33,7 @@ set showcmd
 
 " Enable menu that appears when completing ex commands
 set wildmenu
+
+" Make buffers hidden instead of unloading them when navigating
+" so that we don't need ! when navigating with unsaved modifications
+set hidden

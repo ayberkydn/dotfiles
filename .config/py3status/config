@@ -47,7 +47,7 @@ volume_status {
     format = "🔉: {percentage}"
     format_muted = "🔇: {percentage}"
     thresholds = [(0,'good')]
-    cache_timeout = 100
+    cache_timeout = 1
 }
 
 time {
