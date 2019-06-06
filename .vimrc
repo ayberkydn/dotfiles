@@ -37,3 +37,16 @@ set wildmenu
 " Make buffers hidden instead of unloading them when navigating
 " so that we don't need ! when navigating with unsaved modifications
 set hidden
+
+" Easy navigation of windows
+noremap <C-h> <C-w><C-h>
+noremap <C-j> <C-w><C-j>
+noremap <C-k> <C-w><C-k>
+noremap <C-l> <C-w><C-l>
+
+" Disable arrow keys to get used to hjkl
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+
