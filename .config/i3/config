@@ -76,6 +76,8 @@ bindsym XF86MonBrightnessUp     exec --no-startup-id "light -A 10; py3-cmd refre
 # decrease brightness
 bindsym XF86MonBrightnessDown   exec --no-startup-id "light -U 10; py3-cmd refresh backlight"
 
+# middle mouse button (at titlebar) to close windows
+bindsym button2 kill
 
 # screenshot
 bindsym Print exec --no-startup-id flameshot gui

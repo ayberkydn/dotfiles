@@ -98,3 +98,4 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias i3config='vim ~/.config/i3/config'
 alias vimconfig='vim ~/.vimrc'
 alias zshconfig='vim ~/.zshrc'
+unalias rm #common aliases plugininde rm'i override etmis her zaman onay almak icin
