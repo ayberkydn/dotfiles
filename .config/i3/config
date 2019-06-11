@@ -24,6 +24,11 @@ exec --no-startup-id redshift-gtk
 
 exec --no-startup-id light -N 5 #Set minimum brightness to 1 (default is 0)
 
+#set keyboard layoud US and TR. 
+exec --no-startup-id "setxkbmap -layout us,tr" 
+
+#alt shift toggles
+exec --no-startup-id "setxkbmap -option 'grp:alt_shift_toggle'"
 
 
 ################################################################################
@@ -97,7 +102,8 @@ bindsym Mod1+l exec --no-startup-id $lockcmd
 
 bindsym $mod+F2 exec $BROWSER
 bindsym $mod+F3 exec code-oss
-bindsym $mod+F4 exec $TERMINAL -e ranger
+#bindsym $mod+F4 exec $TERMINAL -e ranger
+bindsym $mod+F4 exec pcmanfm
 
 ################################################################################
 ################################################################################
