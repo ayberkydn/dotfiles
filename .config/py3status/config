@@ -9,7 +9,7 @@ order += "volume_status"
 order += "backlight"
 order += "battery_level"
 order += "time"
-order += "keyboard_layout"
+#order += "keyboard_layout"
 
 
 
@@ -50,7 +50,7 @@ volume_status {
     format = "🔉: {percentage}"
     format_muted = "🔇: {percentage}"
     thresholds = [(0,'good')]
-    cache_timeout = 1
+    cache_timeout = 2
 }
 
 time {
