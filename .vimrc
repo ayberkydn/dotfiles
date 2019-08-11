@@ -14,7 +14,7 @@ set autoindent
 syntax on
 
 " Highlight search
-"set hlsearch
+set hlsearch
 
 " Move cursor when typing search pattern (incremental search)
 set incsearch
@@ -37,6 +37,9 @@ set wildmenu
 " Make buffers hidden instead of unloading them when navigating
 " so that we don't need ! when navigating with unsaved modifications
 set hidden
+
+" Always show at least 2 lines above or below the cursor
+set scrolloff=2
 
 " Easy navigation of windows
 noremap <C-h> <C-w><C-h>

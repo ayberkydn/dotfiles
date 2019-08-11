@@ -6,12 +6,16 @@
 #order += "net_rate"
 #order += "online_status"
 order += "volume_status"
-order += "backlight"
 order += "battery_level"
+order += "backlight"
 order += "time"
-#order += "keyboard_layout"
+order += "keyboard_layout"
 
 
+py3status{
+    separator = True
+    separator_block_width = 20
+}
 
 arch_updates {
     format = "AUR:{aur} / PACMAN:{pacman}"
@@ -28,11 +32,11 @@ battery_level {
 }
 
 keyboard_layout {
-    cache_timeout = 0.3
-    #override mouse buttons cunku ustune tiklayinca bozuluyor
-    button_next = None
-    button_prev = None
+    layouts = [us, tr]
+    cache_timeout = 15
+    button_next = 1
 }
+
 
 lm_sensors {
     sensors = ['processor_fan', 'cpu']
