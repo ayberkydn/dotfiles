@@ -100,3 +100,6 @@ alias vimconfig='vim ~/.vimrc'
 alias zshconfig='vim ~/.zshrc'
 alias open='xdg-open'
 unalias rm #common aliases plugininde rm'i override etmis her zaman onay almak icin
+
+source /opt/ros/melodic/setup.zsh
+source ~/catkin_ws/devel/setup.zsh
