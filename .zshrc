@@ -99,7 +99,11 @@ alias i3config='vim ~/.config/i3/config'
 alias vimconfig='vim ~/.vimrc'
 alias zshconfig='vim ~/.zshrc'
 alias open='xdg-open'
+
+maxbr() {
+pkexec mate-power-backlight-helper --set-brightness 1500
+}
 unalias rm #common aliases plugininde rm'i override etmis her zaman onay almak icin
 
-source /opt/ros/melodic/setup.zsh
-source ~/catkin_ws/devel/setup.zsh
+#source /opt/ros/melodic/setup.zsh
+#source ~/catkin_ws/devel/setup.zsh
