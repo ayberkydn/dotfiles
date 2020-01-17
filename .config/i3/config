@@ -3,8 +3,6 @@
 ################################################################################
 ################################################################################
 
-#exec --no-startup-id nm-applet
-
 exec --no-startup-id xset r rate 250 50                      #keyboard repeat rate
 
 exec --no-startup-id xset b off                              #disable that fucking scary loud beep
@@ -20,13 +18,10 @@ exec --no-startup-id nitrogen --restore
 
 exec --no-startup-id dropbox start
 
-#exec --no-startup-id blueman-applet
-
 exec --no-startup-id redshift-gtk
 
-#exec --no-startup-id udiskie -ans -f pcmanfm
-
-#exec --no-startup-id light -N 5 #Set minimum brightness to 1 (default is 0)
+#Swap Caps Lock and Esc
+exec --no-startup-id setxkbmap -option "caps:swapescape"
 
 ##set keyboard layoud US and TR. 
 #exec --no-startup-id setxkbmap -layout us,tr 
