@@ -3,32 +3,32 @@
 ################################################################################
 ################################################################################
 
-exec --no-startup-id xset r rate 250 50                      #keyboard repeat rate
+#exec --no-startup-id xset r rate 250 50                      #keyboard repeat rate
 
-exec --no-startup-id xset b off                              #disable that fucking scary loud beep
+#exec --no-startup-id xset b off                              #disable that fucking scary loud beep
 
-exec --no-startup-id xset s 900                             #blank screen after 20 mins
+#exec --no-startup-id xset s 900                              #blank screen after 20 mins
 
-set $lockcmd "i3lock -c 000000 -ef"
+set $lockcmd "i3lock -c 330000 -ef"
 exec --no-startup-id xautolock -time 20 -locker $lockcmd     #lock screen after 20 mins
 
 exec --no-startup-id compton
 
 exec --no-startup-id nitrogen --restore
 
-exec --no-startup-id dropbox start
+#exec --no-startup-id xfce4-panel --disable-wm-check
 
-exec --no-startup-id redshift-gtk
+#exec --no-startup-id dropbox start
 
-#Swap Caps Lock and Esc
-exec --no-startup-id setxkbmap -option "caps:swapescape"
+#exec --no-startup-id redshift-gtk
 
-##set keyboard layoud US and TR. 
+#set keyboard layoud US and TR. 
 #exec --no-startup-id setxkbmap -layout us,tr 
-#
-##alt shift toggles
-#exec --no-startup-id setxkbmap -option grp:alt_shift_toggle
 
+#alt shift toggles
+#exec --no-startup-id setxkbmap -option grp:alt_shift_toggle
+ 
+#exec_always --no-startup-id setxkbmap -option "caps:swapescape"  
 
 ################################################################################
 ################################################################################
@@ -37,7 +37,7 @@ exec --no-startup-id setxkbmap -option "caps:swapescape"
 
 set $mod Mod4
 set $TERMINAL termite
-set $BROWSER chromium
+set $BROWSER google-chrome-stable
 set $EDITOR vim
 
 ################################################################################
@@ -68,20 +68,14 @@ bindsym $mod+d exec --no-startup-id dmenu_run
 #xkill
 bindsym --release $mod+x exec xkill
 
-#increase sound volume
-bindsym XF86AudioRaiseVolume    exec --no-startup-id "amixer sset Master 5%+ ; py3-cmd refresh volume_status"
-
-#decrease sound volume
-bindsym XF86AudioLowerVolume    exec --no-startup-id "amixer sset Master 5%- ; py3-cmd refresh volume_status"
-
-# mute sound
-bindsym XF86AudioMute           exec --no-startup-id "amixer sset Master toggle ; py3-cmd refresh volume_status"
-
-# increase brightness
-#bindsym XF86MonBrightnessUp     exec --no-startup-id "light -A 10; py3-cmd refresh backlight"
-
-# decrease brightness
-#bindsym XF86MonBrightnessDown   exec --no-startup-id "light -U 10; py3-cmd refresh backlight"
+##increase sound volume
+#bindsym XF86AudioRaiseVolume    exec --no-startup-id "amixer sset Master 5%+ ; py3-cmd refresh volume_status"
+#
+##decrease sound volume
+#bindsym XF86AudioLowerVolume    exec --no-startup-id "amixer sset Master 5%- ; py3-cmd refresh volume_status"
+#
+## mute sound
+#bindsym XF86AudioMute           exec --no-startup-id "amixer sset Master toggle ; py3-cmd refresh volume_status"
 
 # middle mouse button (at titlebar) to close windows
 bindsym button2 kill
@@ -162,14 +156,17 @@ bindsym $mod+a focus parent
 ################################################################################
 ################################################################################
 
-new_window pixel 2
-new_float normal
+default_border pixel 4
+default_floating_border normal
 
 smart_gaps on
 smart_borders on
 
 gaps inner 10
 gaps outer -4
+
+focus_follows_mouse no
+focus_wrapping no
 
 ################################################################################
 ################################################################################
@@ -178,7 +175,6 @@ gaps outer -4
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws0 "0:^^"
 set $ws1 "1:"
 set $ws2 "2:"
 set $ws3 "3"
@@ -191,7 +187,6 @@ set $ws9 "9"
 set $ws10 "10"
 
 # switch to workspace
-bindsym $mod+` workspace $ws0
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
@@ -204,7 +199,6 @@ bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
 # move focused container to workspace
-bindsym $mod+Shift+` move container to workspace $ws0
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3
@@ -294,6 +288,7 @@ client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 ################################################################################
 
 bar {
+    tray_output none
     #strip_workspace_numbers yes
     status_command py3status
 }

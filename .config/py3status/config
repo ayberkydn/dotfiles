@@ -43,8 +43,6 @@ lm_sensors {
     sensors = ['processor_fan', 'cpu']
     chips = ['dell_smm-virtual-0']
     format_chip = "{format_sensor}"
-
-
 }
 
 sysdata {
