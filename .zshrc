@@ -88,9 +88,6 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir)
-
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -106,3 +103,5 @@ alias zshconfig='vim ~/.zshrc'
 alias open='xdg-open'
 
 unalias rm #common aliases plugininde rm'i override etmis her zaman onay almak icin
+
+

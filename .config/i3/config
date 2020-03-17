@@ -37,7 +37,7 @@ exec --no-startup-id nitrogen --restore
 
 set $mod Mod4
 set $TERMINAL termite
-set $BROWSER google-chrome-stable
+set $BROWSER chromium
 set $EDITOR vim
 
 ################################################################################
@@ -62,8 +62,12 @@ bindsym $mod+Return exec $TERMINAL
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# dmenu
-bindsym $mod+d exec --no-startup-id dmenu_run
+# rofi
+bindsym $mod+d exec --no-startup-id rofi -show run
+
+#scratchpad
+bindsym $mod+p move scratchpad
+bindsym $mod+Shift+p scratchpad show
 
 #xkill
 bindsym --release $mod+x exec xkill
