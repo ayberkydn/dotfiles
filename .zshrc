@@ -66,11 +66,11 @@ plugins=(
     common-aliases 
     dirhistory 
     extract
-    virtualenvwrapper
     )
 
 source $ZSH/oh-my-zsh.sh
 
+autoload -U compinit && compinit
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -94,8 +94,6 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias i3config='vim ~/.config/i3/config'
 alias vimconfig='vim ~/.vimrc'
