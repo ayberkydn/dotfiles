@@ -103,3 +103,4 @@ alias open='xdg-open'
 unalias rm #common aliases plugininde rm'i override etmis her zaman onay almak icin
 
 
+

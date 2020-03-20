@@ -1,0 +1,9 @@
+{
+    "editor.fontFamily": "'Source Code Pro Medium'",
+    "editor.fontSize": 13,
+    "vim.handleKeys": {
+        "<C-k>": false
+    },
+    "workbench.colorTheme": "Material Theme Darker High Contrast",
+    "keyboard.dispatch": "keyCode"
+}

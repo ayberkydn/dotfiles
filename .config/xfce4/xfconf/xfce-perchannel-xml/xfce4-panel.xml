@@ -65,7 +65,7 @@
     </property>
     <property name="plugin-9" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
-      <property name="mpris-players" type="string" value="chromium.instance151473;chromium.instance1935;chromium.instance19370;chromium.instance23366;chromium.instance2429;chromium.instance2485;chromium.instance56879;chromium.instance7192;spotify"/>
+      <property name="mpris-players" type="string" value="chromium.instance151473;chromium.instance1935;chromium.instance19370;chromium.instance23366;chromium.instance2380;chromium.instance2429;chromium.instance2485;chromium.instance56879;chromium.instance7192;spotify"/>
     </property>
     <property name="plugin-8" type="string" value="whiskermenu"/>
     <property name="plugin-1" type="string" value="xkb">
