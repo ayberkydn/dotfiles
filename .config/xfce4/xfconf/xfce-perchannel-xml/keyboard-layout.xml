@@ -5,10 +5,10 @@
     <property name="XkbDisable" type="bool" value="false"/>
     <property name="XkbLayout" type="string" value="us,tr"/>
     <property name="XkbOptions" type="empty">
-      <property name="Compose" type="string" value="compose:ralt"/>
+      <property name="Compose" type="string" value=""/>
       <property name="Group" type="string" value="grp:alt_shift_toggle"/>
     </property>
     <property name="XkbVariant" type="string" value=","/>
-    <property name="XkbModel" type="string" value="pc105"/>
+    <property name="XkbModel" type="string" value="pc102"/>
   </property>
 </channel>

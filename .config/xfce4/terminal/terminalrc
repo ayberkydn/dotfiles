@@ -32,7 +32,7 @@ MiscSearchDialogOpacity=100
 MiscShowUnsafePasteDialog=TRUE
 FontName=Source Code Pro Semibold 10
 ColorCursor=#abababababab
-ColorForeground=#abababababab
+ColorForeground=#f850feeeffff
 ColorBackground=#000000000000
-ColorPalette=#000000000000;#e9e92f2f2f2f;#0e0ed8d83939;#dddddddd1313;#3b3b4848e3e3;#f9f99696e2e2;#2323ededdada;#abababababab;#343434343434;#e9e92f2f2f2f;#0e0ed8d83939;#dddddddd1313;#3b3b4848e3e3;#f9f99696e2e2;#2323ededdada;#f9f9f9f9f9f9
+ColorPalette=rgb(0,0,0);rgb(233,47,47);rgb(14,216,57);rgb(221,221,19);rgb(59,72,227);rgb(249,150,226);rgb(35,237,218);rgb(172,172,172);rgb(52,52,52);rgb(233,47,47);rgb(14,216,57);rgb(221,221,19);rgb(59,72,227);rgb(249,150,226);rgb(35,237,218);rgb(249,249,249)
 

@@ -49,20 +49,8 @@ bindsym $mod+p scratchpad show
 #xkill
 bindsym --release $mod+x exec xkill
 
-##increase sound volume
-#bindsym XF86AudioRaiseVolume    exec --no-startup-id "amixer sset Master 5%+ ; py3-cmd refresh volume_status"
-#
-##decrease sound volume
-#bindsym XF86AudioLowerVolume    exec --no-startup-id "amixer sset Master 5%- ; py3-cmd refresh volume_status"
-#
-## mute sound
-#bindsym XF86AudioMute           exec --no-startup-id "amixer sset Master toggle ; py3-cmd refresh volume_status"
-
 # middle mouse button (at titlebar) to close windows
 bindsym button2 kill
-
-# screenshot
-bindsym Print exec --no-startup-id flameshot gui
 
 # restart i3 inplace
 bindsym $mod+Shift+r restart
@@ -73,20 +61,7 @@ bindsym Mod1+l exec --no-startup-id $lockcmd
 
 ################################################################################
 ################################################################################
-################################################################################
-################################################################################
 
-## Application specific shortcuts
-
-bindsym $mod+F2 exec $BROWSER
-bindsym $mod+F3 exec code-oss
-#bindsym $mod+F4 exec $TERMINAL -e ranger
-bindsym $mod+F4 exec thunar
-
-################################################################################
-################################################################################
-################################################################################
-################################################################################
 
 # change focus
 bindsym $mod+h focus left

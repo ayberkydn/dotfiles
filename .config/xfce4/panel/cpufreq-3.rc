@@ -1,5 +1,5 @@
 timeout=1
-show_cpu=14
+show_cpu=13
 show_icon=true
 show_label_freq=true
 show_label_governor=false
