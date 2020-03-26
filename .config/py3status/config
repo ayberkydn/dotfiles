@@ -38,7 +38,6 @@ keyboard_layout {
     button_next = 1
 }
 
-
 lm_sensors {
     sensors = ['processor_fan', 'cpu']
     chips = ['dell_smm-virtual-0']
@@ -50,8 +49,8 @@ sysdata {
 }
 
 volume_status {
-    format = "🔉: {percentage}"
-    format_muted = "🔇: {percentage}"
+    format = ": {percentage}"
+    format_muted = ": {percentage}"
     thresholds = [(0,'good')]
     cache_timeout = 1
 }

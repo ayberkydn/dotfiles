@@ -13,8 +13,8 @@ exec --no-startup-id nitrogen --restore
 ################################################################################
 
 set $mod Mod4
-set $TERMINAL xfce4-terminal
-set $BROWSER chromium
+set $TERMINAL termite
+set $BROWSER firefox
 set $EDITOR vim
 
 ################################################################################
