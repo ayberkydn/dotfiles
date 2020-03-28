@@ -9,7 +9,7 @@ exec --no-startup-id nitrogen --restore
 ################################################################################
 
 set $mod Mod4
-set $TERMINAL konsole
+set $TERMINAL termite
 set $BROWSER opera
 set $EDITOR vim
 
@@ -24,9 +24,6 @@ floating_modifier $mod
 
 ################################################################################
 ################################################################################
-
-# start a terminal
-#bindsym $mod+Return exec --no-startup-id $TERMINAL
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -50,7 +47,36 @@ bindsym $mod+Shift+r restart
 
 
 ################################################################################
-################################################################################
+######################Non-i3 related###########################################
+
+##increase sound volume
+#bindsym XF86AudioRaiseVolume    exec --no-startup-id "amixer sset Master 5%+ ; py3-cmd refresh volume_status"
+
+##decrease sound volume
+#bindsym XF86AudioLowerVolume    exec --no-startup-id "amixer sset Master 5%- ; py3-cmd refresh volume_status"
+
+## mute sound
+#bindsym XF86AudioMute           exec --no-startup-id "amixer sset Master toggle ; py3-cmd refresh volume_status"
+
+ start a terminal
+bindsym $mod+Return exec --no-startup-id $TERMINAL
+
+# screenshot
+bindsym Print exec --no-startup-id flameshot gui
+
+# restart i3 inplace
+bindsym $mod+Shift+r restart
+
+#lockcmd = i3lock
+#bindsym Mod1+l exec --no-startup-id $lockcmd
+
+bindsym $mod+F2 exec $BROWSER
+bindsym $mod+F3 exec code-oss
+#bindsym $mod+F4 exec $TERMINAL -e ranger
+bindsym $mod+F4 exec thunarb
+
+#################################################################################
+#################################################################################
 
 
 # change focus
