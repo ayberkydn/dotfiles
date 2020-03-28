@@ -41,6 +41,9 @@ set hidden
 " Always show at least 2 lines above or below the cursor
 set scrolloff=2
 
+" Use system clipboard
+set clipboard=unnamedplus
+
 " Easy navigation of windows
 noremap <C-h> <C-w><C-h>
 noremap <C-j> <C-w><C-j>
