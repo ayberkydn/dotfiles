@@ -7,18 +7,4 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 sudo pacman-mirrors --fasttrack && sudo pacman -Syyu --noconfirm
 
-sudo pacman -S i3 \
-rofi\
-sxhkd\
-zsh\
-yay\
-gvim\
-py3status\
-nitrogen\
-base\
-base-devel\
-termite\
-compton\
-flameshot\
-ttf-font-awesome\
---noconfirm
+sudo pacman -S i3 rofi sxhkd zsh yay gvim py3status nitrogen base base-devel termite compton flameshot ttf-font-awesome chromium --noconfirm
