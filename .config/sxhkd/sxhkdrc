@@ -4,15 +4,28 @@
 
 # terminal emulator
 super + Return
-	konsole
+	termite
 
-# program launcher
-super + @space
+super + d
 	rofi -show run
 
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR0 -x sxhkd
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #
 ## bspwm hotkeys
@@ -51,8 +64,7 @@ super + Escape
 #	bspc node -g {marked,locked,sticky,private}
 #
 ##
-## focus/swap
-##
+## focus/sw
 #
 ## focus the node in the given direction
 #super + {_,shift + }{h,j,k,l}

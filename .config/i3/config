@@ -1,16 +1,15 @@
 ################################################################################
 ################################################################################
 
-exec --no-startup-id compton
-exec-always --no-startup-id sxhkd
 exec --no-startup-id nitrogen --restore
-
+exec --no-startup-id compton
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 ################################################################################
 ################################################################################
 
 set $mod Mod4
 set $TERMINAL termite
-set $BROWSER opera
+set $BROWSER chromium
 set $EDITOR vim
 
 ################################################################################
@@ -59,7 +58,7 @@ bindsym $mod+Return exec --no-startup-id $TERMINAL
 bindsym Print exec --no-startup-id flameshot gui
 
 #lockcmd = i3lock
-#bindsym Mod1+l exec --no-startup-id $lockcmd
+bindsym Mod1+l exec --no-startup-id $lockcmd
 
 # rofi
 bindsym $mod+d exec --no-startup-id rofi -show run
@@ -255,10 +254,10 @@ client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 ################################################################################
 ################################################################################
 
-bar {
-    #tray_output primary
-    #strip_workspace_numbers yes
-    status_command py3status
-}
+#bar {
+#    #tray_output primary
+#    #strip_workspace_numbers yes
+#    status_command py3status
+#}
 
 
