@@ -100,6 +100,7 @@ alias vimconfig='vim ~/.vimrc'
 alias zshconfig='vim ~/.zshrc'
 alias barconfig='vim ~/.config/polybar/config'
 alias open='xdg-open'
+alias vim='nvim'
 
 unalias rm #common aliases plugininde rm'i override etmis her zaman onay almak icin
 
