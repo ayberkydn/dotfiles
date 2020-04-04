@@ -1,6 +1,6 @@
 [options]
 allow_bold = true
-font = Jetbrains Mono Medium
+font = Source Code Pro Medium
 scrollback_lines = 10000
 
 
@@ -48,4 +48,4 @@ color15 = #f9f9f9
 
 
 
-background = rgba(0, 0, 0, 0.80)
+background = rgba(15, 15, 35, 0.85)

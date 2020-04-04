@@ -1,7 +1,7 @@
 ################################################################################
 ################################################################################
 
-exec --no-startup-id nitrogen --restore
+exec-always  nitrogen --restore
 exec --no-startup-id compton
 #exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 ################################################################################
@@ -143,7 +143,7 @@ focus_wrapping no
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1:"
 set $ws2 "2:"
-set $ws3 "3"
+set $ws3 "3:"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
@@ -256,10 +256,10 @@ client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 ################################################################################
 ################################################################################
 
-bar {
-    #tray_output primary
-    #strip_workspace_numbers yes
-    status_command py3status
-}
+#bar {
+#    tray_output none
+#    #strip_workspace_numbers yes
+#    status_command py3status
+#}
 
 
