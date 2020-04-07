@@ -1,14 +1,14 @@
 ################################################################################
 ################################################################################
 
-exec-always  nitrogen --restore
-exec --no-startup-id compton
+exec --no-startup-id nitrogen --restore
+exec --no-startup-id picom
 #exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 ################################################################################
 ################################################################################
 
 set $mod Mod4
-set $TERMINAL termite
+set $TERMINAL xfce4-terminal
 set $BROWSER chromium
 set $EDITOR vim
 
@@ -61,7 +61,7 @@ bindsym $mod+Shift+Return exec $BROWSER
 bindsym Print exec --no-startup-id flameshot gui
 
 #lockcmd = i3lock
-bindsym Mod1+l exec --no-startup-id $lockcmd
+#bindsym Mod1+l eec --no-startup-id $lockcmd
 
 # rofi
 bindsym $mod+d exec --no-startup-id rofi -show run
@@ -124,14 +124,14 @@ bindsym $mod+a focus parent
 ################################################################################
 ################################################################################
 
-default_border pixel 3
+default_border pixel 2
 default_floating_border normal
 
 smart_gaps on
 smart_borders on
 
-gaps inner 10
-gaps outer 5
+gaps inner 4
+gaps outer 4
 
 focus_follows_mouse no
 focus_wrapping no
@@ -214,6 +214,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 ################################################################################
+##
 ################################################################################
 
 for_window [window_role="pop-up"] floating enable
@@ -242,6 +243,7 @@ no_focus [class="plasmashell" window_type="on_screen_display"]
 ################################################################################
 
 assign [class="Chromium"] $ws2
+#assign [class="erminal"] $ws1
 
 ################################################################################
 ################################################################################
