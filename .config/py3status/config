@@ -56,5 +56,5 @@ volume_status {
 }
 
 time {
-    format = "%a - %d %b - %H:%M"
+    format = "%H:%M |%d %b %a|"
 }

@@ -3,12 +3,13 @@
 
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id picom
+#exec_always --no-startup-id tint2
 #exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 ################################################################################
 ################################################################################
 
 set $mod Mod4
-set $TERMINAL xfce4-terminal
+set $TERMINAL mate-terminal
 set $BROWSER chromium
 set $EDITOR vim
 
@@ -258,10 +259,10 @@ client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 ################################################################################
 ################################################################################
 
-#bar {
-#    tray_output none
-#    #strip_workspace_numbers yes
-#    status_command py3status
-#}
+bar {
+    #tray_output none
+    #strip_workspace_numbers yes
+    status_command py3status
+}
 
 
