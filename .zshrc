@@ -94,6 +94,7 @@ autoload -U compinit && compinit
 #
 # Example aliases
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dots='dotfiles commit -am"upd" && dotfiles push'
 alias i3config='vim ~/.config/i3/config'
 alias vimconfig='vim ~/.vimrc'
 alias zshconfig='vim ~/.zshrc'
