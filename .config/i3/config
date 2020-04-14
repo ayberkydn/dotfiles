@@ -78,6 +78,8 @@ bindsym $mod+F4 exec thunarb
 #################################################################################
 #################################################################################
 
+# alt tab
+bindsym $mod+Tab workspace back_and_forth
 
 # change focus
 bindsym $mod+h focus left
