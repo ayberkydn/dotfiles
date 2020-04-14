@@ -1,7 +1,8 @@
 ################################################################################
 ################################################################################
 
-exec --no-startup-id nitrogen --restore
+#exec-always --no-startup-id nitrogen --restore
+exec --no-startup-id ~/.fehbg
 exec --no-startup-id picom
 #exec_always --no-startup-id tint2
 #exec_always --no-startup-id $HOME/.config/polybar/launch.sh
@@ -9,7 +10,7 @@ exec --no-startup-id picom
 ################################################################################
 
 set $mod Mod4
-set $TERMINAL mate-terminal
+set $TERMINAL konsole
 set $BROWSER chromium
 set $EDITOR vim
 
@@ -182,7 +183,7 @@ bindsym $mod+Ctrl+Right workspace next
 bindsym $mod+Ctrl+Left workspace prev
 
 #enable back and forth
-workspace_auto_back_and_forth yes
+workspace_auto_back_and_forth no
 
 ################################################################################
 ################################################################################
@@ -259,10 +260,10 @@ client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 ################################################################################
 ################################################################################
 
-bar {
-    #tray_output none
-    #strip_workspace_numbers yes
-    status_command py3status
-}
-
+#bar {
+#    #tray_output none
+#    #strip_workspace_numbers yes
+#    status_command py3status
+#}
+#
 
