@@ -13,6 +13,9 @@ set autoindent
 " Syntax highlight
 syntax on
 
+" Disable parantheses highlight
+set noshowmatch
+
 " Highlight search
 set hlsearch
 
