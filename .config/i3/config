@@ -10,7 +10,7 @@ exec --no-startup-id picom
 ################################################################################
 
 set $mod Mod4
-set $TERMINAL konsole
+set $TERMINAL xfce4-terminal
 set $BROWSER chromium
 set $EDITOR vim
 
@@ -67,6 +67,7 @@ bindsym Print exec --no-startup-id flameshot gui
 
 # rofi
 bindsym $mod+d exec --no-startup-id rofi -show run
+bindsym Mod1+Tab exec --no-startup-id rofi -show window
 
 #xkill
 bindsym --release $mod+x exec xkill
@@ -78,8 +79,8 @@ bindsym $mod+F4 exec thunarb
 #################################################################################
 #################################################################################
 
-# alt tab
-bindsym Mod1+Tab workspace back_and_forth
+# Mod tab
+bindsym $mod+Tab workspace back_and_forth
 
 # change focus
 bindsym $mod+h focus left
@@ -185,7 +186,7 @@ gaps inner 10
 gaps outer 10
 
 workspace $ws2 gaps inner 5 
-workspace $ws2 gaps outer -7
+workspace $ws2 gaps outer -6
 
 focus_follows_mouse no
 focus_wrapping no
