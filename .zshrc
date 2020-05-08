@@ -69,7 +69,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-autoload -U compinit && compinit
+#autoload -U compinit && compinit
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -100,7 +100,7 @@ alias vimconfig='vim ~/.vimrc'
 alias zshconfig='vim ~/.zshrc'
 alias barconfig='vim ~/.config/polybar/config'
 alias open='xdg-open'
-alias vim='nvim'
+#alias vim='nvim'
 
 unalias rm #common aliases plugininde rm'i override etmis her zaman onay almak icin
 
