@@ -4,7 +4,8 @@
     "vim.handleKeys": {
         "<C-k>": false
     },
-    "workbench.colorTheme": "Material Theme Darker High Contrast",
+    "workbench.colorTheme": "Visual Studio Dark",
     "keyboard.dispatch": "keyCode",
-    "workbench.iconTheme": "material-icon-theme"
+    "workbench.iconTheme": "material-icon-theme",
+    "window.zoomLevel": 1
 }
