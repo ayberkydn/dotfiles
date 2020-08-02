@@ -7,5 +7,5 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 sudo pacman-mirrors --fasttrack ; sudo pacman -Syyu --noconfirm
 
-sudo pacman -S i3 rofi sxhkd zsh yay awesome-terminal-fonts gvim neovim gtop py3status nitrogen feh base base-devel termite compton flameshot ttf-font-awesome chromium noto-fonts-emoji redshift cmake python-pip neofetch nmap xclip xsel discover packagekit-qt5 xf86-video-intel --noconfirm
+sudo pacman -S yay gvim neovim gtop base base-devel chromium cmake python-pip neofetch nmap xclip xsel discover --noconfirm
 
