@@ -65,6 +65,7 @@ export UPDATE_ZSH_DAYS=30
 plugins=(
     common-aliases 
     extract
+    dnf
     )
 
 source $ZSH/oh-my-zsh.sh
