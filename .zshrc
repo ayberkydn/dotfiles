@@ -1,6 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=.:$PATH
 
+# Datasetlerin path
+export DATA_PATH="/home/ayb/Documents/data"
+
 # Path to your oh-my-zsh installation.
 export ZSH="/home/ayb/.oh-my-zsh"
 
@@ -66,6 +69,8 @@ plugins=(
     common-aliases 
     extract
     dnf
+    docker
+    docker-compose
     )
 
 source $ZSH/oh-my-zsh.sh
