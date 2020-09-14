@@ -1,34 +1,34 @@
-[org/mate/desktop/background]
+[gdesktop/background]
 color-shading-type='solid'
 picture-filename='/usr/share/backgrounds/wallpapers-2018/dreams.jpg'
 picture-options='stretched'
 primary-color='rgb(255,255,255)'
 secondary-color='rgb(0,0,0)'
 
-[org/mate/desktop/interface]
+[gdesktop/interface]
 gtk-color-scheme='menu_fg: #e3e4e7'
 gtk-theme='Matcha-dark-azul'
 icon-theme='Papirus-Dark'
 
-[org/mate/desktop/peripherals/keyboard]
+[gdesktop/peripherals/keyboard]
 delay=200
 numlock-state='off'
 rate=50
 
-[org/mate/desktop/peripherals/keyboard/kbd]
+[gdesktop/peripherals/keyboard/kbd]
 layouts=['us', 'tr']
 options=['caps\tcaps:swapescape', 'grp\tgrp:shifts_toggle']
 
-[org/mate/desktop/peripherals/touchpad]
+[gdesktop/peripherals/touchpad]
 disable-while-typing=true
 tap-to-click=false
 three-finger-click=2
 two-finger-click=3
 
-[org/mate/marco/general]
+[gmarco/general]
 theme='Matcha-dark-azul'
 
-[org/mate/marco/global-keybindings]
+[gmarco/global-keybindings]
 panel-run-dialog='<Mod4>d'
 run-command-screenshot='disabled'
 run-command-terminal='<Mod4>Return'
@@ -39,7 +39,7 @@ switch-to-workspace-3='<Mod4>3'
 switch-to-workspace-4='<Mod4>4'
 switch-to-workspace-left='disabled'
 
-[org/mate/marco/window-keybindings]
+[gmarco/window-keybindings]
 begin-move='<Mod4>e'
 begin-resize='<Mod4>r'
 close='<Shift><Mod4>q'
@@ -58,19 +58,19 @@ tile-to-side-e='<Mod4>Right'
 tile-to-side-w='<Mod4>Left'
 toggle-maximized='<Shift><Mod4>Up'
 
-[org/mate/panel/general]
+[gpanel/general]
 history-mate-run=['code', 'caja', 'poweroff']
 object-id-list=['brisk-menu', 'window-list', 'notification-area', 'clock', 'show-desktop', 'object-0', 'object-1', 'object-2', 'object-3']
 toplevel-id-list=['bottom']
 
-[org/mate/panel/objects/brisk-menu]
+[gpanel/objects/brisk-menu]
 applet-iid='BriskMenuFactory::BriskMenu'
 locked=false
 object-type='applet'
 position=1527
 toplevel-id='bottom'
 
-[org/mate/panel/objects/clock]
+[gpanel/objects/clock]
 applet-iid='ClockAppletFactory::ClockApplet'
 locked=true
 object-type='applet'
@@ -78,11 +78,11 @@ panel-right-stick=true
 position=10
 toplevel-id='bottom'
 
-[org/mate/panel/objects/clock/prefs]
+[gpanel/objects/clock/prefs]
 custom-format=''
 format='24-hour'
 
-[org/mate/panel/objects/notification-area]
+[gpanel/objects/notification-area]
 applet-iid='NotificationAreaAppletFactory::NotificationArea'
 locked=true
 object-type='applet'
@@ -90,21 +90,21 @@ panel-right-stick=true
 position=20
 toplevel-id='bottom'
 
-[org/mate/panel/objects/notification-area/prefs]
+[gpanel/objects/notification-area/prefs]
 min-icon-size=30
 
-[org/mate/panel/objects/object-0]
+[gpanel/objects/object-0]
 applet-iid='WnckletFactory::WorkspaceSwitcherApplet'
 object-type='applet'
 panel-right-stick=false
 position=0
 toplevel-id='bottom'
 
-[org/mate/panel/objects/object-0/prefs]
+[gpanel/objects/object-0/prefs]
 display-workspace-names=false
 wrap-workspaces=false
 
-[org/mate/panel/objects/show-desktop]
+[gpanel/objects/show-desktop]
 applet-iid='WnckletFactory::ShowDesktopApplet'
 locked=true
 object-type='applet'
@@ -112,14 +112,14 @@ panel-right-stick=true
 position=0
 toplevel-id='bottom'
 
-[org/mate/panel/objects/window-list]
+[gpanel/objects/window-list]
 applet-iid='WnckletFactory::WindowListApplet'
 locked=false
 object-type='applet'
 position=680
 toplevel-id='bottom'
 
-[org/mate/panel/toplevels/bottom]
+[gpanel/toplevels/bottom]
 auto-hide=false
 enable-buttons=false
 expand=true
@@ -131,7 +131,7 @@ x-right=-1
 y=1046
 y-bottom=0
 
-[org/mate/terminal/profiles/default]
+[gterminal/profiles/default]
 background-color='#000000000000'
 background-darkness=0.91295938104448737
 background-type='transparent'
