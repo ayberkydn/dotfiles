@@ -6,5 +6,5 @@ sudo pacman -S zsh --noconfirm
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 
-sudo pacman -S yay base base-devel chromium cmake --noconfirm
+sudo pacman -S yay base base-devel chromium cmake xclip xsel neovim alacritty tmux --noconfirm
 
