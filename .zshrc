@@ -16,7 +16,7 @@ CASE_SENSITIVE="true"
 export UPDATE_ZSH_DAYS=90
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 COMPLETION_WAITING_DOTS="true"
 
