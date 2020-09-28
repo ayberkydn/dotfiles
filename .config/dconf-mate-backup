@@ -144,3 +144,7 @@ palette='#000000000000:#AAAA00000000:#0000AAAA0000:#AAAA55540000:#00000000AAAA:#
 use-system-font=true	
 use-theme-colors=false	
 visible-name='Default'
+
+
+[org/mate/desktop/applications/terminal]
+exec='alacritty'
