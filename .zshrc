@@ -46,6 +46,7 @@ fi
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias dots='dotfiles commit -am"upd" && dotfiles push'
 alias i3config='nvim ~/.config/i3/config'
+alias nvs='nvidia-smi'
 alias vimconfig='nvim ~/.vimrc'
 alias zshconfig='nvim ~/.zshrc'
 alias barconfig='nvim ~/.config/polybar/config'
