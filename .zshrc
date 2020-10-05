@@ -55,7 +55,7 @@ alias alacrittyconfig='nvim ~/.config/alacritty/alacritty.yml'
 alias open='xdg-open'
 alias ca='conda activate'
 alias cda='conda deactivate'
-#alias vim='nvim'
+alias vim='nvim'
 
 unalias rm #common aliases plugininde rm'i override etmis her zaman onay almak icin
 
