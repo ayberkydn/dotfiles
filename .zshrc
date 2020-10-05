@@ -28,7 +28,6 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 plugins=(
     common-aliases 
     extract
-    dnf
     docker
     docker-compose
     )
@@ -45,13 +44,15 @@ fi
 # aliases
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias dots='dotfiles commit -am"upd" && dotfiles push'
-alias i3config='nvim ~/.config/i3/config'
 alias nvs='nvidia-smi'
-alias vimconfig='nvim ~/.vimrc'
+
 alias zshconfig='nvim ~/.zshrc'
+alias i3config='nvim ~/.config/i3/config'
 alias barconfig='nvim ~/.config/polybar/config'
-alias nvimconfig='nvim ~/.config/nvim/init.vim'
+alias vimconfig='nvim ~/.vimrc'
+alias nvimconfig='nvim ~/.config/nvim/'
 alias alacrittyconfig='nvim ~/.config/alacritty/alacritty.yml'
+
 alias open='xdg-open'
 alias ca='conda activate'
 alias cda='conda deactivate'
