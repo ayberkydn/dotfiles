@@ -50,7 +50,7 @@ alias zshconfig='nvim ~/.zshrc'
 alias i3config='nvim ~/.config/i3/config'
 alias barconfig='nvim ~/.config/polybar/config'
 alias vimconfig='nvim ~/.vimrc'
-alias nvimconfig='nvim ~/.config/nvim/'
+alias nvimconfig='nvim ~/.config/nvim/*'
 alias alacrittyconfig='nvim ~/.config/alacritty/alacritty.yml'
 
 alias open='xdg-open'
