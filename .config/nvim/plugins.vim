@@ -16,7 +16,10 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-" Plug 'ryanoasis/vim-devicons'
+Plug 'unblevable/quick-scope'       
+Plug 'ryanoasis/vim-devicons'
+Plug 'liuchengxu/vim-which-key'
+
 
 
 call plug#end()
@@ -50,8 +53,19 @@ nnoremap <leader>b :Buffers<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => CocExplorer
-nmap <space>e :CocCommand explorer<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <space>e :CocCommand explorer<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Quick-scope
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Trigger a highlight in the appropriate direction when pressing these keys:
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vim Which Key
+nnoremap <silent> <leader> :WhichKey ','<CR>
+nnoremap <silent> <Space> :WhichKey '<Space>'<CR>
 
 
 

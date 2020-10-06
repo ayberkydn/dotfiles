@@ -163,4 +163,5 @@ let g:coc_global_extensions = ['coc-json',
                               \'coc-git', 
                               \'coc-python', 
                               \'coc-yank', 
-                              \'coc-explorer']
+                              \'coc-explorer',
+                              \'coc-marketplace']
