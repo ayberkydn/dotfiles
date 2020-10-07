@@ -2,8 +2,10 @@
 {
     "coc.preferences.formatOnType": true,
     "coc.preferences.formatOnSaveFiletypes": ["python"],
+
     "python.formatting.provider": "autopep8",
     "python.linting.flake8Enabled": true,
     "python.linting.pylintEnabled": false
+
     
 }

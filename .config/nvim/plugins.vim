@@ -19,6 +19,9 @@ Plug 'junegunn/fzf.vim'
 Plug 'unblevable/quick-scope'       
 Plug 'ryanoasis/vim-devicons'
 Plug 'liuchengxu/vim-which-key'
+Plug 'jaredgorski/spacecamp'
+Plug 'rakr/vim-one'
+
 
 
 
@@ -28,8 +31,10 @@ call plug#end()
 let g:airline_theme='dark'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tagbar#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
 
-colorscheme gruvbox
+
+colorscheme spacecamp_lite
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -64,8 +69,11 @@ let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vim Which Key
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <silent> <leader> :WhichKey ','<CR>
 nnoremap <silent> <Space> :WhichKey '<Space>'<CR>
 
 
-
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Tagbar
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

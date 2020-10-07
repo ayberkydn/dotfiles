@@ -7,7 +7,7 @@ export DATA_PATH="/home/ayb/Documents/data"
 # Path to your oh-my-zsh installation.
 export ZSH="/home/ayb/.oh-my-zsh"
 
-ZSH_THEME="bira"
+ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
 CASE_SENSITIVE="true"
@@ -50,7 +50,7 @@ alias zshconfig='nvim ~/.zshrc'
 alias i3config='nvim ~/.config/i3/config'
 alias barconfig='nvim ~/.config/polybar/config'
 alias vimconfig='nvim ~/.vimrc'
-alias nvimconfig='nvim ~/.config/nvim/*'
+alias nvimconfig='nvim ~/.config/nvim/*.{vim,json}'
 alias alacrittyconfig='nvim ~/.config/alacritty/alacritty.yml'
 
 alias open='xdg-open'

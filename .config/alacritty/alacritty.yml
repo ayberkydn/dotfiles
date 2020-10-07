@@ -15,8 +15,8 @@ scrolling:
 
 font:
   normal:
-    family: Fira Code
-    style: Regular
+    family: Source Code Pro
+    style: Medium
   bold:
     family: Source Code Pro
     style: Bold
@@ -27,58 +27,63 @@ font:
     family: Source Code Pro
     style: Bold Italic
 
-  size: 11.0
+  offset:
+      x: 0
+      y: 0
+
+  size: 11
 ################################################################################################################
 
 draw_bold_text_with_bright_colors: true
 
 ################################################################################################################
 colors:
+  # Default colors
   primary:
-    background: '0x021b21'
-    foreground: '0xe8dfd6'
+    background: '0x121212'
+    foreground: '0xd0d0d0'
 
-  cursor:
-    text: CellBackground
-    cursor: CellForeground
-
-  vi_mode_cursor:
-    text: CellBackground
-    cursor: CellForeground
-
-  selection:
-    text: CellBackground
-    background: CellForeground
-
-  search:
-    matches:
-      foreground: '#000000'
-      background: '#ffffff'
-
-    bar:
-      background: '#c5c8c6'
-      foreground: '#1d1f21'
-
+  # Normal colors
   normal:
-    black:   '0x032c36'
-    red:     '0xc2454e'
-    green:   '0x7cbf9e'
-    yellow:  '0x8a7a63'
-    blue:    '0x2e3340'
-    magenta: '0xff5879'
-    cyan:    '0x44b5b1'
-    white:   '0xf2f1b9'
+    black:   '0x282828'
+    red:     '0xd71a1a'
+    green:   '0x57ba37'
+    yellow:  '0xf0d50c'
+    blue:    '0x91aadf'
+    magenta: '0xcf73e6'
+    cyan:    '0xb7cbf4'
+    white:   '0xdedede'
 
+  # Bright colors
   bright:
-    black:   '0x065f73'
-    red:     '0xef5847'
-    green:   '0xa2d9b1'
-    yellow:  '0xbeb090'
-    blue:    '0x61778d'
-    magenta: '0xff99a1'
-    cyan:    '0x9ed9d8'
-    white:   '0xf6f6c9'
+    black:   '0x666666'
+    red:     '0xff0000'
+    green:   '0xd8fa3b'
+    yellow:  '0xe7c547'
+    blue:    '0xb7cbf4'
+    magenta: '0xb77ee0'
+    cyan:    '0xa9c1de'
+    white:   '0xeeeeee'
+  # cursor:
+  #   text: CellBackground
+  #   cursor: CellForeground
 
+  # vi_mode_cursor:
+  #   text: CellBackground
+  #   cursor: CellForeground
+
+  # selection:
+  #   text: CellBackground
+  #   background: CellForeground
+
+  # search:
+  #   matches:
+  #     foreground: '#000000'
+  #     background: '#ffffff'
+
+  #   bar:
+  #     background: '#c5c8c6'
+  #     foreground: '#1d1f21'
 
 background_opacity: 0.95 
 
@@ -314,11 +319,12 @@ key_bindings:
   - { key: Paste,                                action: Paste          }
   - { key: Copy,                                 action: Copy           }
   - { key: L,         mods: Control,             action: ClearLogNotice }
-  - { key: L,         mods: Control,          mode: ~Vi,  chars: "\x0c"          }
-  - { key: Up,        mods: Shift,            mode: ~Alt, action: ScrollPageUp,  }
-  - { key: Down,      mods: Shift,            mode: ~Alt, action: ScrollPageDown }
-  - { key: Up,        mods: Shift|Control,   mode: ~Alt, action: ScrollToTop,   }
-  - { key: Down,      mods: Shift|Control,   mode: ~Alt, action: ScrollToBottom }
+  - { key: L,         mods: Control,             mode: ~Vi,  chars: "\x0c"          }
+  - { key: Up,        mods: Shift,               mode: ~Alt, action: ScrollPageUp,  }
+  - { key: Down,      mods: Shift,               mode: ~Alt, action: ScrollPageDown }
+  - { key: Up,        mods: Shift|Control,       mode: ~Alt, action: ScrollToTop,   }
+  - { key: Down,      mods: Shift|Control,       mode: ~Alt, action: ScrollToBottom }
+  - { key: F11,                                  mode: ~Alt, action: ToggleFullscreen }
 
     #Vi Mode
   - { key: Space,  mods: Shift|Control, mode: Vi, action: ScrollToBottom          }
