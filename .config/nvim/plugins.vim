@@ -1,3 +1,6 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Load Plugins
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin()
 
 Plug 'morhetz/gruvbox'
@@ -21,19 +24,25 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'liuchengxu/vim-which-key'
 Plug 'jaredgorski/spacecamp'
 Plug 'rakr/vim-one'
-
+Plug 'sheerun/vim-polyglot'
 
 
 
 call plug#end()
 
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Airline
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:airline_theme='dark'
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#tagbar#enabled = 1
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tagbar#enabled = 1 "tagbar integration
+let g:airline#extensions#tabline#enabled = 1 "tab and buffer line at top
 
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Colorscheme
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 colorscheme spacecamp_lite
 
 
@@ -59,7 +68,7 @@ nnoremap <leader>b :Buffers<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => CocExplorer
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <space>e :CocCommand explorer<CR>
+nmap <leader>e :CocCommand explorer<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Quick-scope
@@ -70,8 +79,8 @@ let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vim Which Key
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <silent> <leader> :WhichKey ','<CR>
-nnoremap <silent> <Space> :WhichKey '<Space>'<CR>
+nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
+nnoremap <silent> , :WhichKey ','<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

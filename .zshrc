@@ -7,6 +7,8 @@ export DATA_PATH="/home/ayb/Documents/data"
 # Path to your oh-my-zsh installation.
 export ZSH="/home/ayb/.oh-my-zsh"
 
+export EDITOR='nvim'
+
 ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -30,16 +32,8 @@ plugins=(
     extract
     docker
     docker-compose
+    tmux
     )
-
-source $ZSH/oh-my-zsh.sh
-
-
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='nvim'
-else
-  export EDITOR='nvim'
-fi
 
 # aliases
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
@@ -58,20 +52,31 @@ alias ca='conda activate'
 alias cda='conda deactivate'
 alias vim='nvim'
 
+
+
+
+
+
+source $ZSH/oh-my-zsh.sh
+
+
+
 unalias rm #common aliases plugininde rm'i override etmis her zaman onay almak icin
+
+
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/ayb/.local/conda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/ayb/.local/conda/etc/profile.d/conda.sh" ]; then
-        . "/home/ayb/.local/conda/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/ayb/.local/conda/bin:$PATH"
-    fi
-fi
-unset __conda_setup
+ __conda_setup="$('/home/ayb/.local/conda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+ if [ $? -eq 0 ]; then
+     eval "$__conda_setup"
+ else
+     if [ -f "/home/ayb/.local/conda/etc/profile.d/conda.sh" ]; then
+         . "/home/ayb/.local/conda/etc/profile.d/conda.sh"
+     else
+         export PATH="/home/ayb/.local/conda/bin:$PATH"
+     fi
+ fi
+ unset __conda_setup
 # <<< conda initialize <<<
 
