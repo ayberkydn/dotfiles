@@ -23,6 +23,8 @@ let mapleader="\<space>"
 " Tab complete suggests without completing first.
 set wildmode=list:longest,full
 "
+" Enable mouse support
+set mouse=a
 "
 " highlight column 80
 set colorcolumn=80
@@ -44,9 +46,9 @@ cmap w!! w !sudo tee % >/dev/null
 set cursorline
 "
 "
-" Dont show matching parantheses
-set noshowmatch
-"
+" Dont show matching parantheses except it is newly insterted
+set showmatch
+let loaded_matchparen = 1
 "
 " press ; to issue commands in normal mode (no more shift holding)
 nnoremap ; :
@@ -57,14 +59,11 @@ nnoremap k gk
 xnoremap j gj
 xnoremap k gk
 
-" break a line at cursor without exiting normal mode
-nnoremap <silent> <leader><CR> i<CR><ESC>
-
-
 " use to quickly escape to normal mode while typing 
 inoremap jj <ESC>
 inoremap jk <ESC>
 inoremap kj <ESC>
+
 
 " use  <leader>y and  <leader>p to copy and paste from system clipboard
 noremap <leader>y "+y
@@ -84,8 +83,8 @@ xnoremap < <gv
 xnoremap > >gv
 
 "???? Remap gm to skip to the actual middle of the line, not middle of screen
-"noremap gm :call cursor(0, virtcol('$')/2)<CR>
-"
+noremap gm :call cursor(0, virtcol('$')/2)<CR>
+
 "
 "" buffers can exist in background without being in a window
 set hidden
@@ -93,50 +92,28 @@ set hidden
 " Automatically save before commands like :next and :make
 set autowrite
 
-" buffer browsing with left/right arrows
-nnoremap <Left> :bprev<CR>
-nnoremap <Right> :bnext<CR>
-
 " jump to previous buffer with Tab
 nnoremap <Tab> <C-^>
+" move between buffers with <leader>l h
 
-"============ Saving and Closing ==============================================
-
-" for when you mess up and hold shift too long (using ! to prevent errors while 
-" sourcing vimrc after it was updated)
-command! W w
-command! WQ wq
-command! Wq wq
-command! Q q
-
-" changing file types:
-command! DOS  set ff=dos  " force windows style line endings
-command! UNIX set ff=unix " force unix style line endings
-command! MAC  set ff=mac  " force mac style line endings
-
-" Remove the ^M characters from files
-command! RemoveEm :%s///g
+" cd to file's directory
+map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 "============= Formatting, Indentation & Behavior =============================
 
 " enable soft word wrap
-set formatoptions=l
-set lbr
-
-" allow displaying parts of the last line instead of replacing them with @ for
-" exceptionally long lines
-set display+=lastline
+set formatoptions=l "wrap long lines
+set textwidth=79
+set linebreak "dont cut at middle of the word
 
 " Keep inserting comment leader character on subsequent lines
-set formatoptions+=or
+set formatoptions+=r "instert mode enter
 
 " use hard tabs for indentation
 set tabstop=4
 set softtabstop=4 	" makes backspace treat 4 spaces like a tab
 set shiftwidth=4    " makes indents 4 spaces wide as well
 set expandtab 		" actually, expand tabs into spaces
-
-set backspace=indent,eol,start
 
 au FocusLost * silent! :wa	" save when switching focus 
 
@@ -149,9 +126,6 @@ set smartcase		" Do smart case matching
 
 set incsearch		" incremental search
 set hlsearch		" highlights searches
-
-set noerrorbells 	" suppress audible bell
-set novisualbell 	" suppress bell blink
 
 "============= History ========================================================
 
@@ -171,7 +145,6 @@ filetype plugin on
 filetype plugin indent on
 
 set autoindent 		" always indent
-set copyindent 		" copy previous indent on autoindenting
 set smartindent
 
 set backspace=indent,eol,start 	" backspace over everything in insert mode
@@ -184,17 +157,13 @@ set laststatus=2
 "============== Folding =======================================================
 
 set nofoldenable 	" screw folding
-
-" Set up specific folding threshold 
-"set foldmethod=indent
-"set foldnestmax=3
-"set foldenable
-
 "============== Completion ====================================================
 
 " Enable wild menu, but ignore nonsensical files
 set wildmenu
-set wildmode=list:longest
+set wildignorecase
+set wildmode=longest:full
+
 set wildignore=*.swp,*.bak,*.pyc,*.class,*.o,*.obj,*~
 set wildignore+=*DS_Store*
 set wildignore+=*.gem
@@ -224,23 +193,25 @@ set nowb 			" suppress creation of ~ files
 set autoread
 au FocusGained,BufEnter * checktime
 
-" Fast saving
+" Fast saving and quitting
 nmap <leader>w :w!<cr>
+nmap <leader>q :q!<cr>
+nmap <leader>wq :wq!<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Set 10 lines to the cursor - when moving vertically using j/k
-set so=10
+" Set 5 lines to the cursor - when moving vertically using j/k
+set so=5
 
 "Show line numbers
 set number
 
-" Configure backspace so it acts as it should act
-set whichwrap+=<,>,h,l
+" " Configure backspace so it acts as it should act
+" set whichwrap+=<,>,h,l
 
 " Don't redraw while executing macros (good performance config)
-set lazyredraw 
+"set lazyredraw 
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -256,15 +227,8 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-" move between buffers with <leader>l h
-map <leader>l :bnext<cr>
-map <leader>h :bprevious<cr>
-
-" Switch CWD to the directory of the open buffer
-map <leader>cd :cd %:p:h<cr>:pwd<cr>
-
 " Return to last edit position when opening files (You want this!)
-au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+" au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 """"""""""""""""""""""""""""""
 " => Status line
@@ -278,56 +242,4 @@ nmap <M-k> mz:m-2<cr>`z
 vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
 vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"" => Helper functions
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"" Returns true if paste mode is enabled
-"function! HasPaste()
-"    if &paste
-"        return 'PASTE MODE  '
-"    endif
-"    return ''
-"endfunction
-
-"" Don't close window, when deleting a buffer
-"command! Bclose call <SID>BufcloseCloseIt()
-"function! <SID>BufcloseCloseIt()
-"    let l:currentBufNum = bufnr("%")
-"    let l:alternateBufNum = bufnr("#")
-
-"    if buflisted(l:alternateBufNum)
-"        buffer #
-"    else
-"        bnext
-"    endif
-
-"    if bufnr("%") == l:currentBufNum
-"        new
-"    endif
-
-"    if buflisted(l:currentBufNum)
-"        execute("bdelete! ".l:currentBufNum)
-"    endif
-"endfunction
-
-"function! CmdLine(str)
-"    call feedkeys(":" . a:str)
-"endfunction 
-
-"function! VisualSelection(direction, extra_filter) range
-"    let l:saved_reg = @"
-"    execute "normal! vgvy"
-
-"    let l:pattern = escape(@", "\\/.*'$^~[]")
-"    let l:pattern = substitute(l:pattern, "\n$", "", "")
-
-"    if a:direction == 'gv'
-"        call CmdLine("Ack '" . l:pattern . "' " )
-"    elseif a:direction == 'replace'
-"        call CmdLine("%s" . '/'. l:pattern . '/')
-"    endif
-
-"    let @/ = l:pattern
-"    let @" = l:saved_reg
-"endfunction
 

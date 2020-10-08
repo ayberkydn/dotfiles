@@ -1,30 +1,27 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Load Plugins
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin()
 
-Plug 'morhetz/gruvbox'
-Plug 'metakirby5/codi.vim'
-"Plug 'jupyter-vim/jupyter-vim'
-
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-" Plug 'preservim/nerdtree'
-Plug 'majutsushi/tagbar'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-commentary'
+Plug 'jaredgorski/spacecamp'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'unblevable/quick-scope'       
-Plug 'ryanoasis/vim-devicons'
 Plug 'liuchengxu/vim-which-key'
-Plug 'jaredgorski/spacecamp'
+Plug 'majutsushi/tagbar'
+Plug 'preservim/nerdtree'
+Plug 'puremourning/vimspector'
 Plug 'rakr/vim-one'
+Plug 'ryanoasis/vim-devicons'
 Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'unblevable/quick-scope'       
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 
 
@@ -53,22 +50,21 @@ colorscheme spacecamp_lite
 " let NERDTreeShowHidden=1
 " let NERDTreeIgnore = ['\.pyc$', '__pycache__']
 " let g:NERDTreeWinSize=35
-" map <leader>nn :NERDTreeToggle<cr>
-" map <leader>nb :NERDTreeFromBookmark<Space>
-" map <leader>nf :NERDTreeFind<cr>
+" map <leader>e :NERDTreeToggle<cr>
+" map <leader>f :NERDTreeFind<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => CocExplorer
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <leader>e :CocCommand explorer<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => FZF
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <leader>s :FZF<CR> 
-nnoremap <leader>b :Buffers<CR>
+nnoremap <leader><Tab> :Buffers<CR>
 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => CocExplorer
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <leader>e :CocCommand explorer<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Quick-scope
