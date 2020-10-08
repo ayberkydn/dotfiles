@@ -44,6 +44,7 @@ alias zshconfig='nvim ~/.zshrc'
 alias i3config='nvim ~/.config/i3/config'
 alias barconfig='nvim ~/.config/polybar/config'
 alias vimconfig='nvim ~/.vimrc'
+alias tmuxconfig='nvim ~/.tmux.conf'
 alias nvimconfig='nvim ~/.config/nvim/*.{vim,json}'
 alias alacrittyconfig='nvim ~/.config/alacritty/alacritty.yml'
 

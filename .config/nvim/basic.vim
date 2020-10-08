@@ -20,6 +20,7 @@
 nnoremap <space> <nop>
 let mapleader="\<space>"
 
+
 " Tab complete suggests without completing first.
 set wildmode=list:longest,full
 "
