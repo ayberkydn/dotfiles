@@ -3,8 +3,11 @@
     "coc.preferences.formatOnType": true,
     "coc.preferences.formatOnSaveFiletypes": ["python"],
 
+    "diagnostic.checkCurrentLine": true,
+
     "python.formatting.provider": "black",
     "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": ["--ignore=E722,E501,F401"],
     "python.linting.pylintEnabled": false,
 
     "explorer.previewAction.onHover": false,

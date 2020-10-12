@@ -3,6 +3,9 @@
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
+cnoreabbrev ii PlugInstall<cr>
+"
 call plug#begin()
 
 "COC
@@ -19,6 +22,8 @@ Plug 'liuchengxu/vim-which-key'
 Plug 'majutsushi/tagbar'
 Plug 'preservim/nerdtree'
 
+Plug 'skanehira/docker-compose.vim'
+Plug 'skanehira/docker.vim'
 
 
 Plug 'sheerun/vim-polyglot'
@@ -35,6 +40,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'rakr/vim-one'
 Plug 'ryanoasis/vim-devicons'
+Plug 'arcticicestudio/nord-vim'
 
 
 

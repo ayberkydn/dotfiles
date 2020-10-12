@@ -21,6 +21,16 @@
 nnoremap <space> <nop>
 let mapleader="\<space>"
 
+nmap ; :
+inoremap ; :
+cnoremap ; :
+vnoremap ; :
+
+augroup CursorLine
+  au!
+  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+  au WinLeave * setlocal nocursorline
+augroup END
 
 "Auto reload when init file is changed
 augroup auto-source   | " The name of the group is arbitrary
@@ -34,7 +44,6 @@ tnoremap <C-h> <C-\><C-n><C-w>h
 tnoremap <C-j> <C-\><C-n><C-w>j
 tnoremap <C-k> <C-\><C-n><C-w>k
 tnoremap <C-l> <C-\><C-n><C-w>l
-tnoremap <Esc> <C-\><C-n>
 
 " Tab complete suggests without completing first.
 set wildmode=list:longest,full
@@ -55,7 +64,7 @@ vnoremap . :normal .<CR>
 "
 "
 " For when you forget to sudo.. Really Write the file.
-cmap w!! w !sudo tee % >/dev/null
+cnorea w!! w !sudo tee % >/dev/null
 "
 "
 " Set cursorline
@@ -66,8 +75,6 @@ set cursorline
 set showmatch
 let loaded_matchparen = 1
 "
-" press ; to issue commands in normal mode (no more shift holding)
-nnoremap ; :
 
 " move by screen lines, not by real lines - great for creative writing
 nnoremap j gj
@@ -245,6 +252,8 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+map <C-W> :echo "SADASDA"<cr>
+
 
 " Return to last edit position when opening files (You want this!)
 " au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
