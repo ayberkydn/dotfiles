@@ -40,13 +40,13 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias dots='dotfiles commit -am"upd" && dotfiles push'
 alias nvs='nvidia-smi'
 
-alias zshconfig='nvim ~/.zshrc'
-alias i3config='nvim ~/.config/i3/config'
-alias barconfig='nvim ~/.config/polybar/config'
-alias vimconfig='nvim ~/.vimrc'
-alias tmuxconfig='nvim ~/.tmux.conf'
-alias nvimconfig='nvim ~/.config/nvim/*.{vim,json}'
-alias alacrittyconfig='nvim ~/.config/alacritty/alacritty.yml'
+alias shconfig='nvim ~/.zshrc'
+alias iconfig='nvim ~/.config/i3/config'
+alias bconfig='nvim ~/.config/polybar/config'
+alias vconfig='nvim ~/.vimrc'
+alias tconfig='nvim ~/.tmux.conf'
+alias nvconfig='nvim ~/.config/nvim/*.{vim,json}'
+alias aconfig='nvim ~/.config/alacritty/alacritty.yml'
 
 alias open='xdg-open'
 alias ca='conda activate'
@@ -60,6 +60,7 @@ alias vim='nvim'
 
 source $ZSH/oh-my-zsh.sh
 
+zstyle ":completion:*" matcher-list '' #disable fuzzy tab completion
 
 
 unalias rm #common aliases plugininde rm'i override etmis her zaman onay almak icin

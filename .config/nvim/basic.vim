@@ -196,8 +196,11 @@ au FocusGained,BufEnter * checktime
 
 " Fast saving and quitting
 nmap <leader>w :w!<cr>
+nmap <leader>W :w!<cr>
 nmap <leader>q :q!<cr>
+nmap <leader>Q :qa!<cr>
 nmap <leader>wq :wq!<cr>
+nmap <leader>WQ :wqa!<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface

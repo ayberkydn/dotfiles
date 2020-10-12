@@ -12,7 +12,11 @@ Plug 'junegunn/fzf.vim'
 Plug 'liuchengxu/vim-which-key'
 Plug 'majutsushi/tagbar'
 Plug 'preservim/nerdtree'
+
+
+let g:vimspector_enable_mappings = 'HUMAN'
 Plug 'puremourning/vimspector'
+
 Plug 'rakr/vim-one'
 Plug 'ryanoasis/vim-devicons'
 Plug 'sheerun/vim-polyglot'
@@ -59,6 +63,8 @@ colorscheme spacecamp_lite
 " => CocExplorer
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <leader>e :CocCommand explorer<CR>
+autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
+
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -84,3 +90,5 @@ nnoremap <silent> , :WhichKey ','<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Tagbar
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd FileType python,c,cpp,cu TagbarOpen
+
