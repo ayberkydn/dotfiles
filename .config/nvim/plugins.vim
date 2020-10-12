@@ -4,9 +4,14 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin()
 
+"COC
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-Plug 'jaredgorski/spacecamp'
+"Vimspector
+let g:vimspector_enable_mappings = 'HUMAN'
+Plug 'puremourning/vimspector'
+
+
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'liuchengxu/vim-which-key'
@@ -14,20 +19,33 @@ Plug 'majutsushi/tagbar'
 Plug 'preservim/nerdtree'
 
 
-let g:vimspector_enable_mappings = 'HUMAN'
-Plug 'puremourning/vimspector'
 
-Plug 'rakr/vim-one'
-Plug 'ryanoasis/vim-devicons'
 Plug 'sheerun/vim-polyglot'
 "Plug 'tpope/vim-commentary'
 Plug 'preservim/nerdcommenter'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
-Plug 'unblevable/quick-scope'       
+
+
+
+Plug 'unblevable/quick-scope'
+
+
+
+"Themes and Icons
+Plug 'jaredgorski/spacecamp'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'rakr/vim-one'
+Plug 'ryanoasis/vim-devicons'
+
+
+
+
 Plug 'ctrlpvim/ctrlp.vim'
+
+
+
 Plug 'mhinz/vim-startify'
 
 
@@ -87,6 +105,7 @@ let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 nnoremap <silent> , :WhichKey ','<CR>
+set timeoutlen=250
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

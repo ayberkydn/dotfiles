@@ -1,5 +1,5 @@
-" Sections:
 "    -> General
+" Sections:
 "    -> VIM user interface
 "    -> Colors and Fonts
 "    -> Files and backups
@@ -13,6 +13,7 @@
 "    -> Misc
 "    -> Helper functions
 "
+"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => My Config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -20,6 +21,20 @@
 nnoremap <space> <nop>
 let mapleader="\<space>"
 
+
+"Auto reload when init file is changed
+augroup auto-source   | " The name of the group is arbitrary
+autocmd!              | " Deletes all auto-commands in the current group
+autocmd BufWritePost *.vim,coc-settings.json source $MYVIMRC
+augroup END           | " Switch back to default auto-group
+
+
+"Easy navigation from terminal
+tnoremap <C-h> <C-\><C-n><C-w>h
+tnoremap <C-j> <C-\><C-n><C-w>j
+tnoremap <C-k> <C-\><C-n><C-w>k
+tnoremap <C-l> <C-\><C-n><C-w>l
+tnoremap <Esc> <C-\><C-n>
 
 " Tab complete suggests without completing first.
 set wildmode=list:longest,full
@@ -199,7 +214,6 @@ nmap <leader>w :w!<cr>
 nmap <leader>W :w!<cr>
 nmap <leader>q :q!<cr>
 nmap <leader>Q :qa!<cr>
-nmap <leader>wq :wq!<cr>
 nmap <leader>WQ :wqa!<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
