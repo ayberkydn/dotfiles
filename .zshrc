@@ -50,7 +50,7 @@ alias nvs='nvidia-smi'
 alias shconfig='nvim ~/.zshrc'
 alias iconfig='nvim ~/.config/i3/config'
 alias bconfig='nvim ~/.config/polybar/config'
-alias vconfig='nvim ~/.vimrc'
+alias vconfig='vim ~/.vimrc'
 alias tconfig='nvim ~/.tmux.conf'
 alias nvconfig='nvim ~/.config/nvim/*.{vim,json}'
 alias aconfig='nvim ~/.config/alacritty/alacritty.yml'
@@ -58,7 +58,6 @@ alias aconfig='nvim ~/.config/alacritty/alacritty.yml'
 alias open='xdg-open'
 alias ca='conda activate'
 alias cda='conda deactivate'
-alias vim='nvim'
 
 
 

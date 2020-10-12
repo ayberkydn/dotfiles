@@ -224,6 +224,7 @@ set so=5
 
 "Show line numbers
 set number
+set relativenumber
 
 " " Configure backspace so it acts as it should act
 " set whichwrap+=<,>,h,l
