@@ -1,7 +1,6 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Load Plugins
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
 cnoreabbrev ii PlugInstall<cr>
@@ -34,13 +33,15 @@ Plug 'tpope/vim-surround'
 
 
 
-""""""""""""""" Themes and Icons """"""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""" Themes, Colors and Icons """"""""""""""""""""""""""""""""""""""""
 Plug 'jaredgorski/spacecamp'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'rakr/vim-one'
 Plug 'ryanoasis/vim-devicons'
 Plug 'arcticicestudio/nord-vim'
+Plug 'drewtempelmeyer/palenight.vim'
+
 
 
 
@@ -68,7 +69,7 @@ let g:airline#extensions#tabline#enabled = 1 "tab and buffer line at top
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colorscheme
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-colorscheme spacecamp_lite
+colorscheme palenight
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
