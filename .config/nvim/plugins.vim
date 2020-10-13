@@ -1,6 +1,5 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Load Plugins
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
 cnoreabbrev ii PlugInstall<cr>
@@ -17,12 +16,11 @@ Plug 'puremourning/vimspector'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'liuchengxu/vim-which-key'
+Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 Plug 'majutsushi/tagbar'
-Plug 'preservim/nerdtree'
 
-Plug 'skanehira/docker-compose.vim'
-Plug 'skanehira/docker.vim'
+"Plug 'skanehira/docker-compose.vim'
+"Plug 'skanehira/docker.vim'
 
 
 Plug 'sheerun/vim-polyglot'
@@ -34,13 +32,9 @@ Plug 'tpope/vim-surround'
 
 
 """"""""""""""" Themes, Colors and Icons """"""""""""""""""""""""""""""""""""""""
-Plug 'jaredgorski/spacecamp'
+Plug 'flazz/vim-colorschemes'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'rakr/vim-one'
-Plug 'ryanoasis/vim-devicons'
-Plug 'arcticicestudio/nord-vim'
-Plug 'drewtempelmeyer/palenight.vim'
 
 
 
@@ -69,7 +63,7 @@ let g:airline#extensions#tabline#enabled = 1 "tab and buffer line at top
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colorscheme
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-colorscheme palenight
+colorscheme space-vim-dark
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -94,7 +88,7 @@ autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | end
 " => FZF
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <leader>s :FZF<CR> 
-nnoremap <leader><Tab> :Buffers<CR>
+nnoremap <Tab> :Buffers<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

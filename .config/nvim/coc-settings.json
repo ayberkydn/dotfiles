@@ -5,13 +5,13 @@
 
     "diagnostic.checkCurrentLine": true,
 
+    "explorer.buffer.showHiddenBuffers": true,
     "python.formatting.provider": "black",
     "python.linting.flake8Enabled": true,
     "python.linting.flake8Args": ["--ignore=E722,E501,F401"],
     "python.linting.pylintEnabled": false,
 
     "explorer.previewAction.onHover": false,
-    "explorer.icon.enableNerdfont": true,
 
     "explorer.icon.enableVimDevicons": true
     

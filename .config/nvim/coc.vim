@@ -162,4 +162,5 @@ nnoremap <silent><nowait> ,p  :<C-u>CocListResume<CR>
 let g:coc_global_extensions = ['coc-json', 
                               \'coc-explorer', 
                               \'coc-python', 
+                              \'coc-yank', 
                               \'coc-marketplace']

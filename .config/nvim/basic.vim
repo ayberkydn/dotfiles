@@ -52,7 +52,7 @@ set wildmode=list:longest,full
 set mouse=a
 "
 " highlight column 80
-set colorcolumn=80
+"set colorcolumn=80
 "
 " Visual shifting (does not exit Visual mode)
 vnoremap < <gv
@@ -116,7 +116,7 @@ set hidden
 set autowrite
 
 " jump to previous buffer with Tab
-nnoremap <Tab> <C-^>
+nnoremap <leader><Tab> <C-^>
 " move between buffers with <leader>l h
 
 " cd to file's directory
