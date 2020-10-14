@@ -1,19 +1,3 @@
-"    -> General
-" Sections:
-"    -> VIM user interface
-"    -> Colors and Fonts
-"    -> Files and backups
-"    -> Text, tab and indent related
-"    -> Visual mode related
-"    -> Moving around, tabs and buffers
-"    -> Status line
-"    -> Editing mappings
-"    -> vimgrep searching and cope displaying
-"    -> Spell checking
-"    -> Misc
-"    -> Helper functions
-"
-"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => My Config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -21,7 +5,7 @@
 nnoremap <space> <nop>
 let mapleader="\<space>"
 
-nmap ; :
+nmap     ; :
 inoremap ; :
 cnoremap ; :
 vnoremap ; :
@@ -38,21 +22,12 @@ autocmd!              | " Deletes all auto-commands in the current group
 autocmd BufWritePost *.vim,coc-settings.json source $MYVIMRC
 augroup END           | " Switch back to default auto-group
 
-
-"Easy navigation from terminal
-tnoremap <C-h> <C-\><C-n><C-w>h
-tnoremap <C-j> <C-\><C-n><C-w>j
-tnoremap <C-k> <C-\><C-n><C-w>k
-tnoremap <C-l> <C-\><C-n><C-w>l
-
 " Tab complete suggests without completing first.
 set wildmode=list:longest,full
 "
 " Enable mouse support
 set mouse=a
 "
-" highlight column 80
-"set colorcolumn=80
 "
 " Visual shifting (does not exit Visual mode)
 vnoremap < <gv
@@ -72,9 +47,9 @@ set cursorline
 "
 "
 " Dont show matching parantheses except it is newly insterted
-set showmatch
+set noshowmatch
 let loaded_matchparen = 1
-"
+
 
 " move by screen lines, not by real lines - great for creative writing
 nnoremap j gj
@@ -176,11 +151,24 @@ set backspace=indent,eol,start 	" backspace over everything in insert mode
 
 " Always show status line
 set laststatus=2
+set cmdheight=1
+set updatetime=300
+" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience.
+" Don't pass messages to |ins-completion-menu|.
+set shortmess+=c
 
-"============== Folding =======================================================
+" Always show the signcolumn, otherwise it would shift the text each time
+" diagnostics appear/become resolved.
+if has("patch-8.1.1564")
+  " Recently vim can merge signcolumn and number column into one
+  set signcolumn=number
+else
+  set signcolumn=yes
+endif
+
 
 set nofoldenable 	" screw folding
-"============== Completion ====================================================
 
 " Enable wild menu, but ignore nonsensical files
 set wildmenu
@@ -204,7 +192,7 @@ set ofu=syntaxcomplete#Complete  "  ??
 
 set noswapfile 		" suppress creation of swap files
 set nobackup 		" suppress creation of backup files
-set nowb 			" suppress creation of ~ files
+set nowritebackup   " suppress creation of ~ files
 
 "
 "------------------------------------------------------------------------------
@@ -248,25 +236,8 @@ set relativenumber
 map <silent> <leader><cr> :noh<cr>
 
 " Smart way to move between windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
-
-
-" Return to last edit position when opening files (You want this!)
-" au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-
-""""""""""""""""""""""""""""""
-" => Status line
-""""""""""""""""""""""""""""""
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Editing mappings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Move a line of text using ALT+[jk] or Command+[jk] on mac
-nmap <M-j> mz:m+<cr>`z
-nmap <M-k> mz:m-2<cr>`z
-vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
-vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
-
+"map <C-k> <C-W>k
+"map <C-j> <C-W>j
+"map <C-h> <C-W>h
+"map <C-l> <C-W>l
 

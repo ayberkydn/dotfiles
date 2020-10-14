@@ -1,3 +1,5 @@
+if [ "$TMUX" = "" ]; then tmux attach || tmux; fi
+#
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -48,12 +50,12 @@ alias dots='dotfiles commit -am"upd" && dotfiles push'
 alias nvs='nvidia-smi'
 
 alias shconfig='nvim ~/.zshrc'
-alias iconfig='nvim ~/.config/i3/config'
-alias bconfig='nvim ~/.config/polybar/config'
+#alias iconfig='nvim ~/.config/i3/config'
+#alias bconfig='nvim ~/.config/polybar/config'
 alias vconfig='vim ~/.vimrc'
-alias tconfig='nvim ~/.tmux.conf'
-alias nvconfig='nvim ~/.config/nvim/*.{vim,json}'
-alias aconfig='nvim ~/.config/alacritty/alacritty.yml'
+alias tmuxconfig='nvim ~/.tmux.conf'
+alias nvimconfig='nvim ~/.config/nvim/*.{vim,json}'
+alias tconfig='nvim ~/.config/alacritty/alacritty.yml'
 
 alias open='xdg-open'
 alias ca='conda activate'
