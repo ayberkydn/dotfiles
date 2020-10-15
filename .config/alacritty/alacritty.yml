@@ -23,15 +23,15 @@ font:
   italic:
     family: Source Code Pro
     style: Italic
-  #bold_italic:
+  bold_italic:
     family: Source Code Pro
     style: Bold Italic
 
   offset:
-      x: 0
-      y: 2
+      x: -1
+      y: 0
 
-  size: 10
+  size: 11
 ################################################################################################################
 
 draw_bold_text_with_bright_colors: true

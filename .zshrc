@@ -1,4 +1,4 @@
-if [ "$TMUX" = "" ]; then tmux attach || tmux; fi
+if [ "$TMUX" = "" ]; then tmux attach -t main || tmux new -s main; fi
 #
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -63,7 +63,8 @@ alias ca='conda activate'
 alias cda='conda deactivate'
 
 
-
+alias vimm='/usr/bin/vim'
+alias vim='nvim'
 
 
 
