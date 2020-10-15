@@ -50,6 +50,7 @@ alias dots='dotfiles commit -am"upd" && dotfiles push'
 alias nvs='nvidia-smi'
 
 alias shconfig='nvim ~/.zshrc'
+alias xconfig='nvim ~/.xprofile'
 #alias iconfig='nvim ~/.config/i3/config'
 #alias bconfig='nvim ~/.config/polybar/config'
 alias vconfig='vim ~/.vimrc'
