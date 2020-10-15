@@ -30,6 +30,8 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'jpalardy/vim-slime'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'honza/vim-snippets'
+
 
 
 """"""""""""""" Themes, Colors and Icons """"""""""""""""""""""""""""""""""""""""
@@ -38,10 +40,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 
-
-
-
-Plug 'ctrlpvim/ctrlp.vim'
 
 
 Plug 'mhinz/vim-startify'
@@ -83,22 +81,16 @@ colorscheme space-vim-dark
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => FZF
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <leader>s :FZF<CR> 
-nnoremap <Tab> :Buffers<CR>
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Quick-scope
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Trigger a highlight in the appropriate direction when pressing these keys:
-let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+nnoremap <C-f> :Files<CR> 
+nnoremap <C-b> :Buffers<CR> 
+nnoremap <C-l> :Lines<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vim Which Key
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
-nnoremap <silent> , :WhichKey ','<CR>
-set timeoutlen=250
+nnoremap <silent> <space><space> :WhichKey '<Space>'<CR>
+nnoremap <silent> ,, :WhichKey ','<CR>
+set timeoutlen=200
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -229,7 +221,9 @@ nnoremap <silent><nowait> ,p  :<C-u>CocListResume<CR>
 
 
 let g:coc_global_extensions = ['coc-json', 
+                              \'coc-yaml', 
                               \'coc-explorer', 
+                              \'coc-snippets', 
                               \'coc-python', 
                               \'coc-yank', 
                               \'coc-marketplace']

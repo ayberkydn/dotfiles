@@ -1,11 +1,12 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => My Config
+" o 'asdl'
+"> My Config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Change the leader key to <space>
 nnoremap <space> <nop>
 let mapleader="\<space>"
 
-nmap     ; :
+noremap  ; :
 inoremap ; :
 cnoremap ; :
 vnoremap ; :
@@ -58,9 +59,12 @@ xnoremap j gj
 xnoremap k gk
 
 " use to quickly escape to normal mode while typing 
-inoremap jj <ESC>
-inoremap jk <ESC>
+tnoremap kj <ESC>
+tnoremap jk <ESC>
+cnoremap kj <ESC>
+cnoremap jk <ESC>
 inoremap kj <ESC>
+inoremap jk <ESC>
 
 
 " use  <leader>y and  <leader>p to copy and paste from system clipboard
@@ -72,10 +76,6 @@ noremap <leader>Y "+Y
 noremap <leader>p :set paste<cr>"+]p:set nopaste<cr>
 noremap <leader>P :set paste<cr>"+]P:set nopaste<cr>
 
-" use +/- to increment/decrement numbers
-nnoremap + <C-a>
-nnoremap - <C-x>
-
 " reselect visual block after indent/outdent
 xnoremap < <gv
 xnoremap > >gv
@@ -83,7 +83,6 @@ xnoremap > >gv
 "???? Remap gm to skip to the actual middle of the line, not middle of screen
 noremap gm :call cursor(0, virtcol('$')/2)<CR>
 
-"
 "" buffers can exist in background without being in a window
 set hidden
 
@@ -91,7 +90,7 @@ set hidden
 set autowrite
 
 " jump to previous buffer with Tab
-nnoremap <leader><Tab> <C-^>
+"nnoremap <leader><Tab> <C-^>
 " move between buffers with <leader>l h
 
 " cd to file's directory
@@ -113,7 +112,6 @@ set softtabstop=4 	" makes backspace treat 4 spaces like a tab
 set shiftwidth=4    " makes indents 4 spaces wide as well
 set expandtab 		" actually, expand tabs into spaces
 
-au FocusLost * silent! :wa	" save when switching focus 
 
 "============= Search & Matching ==============================================
 
@@ -214,8 +212,8 @@ nmap <leader>WQ :wqa!<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Set 5 lines to the cursor - when moving vertically using j/k
-set so=5
+" Set 10 lines to the cursor - when moving vertically using j/k
+set so=10
 
 "Show line numbers
 set number
