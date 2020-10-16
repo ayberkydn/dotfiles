@@ -24,7 +24,6 @@ Plug 'majutsushi/tagbar'
 
 
 Plug 'sheerun/vim-polyglot'
-"Plug 'tpope/vim-commentary'
 Plug 'preservim/nerdcommenter'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
@@ -38,6 +37,7 @@ Plug 'tpope/vim-fugitive'
 
 """"""""""""""" Themes, Colors and Icons """"""""""""""""""""""""""""""""""""""""
 Plug 'flazz/vim-colorschemes'
+Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
