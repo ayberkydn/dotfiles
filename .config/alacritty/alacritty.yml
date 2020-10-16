@@ -15,55 +15,62 @@ scrolling:
 
 font:
   normal:
-    family: Source Code Pro
-    style: Medium
+    family: SauceCodePro Nerd Font
+    style: Regular
   bold:
-    family: Source Code Pro
+    family: SauceCodePro Nerd Font
     style: Bold
   italic:
-    family: Source Code Pro
+    family: SauceCodePro Nerd Font
     style: Italic
   bold_italic:
-    family: Source Code Pro
+    family: SauceCodePro Nerd Font
     style: Bold Italic
 
   offset:
       x: -1
       y: 0
 
-  size: 11
-################################################################################################################
+  size: 12
 
 draw_bold_text_with_bright_colors: true
 
-################################################################################################################
+
+
+
+###############################################################################################################
+###############################################################################################################
+###############################################################################################################
 colors:
   # Default colors
   primary:
-    background: '0x121212'
+    background: '0x000000'
     foreground: '0xd0d0d0'
 
   # Normal colors
   normal:
-    black:   '0x282828'
-    red:     '0xd71a1a'
-    green:   '0x57ba37'
-    yellow:  '0xf0d50c'
-    blue:    '0x91aadf'
-    magenta: '0xcf73e6'
-    cyan:    '0xb7cbf4'
-    white:   '0xdedede'
+    black:   '0x000000'
+    red:     '0xff0000'
+    green:   '0x33ff00'
+    yellow:  '0xff0099'
+    blue:    '0x0066ff'
+    magenta: '0xcc00ff'
+    cyan:    '0x00ffff'
+    white:   '0xd0d0d0'
 
   # Bright colors
   bright:
-    black:   '0x666666'
+    black:   '0x808080'
     red:     '0xff0000'
-    green:   '0xd8fa3b'
-    yellow:  '0xe7c547'
-    blue:    '0xb7cbf4'
-    magenta: '0xb77ee0'
-    cyan:    '0xa9c1de'
-    white:   '0xeeeeee'
+    green:   '0x33ff00'
+    yellow:  '0xff0099'
+    blue:    '0x0066ff'
+    magenta: '0xcc00ff'
+    cyan:    '0x00ffff'
+    white:   '0xffffff'
+###############################################################################################################
+###############################################################################################################
+###############################################################################################################
   # cursor:
   #   text: CellBackground
   #   cursor: CellForeground
@@ -78,6 +85,7 @@ colors:
 
   # search:
   #   matches:
+
   #     foreground: '#000000'
   #     background: '#ffffff'
 
@@ -85,7 +93,7 @@ colors:
   #     background: '#c5c8c6'
   #     foreground: '#1d1f21'
 
-background_opacity: 0.98 
+background_opacity: 1
 
 selection:
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"

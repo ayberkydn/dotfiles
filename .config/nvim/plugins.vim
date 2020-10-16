@@ -31,6 +31,8 @@ Plug 'tpope/vim-surround'
 Plug 'jpalardy/vim-slime'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'honza/vim-snippets'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
 
 
 
@@ -65,7 +67,7 @@ let g:airline#extensions#tabline#enabled = 1 "tab and buffer line at top
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colorscheme
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-colorscheme space-vim-dark
+colorscheme badwolf
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
