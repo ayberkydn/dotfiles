@@ -2,17 +2,17 @@
 {
     "coc.preferences.formatOnType": true,
     "coc.preferences.formatOnSaveFiletypes": ["python"],
+    "coc.preferences.previewMaxHeight": 35,
 
     "diagnostic.checkCurrentLine": true,
 
-    "explorer.buffer.showHiddenBuffers": true,
     "python.formatting.provider": "black",
     "python.linting.flake8Enabled": true,
     "python.linting.flake8Args": ["--ignore=E722,E501,F401"],
     "python.linting.pylintEnabled": false,
 
     "explorer.previewAction.onHover": false,
-
+    "explorer.buffer.showHiddenBuffers": true,
     "explorer.icon.enableVimDevicons": true
-    
+
 }

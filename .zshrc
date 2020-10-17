@@ -57,6 +57,7 @@ alias vconfig='vim ~/.vimrc'
 alias tmuxconfig='nvim ~/.tmux.conf'
 alias nvimconfig='nvim ~/.config/nvim/*.{vim,json}'
 alias tconfig='nvim ~/.config/alacritty/alacritty.yml'
+alias cl='clear'
 
 alias open='xdg-open'
 alias ca='conda activate'
