@@ -66,6 +66,7 @@ alias cda='conda deactivate'
 
 alias vimm='/usr/bin/vim'
 alias vim='nvim'
+alias mux='tmuxinator'
 
 
 

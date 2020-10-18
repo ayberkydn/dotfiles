@@ -6,8 +6,9 @@ cnoreabbrev ii PlugInstall<cr>
 "
 call plug#begin()
 
-"COC
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+"ALE
+Plug 'dense-analysis/ale'
 
 "Vimspector
 let g:vimspector_enable_mappings = 'HUMAN'
@@ -42,8 +43,18 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 
-call plug#end()
 
+
+"COC
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Startify
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:startify_file_number = 3
+let g:startify_bookmarks = [ {'c': '~/.config/nvim/'}]
+let g:startify_session_autoload = 1
+let g:startify_session_persistence = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Airline
@@ -58,9 +69,9 @@ let g:airline#extensions#tabline#enabled = 1 "tab and buffer line
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Colorscheme
+" => NERDCommenter
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-colorscheme badwolf
+map <leader>cc <plug>NERDCommenterToggle
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => FZF
@@ -70,8 +81,8 @@ nnoremap <C-f> :Files<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vim Which Key
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <silent> <space><space> :WhichKey '<Space>'<CR>
-nnoremap <silent> ,, :WhichKey ','<CR>
+nnoremap <silent> <space> :WhichKey '<Space>'<CR>
+nnoremap <silent> , :WhichKey ','<CR>
 set timeoutlen=500
 
 
@@ -82,8 +93,8 @@ autocmd FileType python,c,cpp,cu TagbarOpen
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => COC 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""" => COC 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
@@ -216,4 +227,25 @@ let g:coc_global_extensions = ['coc-json',
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <leader>e :CocCommand explorer<CR>
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+call plug#end()
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Colorscheme
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+colorscheme badwolf
 

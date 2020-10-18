@@ -45,6 +45,7 @@ set hidden
 set formatoptions=l "wrap long lines
 set textwidth=79
 set linebreak "dont cut at middle of the word
+set nowrap
 
 " Keep inserting comment leader character on subsequent lines
 set formatoptions+=r "instert mode enter
@@ -91,8 +92,8 @@ set backspace=indent,eol,start 	" backspace over everything in insert mode
 set laststatus=2
 set cmdheight=1
 
-" Save swap file if idle for 0.3 secs
-set updatetime=300
+" Update diagnostics etc with 0.1 delay
+set updatetime=100
 
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
@@ -187,11 +188,14 @@ cnorea cd :cd %:p:h<cr>:pwd<cr>
 
 " Fast saving and quitting
 nmap <leader>w :w!<cr>
-nmap <leader>W :w!<cr>
+nmap <leader>W :wa!<cr>
 nmap <leader>q :q!<cr>
 nmap <leader>Q :qa!<cr>
 nmap <leader>WQ :wqa!<cr>
 
+
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
+
+nnoremap <Leader>b :ls<CR>:b<Space>
 
