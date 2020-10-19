@@ -8,7 +8,7 @@ call plug#begin()
 
 
 "ALE
-Plug 'dense-analysis/ale'
+"Plug 'dense-analysis/ale'
 
 "Vimspector
 let g:vimspector_enable_mappings = 'HUMAN'
@@ -34,6 +34,7 @@ Plug 'honza/vim-snippets'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-startify'
+"Plug 'vim-syntastic/syntastic'
 
 
 " themes, colors and Icons "
