@@ -18,7 +18,7 @@ export ZSH="/home/ayb/.oh-my-zsh"
 
 export EDITOR='nvim'
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
 CASE_SENSITIVE="true"
