@@ -1,21 +1,11 @@
-#source $HOME/.antigen.zsh 
-source "${HOME}/.zgen/zgen.zsh"
+source $HOME/.antigen.zsh 
 
-# if the init script doesn't exist
-if ! zgen saved; then
+antigen use oh-my-zsh
+antigen theme agnoster
+antigen bundle command-not-found
+antigen bundle git
+antigen bundle docker
 
-  zgen oh-my-zsh
-  zgen oh-my-zsh plugins/docker
-  zgen oh-my-zsh plugins/git
-  zgen oh-my-zsh plugins/command-not-found
-  zgen oh-my-zsh themes/agnoster
-
-  zgen load zsh-users/zsh-syntax-highlighting
-  zgen load zsh-users/zsh-autosuggestions
-
-  zgen save
-
-fi
 
 
 # aliases
@@ -53,16 +43,17 @@ alias mux='tmuxinator'
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/ayb/.local/conda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
-   eval "$__conda_setup"
+   #eval "$__conda_setup"
 else
-   if [ -f "/home/ayb/.local/conda/etc/profile.d/conda.sh" ]; then
-       . "/home/ayb/.local/conda/etc/profile.d/conda.sh"
-   else
-       export PATH="/home/ayb/.local/conda/bin:$PATH"
-   fi
+   #if [ -f "/home/ayb/.local/conda/etc/profile.d/conda.sh" ]; then
+       #. "/home/ayb/.local/conda/etc/profile.d/conda.sh"
+   #else
+       #export PATH="/home/ayb/.local/conda/bin:$PATH"
+   #fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
 #
 #
+antigen apply
 
