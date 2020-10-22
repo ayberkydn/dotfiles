@@ -42,12 +42,16 @@ Plug 'flazz/vim-colorschemes'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
+Plug 'NieTiger/halcyon-neovim'
 
 
 
 "COC
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+
+
+call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Startify
@@ -234,19 +238,5 @@ autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | end
 
 
 
-
-
-
-
-
-
-
-
-
-call plug#end()
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Colorscheme
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-colorscheme badwolf
-
+colorscheme Atelier_SavannaDark
+set termguicolors

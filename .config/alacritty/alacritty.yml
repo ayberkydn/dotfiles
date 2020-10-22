@@ -44,30 +44,30 @@ draw_bold_text_with_bright_colors: true
 colors:
   # Default colors
   primary:
-    background: '0x000000'
-    foreground: '0xd0d0d0'
+    background: '0x161b1d'
+    foreground: '0x7ea2b4'
 
   # Normal colors
   normal:
-    black:   '0x000000'
-    red:     '0xff0000'
-    green:   '0x33ff00'
-    yellow:  '0xff0099'
-    blue:    '0x0066ff'
-    magenta: '0xcc00ff'
-    cyan:    '0x00ffff'
-    white:   '0xd0d0d0'
+    black:   '0x161b1d'
+    red:     '0xd22d72'
+    green:   '0x568c3b'
+    yellow:  '0x8a8a0f'
+    blue:    '0x257fad'
+    magenta: '0x5d5db1'
+    cyan:    '0x2d8f6f'
+    white:   '0x7ea2b4'
 
   # Bright colors
   bright:
-    black:   '0x808080'
-    red:     '0xff0000'
-    green:   '0x33ff00'
-    yellow:  '0xff0099'
-    blue:    '0x0066ff'
-    magenta: '0xcc00ff'
-    cyan:    '0x00ffff'
-    white:   '0xffffff'
+    black:   '0x5a7b8c'
+    red:     '0xd22d72'
+    green:   '0x568c3b'
+    yellow:  '0x8a8a0f'
+    blue:    '0x257fad'
+    magenta: '0x5d5db1'
+    cyan:    '0x2d8f6f'
+    white:   '0xebf8ff'
 ###############################################################################################################
 ###############################################################################################################
 ###############################################################################################################
