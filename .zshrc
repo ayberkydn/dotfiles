@@ -1,48 +1,12 @@
-#if [ "$TMUX" = "" ]; then tmux attach -t main || tmux new -s main; fi
-#
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+source $HOME/.antigen.zsh 
 
-# If you come from bash you might have to change your $PATH.
-export PATH=.:$PATH
+antigen use oh-my-zsh
+antigen theme agnoster
+antigen bundle command-not-found
+antigen bundle git
+antigen bundle docker
+antigen bundle olets/zsh-abbr
 
-# Datasetlerin path
-export DATA_PATH="/home/ayb/Documents/data"
-
-# Path to your oh-my-zsh installation.
-export ZSH="/home/ayb/.oh-my-zsh"
-
-export EDITOR='nvim'
-
-ZSH_THEME="agnoster"
-
-# Uncomment the following line to use case-sensitive completion.
-CASE_SENSITIVE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-export UPDATE_ZSH_DAYS=90
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-plugins=(
-    common-aliases 
-    extract
-    docker
-    docker-compose
-    tmux
-    )
 
 # aliases
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
@@ -72,27 +36,22 @@ alias mux='tmuxinator'
 
 
 
-source $ZSH/oh-my-zsh.sh
-
-zstyle ":completion:*" matcher-list '' #disable fuzzy tab completion
-
-
-unalias rm #common aliases plugininde rm'i override etmis her zaman onay almak icin
 
 
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
- __conda_setup="$('/home/ayb/.local/conda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
- if [ $? -eq 0 ]; then
-     eval "$__conda_setup"
- else
-     if [ -f "/home/ayb/.local/conda/etc/profile.d/conda.sh" ]; then
-         . "/home/ayb/.local/conda/etc/profile.d/conda.sh"
-     else
-         export PATH="/home/ayb/.local/conda/bin:$PATH"
-     fi
- fi
- unset __conda_setup
-# <<< conda initialize <<<
+__conda_setup="$('/home/ayb/.local/conda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+   eval "$__conda_setup"
+else
+   if [ -f "/home/ayb/.local/conda/etc/profile.d/conda.sh" ]; then
+       . "/home/ayb/.local/conda/etc/profile.d/conda.sh"
+   else
+       export PATH="/home/ayb/.local/conda/bin:$PATH"
+   fi
+fi
+unset __conda_setup
+
+
+
+antigen apply
 
