@@ -141,6 +141,7 @@ let mapleader="\<space>"
 " easy commands
 noremap  ; :
 inoremap ; :
+inoremap : ;
 cnoremap ; :
 vnoremap ; :
 

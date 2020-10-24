@@ -10,6 +10,7 @@ alias tmuxconfig='nvim ~/.tmux.conf'
 alias nvimconfig='nvim ~/.config/nvim/*.{vim,json}'
 alias tconfig='nvim ~/.config/alacritty/alacritty.yml'
 alias rconfig='nvim ~/.config/ranger/rc.conf'
+alias muxconfig='nvim ~/.config/tmuxinator'
 
 alias cl='clear'
 alias open='xdg-open'
