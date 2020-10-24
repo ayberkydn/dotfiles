@@ -176,15 +176,24 @@ noremap <leader>Y "+Y
 noremap <leader>p :set paste<cr>"+]p:set nopaste<cr>
 noremap <leader>P :set paste<cr>"+]P:set nopaste<cr>
 
-" Remap gm to skip to the actual middle of the line, not middle of screen
-noremap gm :call cursor(0, virtcol('$')/2)<CR>
-
 " jump to previous buffer with double Tab
 nnoremap <Tab><Tab> <C-^>
+nnoremap <Tab>l <cmd> bnext<CR>
+nnoremap <Tab>h <cmd> bprevious<CR>
+nnoremap <Tab>1 <cmd> b1<CR>
+nnoremap <Tab>2 <cmd> b2<CR>
+nnoremap <Tab>3 <cmd> b3<CR>
+nnoremap <Tab>4 <cmd> b4<CR>
+nnoremap <Tab>5 <cmd> b5<CR>
+nnoremap <Tab>6 <cmd> b6<CR>
+nnoremap <Tab>7 <cmd> b7<CR>
+nnoremap <Tab>8 <cmd> b8<CR>
+nnoremap <Tab>9 <cmd> b9<CR>
+nnoremap <Tab>0 <cmd> b10<CR>
 " move between buffers with <leader>l h
 
 " cd to file's directory
-cnorea cd :cd %:p:h<cr>:pwd<cr>
+command! CDC cd %:p:h
 
 " Fast saving and quitting
 nmap <leader>w :w!<cr>
@@ -192,7 +201,6 @@ nmap <leader>W :wa!<cr>
 nmap <leader>q :q!<cr>
 nmap <leader>Q :qa!<cr>
 nmap <leader>WQ :wqa!<cr>
-
 
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>

@@ -1,32 +1,22 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Load Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"
-cnoreabbrev ii PlugInstall<cr>
-"
 call plug#begin()
-
-
-"ALE
+"--->ALE
 "Plug 'dense-analysis/ale'
-
-"Vimspector
+"--->Vimspector
 let g:vimspector_enable_mappings = 'HUMAN'
 Plug 'puremourning/vimspector'
-
-
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 Plug 'majutsushi/tagbar'
-
 "Plug 'skanehira/docker-compose.vim'
 "Plug 'skanehira/docker.vim'
-
-
 Plug 'sheerun/vim-polyglot'
 Plug 'preservim/nerdcommenter'
 Plug 'tpope/vim-repeat'
+Plug 'liuchengxu/vim-clap'
 Plug 'tpope/vim-surround'
 Plug 'jpalardy/vim-slime'
 Plug 'christoomey/vim-tmux-navigator'
@@ -35,24 +25,17 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-startify'
 "Plug 'vim-syntastic/syntastic'
-
-
-" themes, colors and Icons "
+"---> themes, colors and Icons "
 Plug 'flazz/vim-colorschemes'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'NieTiger/halcyon-neovim'
-
-
-
-"COC
+"--->COC
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-
-
 call plug#end()
-
+cnoreabbrev ii PlugInstall<cr>
+"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Startify
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -71,6 +54,8 @@ let g:airline_theme='dark'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tagbar#enabled = 1 "tagbar integration
 let g:airline#extensions#tabline#enabled = 1 "tab and buffer line
+let g:airline#extensions#tabline#buffer_nr_show = 1
+
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -238,5 +223,5 @@ autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | end
 
 
 
-colorscheme Atelier_SavannaDark
+colorscheme Atelier_LakesideDark
 set termguicolors
