@@ -25,4 +25,17 @@ alias mux='tmuxinator'
 eval /home/ayb/.local/conda/bin/conda "shell.fish" "hook" $argv | source
 
 
+#remove greeting
 set fish_greeting
+
+#default is vi bindings
+fish_vi_key_bindings
+
+#avoid esc in insert mode
+bind -M insert jk 'set fish_bind_mode default; commandline -f repaint'
+bind -M insert kj 'set fish_bind_mode default; commandline -f repaint'
+
+#disable right prompt
+function fish_right_prompt; end
+
+
