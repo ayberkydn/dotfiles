@@ -1,6 +1,6 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Load Plugins
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin()
 "--->ALE
 "Plug 'dense-analysis/ale'
@@ -9,6 +9,7 @@ let g:vimspector_enable_mappings = 'HUMAN'
 Plug 'puremourning/vimspector'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'easymotion/vim-easymotion'
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 Plug 'majutsushi/tagbar'
 "Plug 'skanehira/docker-compose.vim'
@@ -30,23 +31,22 @@ Plug 'flazz/vim-colorschemes'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'NieTiger/halcyon-neovim'
 "--->COC
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 cnoreabbrev ii PlugInstall<cr>
 "
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Startify
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:startify_file_number = 3
 let g:startify_bookmarks = [ {'c': '~/.config/nvim/'}]
 let g:startify_session_autoload = 1
 let g:startify_session_persistence = 1
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Airline
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:airline#extensions#coc#enabled = 1
 
@@ -58,33 +58,33 @@ let g:airline#extensions#tabline#buffer_nr_show = 1
 
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => NERDCommenter
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <leader>cc <plug>NERDCommenterToggle
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => FZF
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <C-f> :Files<CR> 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vim Which Key
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <silent> <space> :WhichKey '<Space>'<CR>
 nnoremap <silent> , :WhichKey ','<CR>
 set timeoutlen=500
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Tagbar
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd FileType python,c,cpp,cu TagbarOpen
 let g:tagbar_position = 'topleft vertical'
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""" => COC 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"""" => COC 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
@@ -180,27 +180,14 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 
 
-" Mappings for CoCList
-" Show all diagnostics.
 nnoremap <silent><nowait> ,a  :<C-u>CocList diagnostics<cr>
-" Manage extensions.
 nnoremap <silent><nowait> ,e  :<C-u>CocList extensions<cr>
-" Show commands.
 nnoremap <silent><nowait> ,c  :<C-u>CocList commands<cr>
-" Find symbol of current document.
 nnoremap <silent><nowait> ,o  :<C-u>CocList outline<cr>
-" Search workspace symbols.
 nnoremap <silent><nowait> ,s  :<C-u>CocList -I symbols<cr>
-" Do default action for next item.
 nnoremap <silent><nowait> ,j  :<C-u>CocNext<CR>
-" Do default action for previous item.
 nnoremap <silent><nowait> ,k  :<C-u>CocPrev<CR>
-" Resume latest coc list.
 nnoremap <silent><nowait> ,p  :<C-u>CocListResume<CR>
-
-
-
-
 
 let g:coc_global_extensions = ['coc-json', 
                               \'coc-yaml', 
@@ -212,15 +199,11 @@ let g:coc_global_extensions = ['coc-json',
                               \'coc-marketplace']
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Explorer
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <leader>e :CocCommand explorer<CR>
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
-
-
-
-
 
 
 colorscheme Atelier_LakesideDark
