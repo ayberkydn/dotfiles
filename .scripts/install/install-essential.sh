@@ -24,3 +24,5 @@ yay -S tmux             --noconfirm
 yay -S tmuxinator       --noconfirm
 yay -S ranger           --noconfirm
 yay -S ueberzug         --noconfirm
+yay -S googler          --noconfirm
+yay -S translate-shell  --noconfirm

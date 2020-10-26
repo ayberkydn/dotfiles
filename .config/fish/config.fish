@@ -23,8 +23,8 @@ alias mux='tmuxinator'
 
 
 #abbreviations
-abbr gh  https://github.com/
-abbr gha https://github.com/ayberkydn
+abbr -a gh  https://github.com/
+abbr -a gha https://github.com/ayberkydn
 
 #conda initialize >>>
 eval /home/ayb/.local/conda/bin/conda "shell.fish" "hook" $argv | source
