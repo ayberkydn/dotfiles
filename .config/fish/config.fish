@@ -38,19 +38,21 @@ fish_vi_key_bindings
 
 
 function fish_user_key_bindings
+    #avoid esc in insert mode
     bind -M insert jk 'set fish_bind_mode default; commandline -f repaint'
     bind -M insert kj 'set fish_bind_mode default; commandline -f repaint'
+
+    #c-f is forward movement (so it also accepts autosuggest)
     for mode in insert default visual
         bind -M $mode \cf forward-char
     end
 end
 
-#avoid esc in insert mode
-
-##accept autosuggest with ctrl-f
-#bind \cf accept-autosuggestion
 
 #disable right prompt
 function fish_right_prompt; end
 
+
+#variables
+set DATA_PATH /home/ayb/Documents/data
 

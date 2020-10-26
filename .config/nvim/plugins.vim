@@ -20,6 +20,7 @@ Plug 'tpope/vim-repeat'
 Plug 'liuchengxu/vim-clap'
 Plug 'tpope/vim-surround'
 Plug 'jpalardy/vim-slime'
+Plug 'metakirby5/codi.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'honza/vim-snippets'
 Plug 'airblade/vim-gitgutter'
@@ -39,7 +40,7 @@ cnoreabbrev ii PlugInstall<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Startify
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:startify_file_number = 3
+let g:startify_file_number = 0
 let g:startify_bookmarks = [ {'c': '~/.config/nvim/'}]
 let g:startify_session_autoload = 1
 let g:startify_session_persistence = 1
