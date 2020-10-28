@@ -1,4 +1,4 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 ">>>>>>>>>>>>>> autocommands >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "cursorline only on highlighted windows
@@ -77,6 +77,7 @@ set undodir=$HOME/.vim/undo
 "== Syntax Highlighting & Indents ==
 syntax on
 filetype on
+
 filetype indent on
 filetype plugin on
 filetype plugin indent on

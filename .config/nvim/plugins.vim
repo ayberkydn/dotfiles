@@ -9,7 +9,9 @@ let g:vimspector_enable_mappings = 'HUMAN'
 Plug 'puremourning/vimspector'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'easymotion/vim-easymotion'
+"Plug 'easymotion/vim-easymotion'
+Plug 'justinmk/vim-sneak'
+
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 Plug 'majutsushi/tagbar'
 "Plug 'skanehira/docker-compose.vim'
@@ -28,7 +30,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-startify'
 "Plug 'vim-syntastic/syntastic'
 "---> themes, colors and Icons "
-Plug 'flazz/vim-colorschemes'
+"Plug 'flazz/vim-colorschemes'
+Plug 'rainglow/vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -45,6 +48,27 @@ let g:startify_bookmarks = [ {'c': '~/.config/nvim/'}]
 let g:startify_session_autoload = 1
 let g:startify_session_persistence = 1
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Snea
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:sneak#label = 1
+let g:sneak#s_next = 1
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Incsearch
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"map /  <Plug>(incsearch-forward)
+"map ?  <Plug>(incsearch-backward)
+"map g/ <Plug>(incsearch-stay)
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Easymotion
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+ 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Airline
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -207,5 +231,8 @@ nmap <leader>e :CocCommand explorer<CR>
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 
 
-colorscheme Atelier_LakesideDark
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Color
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set termguicolors
+colorscheme horizon-contrast  
