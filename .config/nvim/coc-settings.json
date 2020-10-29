@@ -2,15 +2,13 @@
 {
     "coc.preferences.formatOnType": true,
     "coc.preferences.formatOnSaveFiletypes": ["python"],
-    "coc.preferences.previewMaxHeight": 35,
 
     "diagnostic.checkCurrentLine": true,
 
-    "python.pythonPath": "/home/ayb/.local/conda/bin/python",
     "python.formatting.provider": "black",
+    "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
     "python.linting.flake8Args": ["--ignore=E722,E501,F401"],
-    "python.linting.pylintEnabled": false,
 
     "explorer.previewAction.onHover": false,
     "explorer.buffer.showHiddenBuffers": true,
