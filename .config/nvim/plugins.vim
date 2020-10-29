@@ -2,42 +2,60 @@
 " => Load Plugins
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin()
+
 "--->ALE
 "Plug 'dense-analysis/ale'
+
+"--->COC
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 "--->Vimspector
 let g:vimspector_enable_mappings = 'HUMAN'
 Plug 'puremourning/vimspector'
+
+"--->FZF
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-"Plug 'easymotion/vim-easymotion'
+
+"--->Sneak
 Plug 'justinmk/vim-sneak'
 
+"--->Which key
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
-Plug 'majutsushi/tagbar'
-"Plug 'skanehira/docker-compose.vim'
-"Plug 'skanehira/docker.vim'
-Plug 'sheerun/vim-polyglot'
-Plug 'preservim/nerdcommenter'
+
+"--->Startify
+Plug 'mhinz/vim-startify'
+
+"--->Git
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+
+"--->Utils
 Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'preservim/nerdcommenter'
 Plug 'jupyter-vim/jupyter-vim'
 Plug 'liuchengxu/vim-clap'
-Plug 'tpope/vim-surround'
 Plug 'jpalardy/vim-slime'
 Plug 'metakirby5/codi.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'honza/vim-snippets'
-Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-fugitive'
-Plug 'mhinz/vim-startify'
 "Plug 'vim-syntastic/syntastic'
-"---> themes, colors and Icons "
-"Plug 'flazz/vim-colorschemes'
-Plug 'rainglow/vim'
-Plug 'ryanoasis/vim-devicons'
+
+"---> Appereance
+"-> utilities
+Plug 'majutsushi/tagbar'
+Plug 'sheerun/vim-polyglot'
 Plug 'vim-airline/vim-airline'
+"-> colors
+Plug 'flazz/vim-colorschemes'
+Plug 'rainglow/vim'
+Plug 'rakr/vim-one'
 Plug 'vim-airline/vim-airline-themes'
-"--->COC
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'arcticicestudio/nord-vim'
+"-> icons
+Plug 'ryanoasis/vim-devicons'
+
 call plug#end()
 cnoreabbrev ii PlugInstall<cr>
 "
@@ -50,24 +68,10 @@ let g:startify_session_autoload = 1
 let g:startify_session_persistence = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Snea
+" => Sneak
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:sneak#label = 1
 let g:sneak#s_next = 1
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Incsearch
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"map /  <Plug>(incsearch-forward)
-"map ?  <Plug>(incsearch-backward)
-"map g/ <Plug>(incsearch-stay)
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Easymotion
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
  
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -92,6 +96,8 @@ map <leader>cc <plug>NERDCommenterToggle
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => FZF
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <C-f> :Files<CR> 
+nnoremap <leader>; :Commands<CR> 
 nnoremap <C-f> :Files<CR> 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -236,4 +242,5 @@ autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | end
 " => Color
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set termguicolors
-colorscheme horizon-contrast  
+colorscheme one
+let g:airline_theme='one'
