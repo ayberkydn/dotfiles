@@ -22,6 +22,16 @@ set autoread
 set autowrite
 au FocusGained,BufEnter * checktime
 
+function! OnTabEnter(path)
+if isdirectory(a:path)
+  let dirname = a:path
+else
+  let dirname = fnamemodify(a:path, ":h")
+endif
+execute "tcd ". dirname
+endfunction()
+
+autocmd TabNewEntered * call OnTabEnter(expand("<amatch>"))
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 ">>>>>>>>>>>>>> set statements >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -168,7 +178,7 @@ cnoremap jk <ESC>
 inoremap kj <ESC>
 inoremap jk <ESC>
 onoremap jk <ESC>
-onoremap kj <ESC>
+onoremap k <ESC>
 
 " use  <leader>y and  <leader>p to copy and paste from system clipboard
 noremap <leader>y "+y
@@ -205,5 +215,4 @@ nmap <leader>WQ :wqa!<cr>
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
 
-nnoremap <Leader>b :ls<CR>:b<Space>
-
+nnoremap <Leader>b :ls<CR>:b<Space>j
