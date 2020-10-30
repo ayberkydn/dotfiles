@@ -45,6 +45,7 @@ Plug 'honza/vim-snippets'
 Plug 'majutsushi/tagbar'
 Plug 'vim-airline/vim-airline'
 "colors
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'flazz/vim-colorschemes'
 Plug 'rainglow/vim'
 Plug 'rakr/vim-one'

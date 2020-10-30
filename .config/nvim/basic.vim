@@ -161,9 +161,6 @@ vnoremap > >gv
 " Allow repeat operator with visual selection
 vnoremap . :normal .<CR>
 
-" For when you forget to sudo.. Really Write the file.
-cnorea w!! w !sudo tee % >/dev/null
-
 " move by screen lines, not by real lines 
 nnoremap j gj
 nnoremap k gk
@@ -201,9 +198,6 @@ nnoremap <Tab>8 <cmd> b8<CR>
 nnoremap <Tab>9 <cmd> b9<CR>
 nnoremap <Tab>0 <cmd> b10<CR>
 " move between buffers with <leader>l h
-
-" cd to file's directory
-command! CDC cd %:p:h
 
 " Fast saving and quitting
 nmap <leader>w :w!<cr>
