@@ -4,15 +4,15 @@
 "cursorline only on highlighted windows
 augroup CursorLine
   au! 
-  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
-  au WinLeave * setlocal nocursorline
+  au VimEnter,WinEnter,BufWinEnter,InsertLeave * setlocal cursorline
+  au WinLeave,InsertEnter * setlocal nocursorline
 augroup END
 
 "Auto reload when init file is changed
-augroup auto-source   | 
-  au!              | 
+augroup auto-source    
+  au!               
   au BufWritePost *.vim,coc-settings.json source $MYVIMRC
-augroup END           | 
+augroup END            
 
 "open help in right window
 autocmd Filetype help wincmd L
@@ -22,16 +22,6 @@ set autoread
 set autowrite
 au FocusGained,BufEnter * checktime
 
-function! OnTabEnter(path)
-if isdirectory(a:path)
-  let dirname = a:path
-else
-  let dirname = fnamemodify(a:path, ":h")
-endif
-execute "tcd ". dirname
-endfunction()
-
-autocmd TabNewEntered * call OnTabEnter(expand("<amatch>"))
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 ">>>>>>>>>>>>>> set statements >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
