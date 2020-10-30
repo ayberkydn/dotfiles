@@ -33,13 +33,14 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'preservim/nerdcommenter'
-Plug 'jupyter-vim/jupyter-vim'
+Plug 'jupyter-vim/jupyter-vim', {'for':'python'}
 Plug 'liuchengxu/vim-clap'
 Plug 'jpalardy/vim-slime'
 Plug 'metakirby5/codi.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'honza/vim-snippets'
-
+Plug 'mbbill/undotree'
+ 
 "---> Appereance
 "utilities
 Plug 'majutsushi/tagbar'
