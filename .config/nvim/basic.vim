@@ -64,6 +64,8 @@ set smartcase		" Do smart case matching
 set incsearch		" incremental search
 set hlsearch		" highlights searches
 
+
+
 "==History ==
 
 " save more in undo history
@@ -140,7 +142,7 @@ nnoremap <space> <nop>
 let mapleader="\<space>"
 
 " easy commands
-noremap  ; :
+nnoremap ; :
 cnoremap ; :
 vnoremap ; :
 
@@ -190,13 +192,12 @@ nnoremap <Tab>0 <cmd> b10<CR>
 " move between buffers with <leader>l h
 
 " Fast saving and quitting
-nmap <leader>w :w!<cr>
-nmap <leader>W :wa!<cr>
-nmap <leader>q :q!<cr>
-nmap <leader>Q :qa!<cr>
-nmap <leader>WQ :wqa!<cr>
+nnoremap <leader>w :w!<cr>
+nnoremap <leader>W :wa!<cr>
+nnoremap <leader>q :q!<cr>
+nnoremap <leader>Q :qa!<cr>
+nnoremap <leader>WQ :wqa!<cr>
 
 " Disable highlight when <leader><cr> is pressed
-map <silent> <leader><cr> :noh<cr>
+noremap <silent> <leader><cr> :noh<cr>
 
-nnoremap <Leader>b :ls<CR>:b<Space>j

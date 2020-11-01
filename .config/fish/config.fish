@@ -7,7 +7,7 @@ alias shconfig='nvim ~/.config/fish/config.fish'
 alias xconfig='nvim ~/.xprofile'
 alias vimconfig='vim ~/.vimrc'
 alias tmuxconfig='nvim ~/.tmux.conf'
-alias nvimconfig='nvim ~/.config/nvim/*.vim'
+alias vconfig='nvim ~/.config/nvim/*.vim'
 alias cocconfig='nvim ~/.config/nvim/coc-settings.json'
 alias tconfig='nvim ~/.config/alacritty/alacritty.yml'
 alias rconfig='nvim ~/.config/ranger/rc.conf'
@@ -18,9 +18,8 @@ alias open='xdg-open'
 alias ca='conda activate'
 alias cda='conda deactivate'
 
-alias vimm='/usr/bin/vim'
-alias vim='nvim'
-alias mux='tmuxinator'
+alias v='nvim'
+alias x='tmuxinator'
 
 
 #abbreviations
