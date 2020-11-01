@@ -40,6 +40,7 @@ Plug 'metakirby5/codi.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'honza/vim-snippets'
 Plug 'mbbill/undotree'
+Plug 'antoinemadec/coc-fzf'
  
 "---> Appereance
 "utilities
