@@ -28,8 +28,6 @@ au FocusGained,BufEnter * checktime
 set splitbelow
 set splitright
 
-" Tab complete suggests without completing first.
-set wildmode=list:longest,full
 
 " Enable mouse support
 set mouse=a
@@ -77,17 +75,15 @@ set undodir=$HOME/.vim/undo
 
 
 "== Syntax Highlighting & Indents ==
-syntax on
-filetype on
+"syntax on
+"filetype on
 
-filetype indent on
-filetype plugin on
-filetype plugin indent on
+"filetype indent on
+"filetype plugin on
+"filetype plugin indent on
 
-set autoindent 		" always indent
-set smartindent
-
-set backspace=indent,eol,start 	" backspace over everything in insert mode
+"set autoindent 		" always indent
+"set smartindent
 
 " = Status Line ==
 
@@ -111,10 +107,6 @@ set wildmenu
 set wildignorecase
 set wildmode=longest:full
 
-" longer more descriptive auto-complete prompts
-set completeopt=longest,menuone
-set ofu=syntaxcomplete#Complete  "  ??
-
 "== Swap Files ==
 set noswapfile 		" suppress creation of swap files
 set nobackup 		" suppress creation of backup files
@@ -137,9 +129,10 @@ set whichwrap+=h,l
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " maps
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Change the leader key to <space>
-nnoremap <space> <nop>
-let mapleader="\<space>"
+if has("nvim")
+    " Change the leader key to <space>
+    let mapleader=" "
+endif
 
 " easy commands
 nnoremap ; :
@@ -169,14 +162,21 @@ inoremap jk <ESC>
 onoremap jk <ESC>
 onoremap k <ESC>
 
-" use  <leader>y and  <leader>p to copy and paste from system clipboard
-noremap <leader>y "+y
-noremap <leader>Y "+Y
-noremap <leader>p :set paste<cr>"+]p:set nopaste<cr>
-noremap <leader>P :set paste<cr>"+]P:set nopaste<cr>
+"U is redo
+nnoremap U <C-r>
+nnoremap Y y$
+
+"use system clipboard
+set clipboard=unnamedplus
+" use  <leader>y and  <leader>p to copy and paste from " register
+
+noremap <leader>y ""y
+noremap <leader>Y ""Y
+noremap <leader>p :set paste<cr>""]p:set nopaste<cr>
+noremap <leader>P :set paste<cr>""]P:set nopaste<cr>
 
 " jump to previous buffer with double Tab
-nnoremap <Tab><Tab> <C-^>
+nnoremap <Tab><Tab> <cmd> blast
 nnoremap <Tab>l <cmd> bnext<CR>
 nnoremap <Tab>h <cmd> bprevious<CR>
 nnoremap <Tab>1 <cmd> b1<CR>
@@ -189,7 +189,21 @@ nnoremap <Tab>7 <cmd> b7<CR>
 nnoremap <Tab>8 <cmd> b8<CR>
 nnoremap <Tab>9 <cmd> b9<CR>
 nnoremap <Tab>0 <cmd> b10<CR>
-" move between buffers with <leader>l h
+
+" jump to previous buffer with double Tab
+nnoremap <leader><Tab><Tab> <cmd> tlast
+nnoremap <leader><Tab>l <cmd> tnext<CR>
+nnoremap <leader><Tab>h <cmd> tprevious<CR>
+nnoremap <leader><Tab>1 <cmd> t1<CR>
+nnoremap <leader><Tab>2 <cmd> t2<CR>
+nnoremap <leader><Tab>3 <cmd> t3<CR>
+nnoremap <leader><Tab>4 <cmd> t4<CR>
+nnoremap <leader><Tab>5 <cmd> t5<CR>
+nnoremap <leader><Tab>6 <cmd> t6<CR>
+nnoremap <leader><Tab>7 <cmd> t7<CR>
+nnoremap <leader><Tab>8 <cmd> t8<CR>
+nnoremap <leader><Tab>9 <cmd> t9<CR>
+nnoremap <leader><Tab>0 <cmd> t10<CR>
 
 " Fast saving and quitting
 nnoremap <leader>w :w!<cr>
@@ -200,4 +214,8 @@ nnoremap <leader>WQ :wqa!<cr>
 
 " Disable highlight when <leader><cr> is pressed
 noremap <silent> <leader><cr> :noh<cr>
+
+" paste with c-v
+inoremap <C-v> <C-r>+
+inoremap <C-v> <C-r>
 

@@ -5,15 +5,20 @@
 
     "diagnostic.checkCurrentLine": true,
 
+
+
     "python.formatting.provider": "black",
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
     "python.linting.flake8Args": ["--ignore=E722,E501,F401"],
 
+
     "explorer.previewAction.onHover": false,
     "explorer.buffer.showHiddenBuffers": true,
     "explorer.icon.enableVimDevicons": true,
 
+
+    "suggest.autoTrigger": "trigger",
     "suggest.completionItemKindLabels": {
         "function": "\uf794",
         "method": "\uf6a6",
