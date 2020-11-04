@@ -74,17 +74,6 @@ set undofile        " keep a persistent backup file
 set undodir=$HOME/.vim/undo
 
 
-"== Syntax Highlighting & Indents ==
-"syntax on
-"filetype on
-
-"filetype indent on
-"filetype plugin on
-"filetype plugin indent on
-
-"set autoindent 		" always indent
-"set smartindent
-
 " = Status Line ==
 
 " Always show status line
@@ -206,5 +195,4 @@ inoremap <C-v> <C-r>+
 
 if has("nvim")
     source ~/.config/nvim/plugins.vim
-    luafile ~/.config/nvim/plugins.lua
 endif

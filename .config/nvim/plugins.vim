@@ -36,8 +36,8 @@ Plug 'tpope/vim-commentary'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'honza/vim-snippets'
 Plug 'mbbill/undotree'
-Plug 'jupyter-vim/jupyter-vim', {'for': 'python'}
-Plug 'hkupty/iron.nvim'
+"Plug 'jupyter-vim/jupyter-vim', {'for': 'python'}
+Plug 'bfredl/nvim-ipy'
 
  
 "---> Appereance
@@ -52,8 +52,7 @@ Plug 'rakr/vim-one'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'arcticicestudio/nord-vim'
 "icons
-Plug 'ryanoasis/vim-devicons'
-
+Plug 'ryanoasis/vim-devicons' 
 call plug#end()
 "
 
@@ -232,7 +231,7 @@ let g:startify_session_persistence = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Tagbar
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd FileType python,c,cpp,cu TagbarOpen
+" autocmd FileType python,c,cpp,cu TagbarOpen
 let g:tagbar_position = 'topleft vertical'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Whichkey
@@ -243,5 +242,5 @@ set timeoutlen=500
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Jupyter
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-inoremap <F5> <cmd> JupyterRunFile<CR>
-nnoremap <F5> <cmd> JupyterRunFile<CR>
+" inoremap <F5> <cmd> JupyterRunFile<CR>
+" nnoremap <F5> <cmd> JupyterRunFile<CR>
