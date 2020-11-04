@@ -18,7 +18,7 @@ alias open='xdg-open'
 alias ca='conda activate'
 alias cda='conda deactivate'
 
-alias v='nvim'
+abbr --add v nvim
 alias x='tmuxinator'
 
 
