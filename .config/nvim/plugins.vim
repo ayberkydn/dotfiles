@@ -2,7 +2,24 @@
 " => Load Plugins
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin()
-cnoreabbrev ii PlugInstall<cr>
+"---> Appereance
+"utilities
+Plug 'majutsushi/tagbar'
+Plug 'vim-airline/vim-airline'
+"colors
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'flazz/vim-colorschemes'
+Plug 'rainglow/vim'
+Plug 'rakr/vim-one'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'arcticicestudio/nord-vim'
+"icons
+Plug 'ryanoasis/vim-devicons' 
+
+
+
+
+
 
 "--->Language related
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -36,23 +53,9 @@ Plug 'tpope/vim-commentary'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'honza/vim-snippets'
 Plug 'mbbill/undotree'
-"Plug 'jupyter-vim/jupyter-vim', {'for': 'python'}
-Plug 'bfredl/nvim-ipy'
+Plug 'jupyter-vim/jupyter-vim', {'for': 'python'}
 
  
-"---> Appereance
-"utilities
-Plug 'majutsushi/tagbar'
-Plug 'vim-airline/vim-airline'
-"colors
-Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'flazz/vim-colorschemes'
-Plug 'rainglow/vim'
-Plug 'rakr/vim-one'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'arcticicestudio/nord-vim'
-"icons
-Plug 'ryanoasis/vim-devicons' 
 call plug#end()
 "
 
@@ -157,14 +160,19 @@ nnoremap <silent><nowait> ,j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> ,k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> ,p  :<C-u>CocFzfListResume<CR>
 
-let g:coc_global_extensions = ['coc-json', 
-                              \'coc-yaml', 
-                              \'coc-explorer', 
-                              \'coc-snippets', 
-                              \'coc-vimlsp', 
-                              \'coc-python', 
-                              \'coc-yank', 
-                              \'coc-marketplace']
+let g:coc_global_extensions = [
+            \'coc-explorer', 
+            \'coc-git', 
+            \'coc-highlight', 
+            \'coc-json', 
+            \'coc-marketplace',
+            \'coc-python', 
+            \'coc-snippets', 
+            \'coc-vimlsp', 
+            \'coc-yaml', 
+            \'coc-yank', 
+            \]
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

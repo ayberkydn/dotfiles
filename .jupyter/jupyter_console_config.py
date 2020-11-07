@@ -1,12 +1,12 @@
 # Configuration file for jupyter-console.
 
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 # ConnectionFileMixin(LoggingConfigurable) configuration
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 ## Mixin for configurable classes that work with connection files
 
 ## JSON file in which to store connection info [default: kernel-<pid>.json]
-#  
+#
 #  This file will contain the IP, ports, and authentication key needed to connect
 #  clients to this kernel. By default, this file will be created in the security
 #  dir of the current profile, but can be specified by absolute path.
@@ -43,9 +43,9 @@
 #  Default: 'tcp'
 # c.ConnectionFileMixin.transport = 'tcp'
 
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 # JupyterConsoleApp(ConnectionFileMixin) configuration
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 ## Set to display confirmation dialog on exit. You can always use 'exit' or
 #  'quit', to force a direct exit without any confirmation.
 #  Default: True
@@ -102,9 +102,9 @@
 #  See also: ConnectionFileMixin.transport
 # c.JupyterConsoleApp.transport = 'tcp'
 
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 # Application(SingletonConfigurable) configuration
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 ## This is an application.
 
 ## The date format used by logging formatters for %(asctime)s
@@ -128,9 +128,9 @@
 #  Default: False
 # c.Application.show_config_json = False
 
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 # JupyterApp(Application) configuration
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 ## Base class for Jupyter applications
 
 ## Answer yes to any prompts.
@@ -169,9 +169,9 @@
 #  See also: Application.show_config_json
 # c.JupyterApp.show_config_json = False
 
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 # ZMQTerminalIPythonApp(JupyterApp, JupyterConsoleApp) configuration
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 ## Answer yes to any prompts.
 #  See also: JupyterApp.answer_yes
 # c.ZMQTerminalIPythonApp.answer_yes = False
@@ -184,7 +184,7 @@
 #  See also: JupyterApp.config_file_name
 # c.ZMQTerminalIPythonApp.config_file_name = ''
 
-## 
+##
 #  See also: JupyterConsoleApp.confirm_exit
 # c.ZMQTerminalIPythonApp.confirm_exit = True
 
@@ -263,9 +263,9 @@
 #  See also: ConnectionFileMixin.transport
 # c.ZMQTerminalIPythonApp.transport = 'tcp'
 
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 # ZMQTerminalInteractiveShell(SingletonConfigurable) configuration
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 ## Text to display before the first prompt. Will be formatted with variables
 #  {version} and {kernel_banner}.
 #  Default: 'Jupyter console {version}\n\n{kernel_banner}'
@@ -288,7 +288,7 @@
 
 ## Shortcut style to use at the prompt. 'vi' or 'emacs'.
 #  Default: 'emacs'
-# c.ZMQTerminalInteractiveShell.editing_mode = 'emacs'
+c.ZMQTerminalInteractiveShell.editing_mode = "vi"
 
 ## Highlight matching brackets.
 #  Default: True
@@ -326,7 +326,7 @@
 c.ZMQTerminalInteractiveShell.include_other_output = True
 
 ## Timeout (in seconds) for giving up on a kernel's is_complete response.
-#  
+#
 #  If the kernel does not respond at any point within this time, the kernel will
 #  no longer be asked if code is complete, and the console will default to the
 #  built-in is_complete test.
@@ -334,7 +334,7 @@ c.ZMQTerminalInteractiveShell.include_other_output = True
 # c.ZMQTerminalInteractiveShell.kernel_is_complete_timeout = 1
 
 ## Timeout for giving up on a kernel (in seconds).
-#  
+#
 #  On first connect and restart, the console tests whether the kernel is running
 #  and responsive by sending kernel_info_requests. This sets the timeout in
 #  seconds for how long the kernel can take before being presumed dead.
@@ -347,7 +347,7 @@ c.ZMQTerminalInteractiveShell.include_other_output = True
 # c.ZMQTerminalInteractiveShell.mime_preference = ['image/png', 'image/jpeg', 'image/svg+xml']
 
 ## Prefix to add to outputs coming from clients other than this one.
-#  
+#
 #  Only relevant if include_other_output is True.
 #  Default: 'Remote '
 # c.ZMQTerminalInteractiveShell.other_output_prefix = 'Remote '
@@ -386,11 +386,11 @@ c.ZMQTerminalInteractiveShell.include_other_output = True
 #  Default: True
 # c.ZMQTerminalInteractiveShell.use_kernel_is_complete = True
 
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 # KernelManager(ConnectionFileMixin) configuration
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 ## Manages a single kernel in a subprocess on this host.
-#  
+#
 #  This version starts kernels with Popen.
 
 ## Should we autorestart the kernel if it dies.
@@ -418,7 +418,7 @@ c.ZMQTerminalInteractiveShell.include_other_output = True
 # c.KernelManager.ip = ''
 
 ## DEPRECATED: Use kernel_name instead.
-#  
+#
 #  The Popen Command to launch the kernel. Override this if you have a custom
 #  kernel. If kernel_cmd is specified in a configuration file, Jupyter does not
 #  pass any arguments to the kernel, because it cannot make any assumptions about
@@ -443,13 +443,13 @@ c.ZMQTerminalInteractiveShell.include_other_output = True
 #  See also: ConnectionFileMixin.transport
 # c.KernelManager.transport = 'tcp'
 
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 # KernelRestarter(LoggingConfigurable) configuration
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 ## Monitor and autorestart a kernel.
 
 ## Whether to include every poll event in debugging output.
-#  
+#
 #  Has to be set explicitly, because there will be *a lot* of output.
 #  Default: False
 # c.KernelRestarter.debug = False
@@ -466,31 +466,31 @@ c.ZMQTerminalInteractiveShell.include_other_output = True
 #  Default: 3.0
 # c.KernelRestarter.time_to_dead = 3.0
 
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 # Session(Configurable) configuration
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 ## Object for handling serialization and sending of messages.
-#  
+#
 #  The Session object handles building messages and sending them with ZMQ sockets
 #  or ZMQStream objects.  Objects can communicate with each other over the
 #  network via Session objects, and only need to work with the dict-based IPython
 #  message spec. The Session will handle serialization/deserialization, security,
 #  and metadata.
-#  
+#
 #  Sessions support configurable serialization via packer/unpacker traits, and
 #  signing with HMAC digests via the key/keyfile traits.
-#  
+#
 #  Parameters ----------
-#  
+#
 #  debug : bool
 #      whether to trigger extra debugging statements
 #  packer/unpacker : str : 'json', 'pickle' or import_string
 #      importstrings for methods to serialize message parts.  If just
 #      'json' or 'pickle', predefined JSON and pickle packers will be used.
 #      Otherwise, the entire importstring must be used.
-#  
+#
 #      The functions must accept at least valid JSON input, and output *bytes*.
-#  
+#
 #      For example, to use msgpack:
 #      packer = 'msgpack.packb', unpacker='msgpack.unpackb'
 #  pack/unpack : callables
@@ -512,7 +512,7 @@ c.ZMQTerminalInteractiveShell.include_other_output = True
 # c.Session.buffer_threshold = 1024
 
 ## Whether to check PID to protect against calls after fork.
-#  
+#
 #  This check can be disabled if fork-safety is handled elsewhere.
 #  Default: True
 # c.Session.check_pid = True
@@ -526,7 +526,7 @@ c.ZMQTerminalInteractiveShell.include_other_output = True
 # c.Session.debug = False
 
 ## The maximum number of digests to remember.
-#  
+#
 #  The digest history will be culled when it exceeds this value.
 #  Default: 65536
 # c.Session.digest_history_size = 65536

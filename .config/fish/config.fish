@@ -11,6 +11,8 @@ alias cocconfig='nvim ~/.config/nvim/coc-settings.json'
 alias tconfig='nvim ~/.config/alacritty/alacritty.yml'
 alias rconfig='nvim ~/.config/ranger/rc.conf'
 alias muxconfig='nvim ~/.config/tmuxinator'
+alias jcconfig="nvim ~/.jupyter/jupyter_console_config.py"
+
 
 alias cl='clear'
 alias open='xdg-open'
@@ -19,7 +21,9 @@ abbr --add nvs nvidia-smi
 abbr --add ca conda activate
 abbr --add cda conda deactivate
 abbr --add v nvim
-alias x='tmuxinator'
+abbr --add jl jupyter-lab
+abbr --add jc jupyter-console
+abbr --add x tmuxinator
 
 
 #abbreviations
