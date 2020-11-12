@@ -3,7 +3,6 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin()
 "---> Appereance
-"utilities
 Plug 'majutsushi/tagbar'
 Plug 'vim-airline/vim-airline'
 "colors
@@ -16,7 +15,15 @@ Plug 'arcticicestudio/nord-vim'
 "icons
 Plug 'ryanoasis/vim-devicons' 
 
-
+"--->Utils
+Plug 'rhysd/clever-f.vim'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'honza/vim-snippets'
+Plug 'mbbill/undotree'
+Plug 'jupyter-vim/jupyter-vim', {'for': 'python'}
 
 
 
@@ -40,20 +47,13 @@ Plug 'justinmk/vim-sneak'
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 
 "--->Startify
-Plug 'mhinz/vim-startify'
-
+"Plug 'mhinz/vim-startify'
+Plug 'glepnir/dashboard-nvim'
+Plug 'thaerkh/vim-workspace'
 "--->Git
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 
-"--->Utils
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-commentary'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'honza/vim-snippets'
-Plug 'mbbill/undotree'
-Plug 'jupyter-vim/jupyter-vim', {'for': 'python'}
 
  
 call plug#end()
@@ -220,6 +220,7 @@ let g:startify_file_number = 0
 let g:startify_bookmarks = [ {'c': '~/.config/nvim/'}]
 let g:startify_session_autoload = 1
 let g:startify_session_persistence = 1
+let g:dashboard_default_executive ='fzf'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Tagbar
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
