@@ -27,3 +27,7 @@ yay -S translate-shell  --noconfirm
 yay -S ueberzug         --noconfirm
 yay -S xclip            --noconfirm
 yay -S xsel             --noconfirm
+yay -S docker           --noconfirm
+
+sudo groupadd docker
+sudo usermod -aG docker $USER
