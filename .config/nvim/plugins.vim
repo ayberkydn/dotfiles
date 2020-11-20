@@ -2,20 +2,8 @@
 " => Load Plugins
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin()
-"---> Appereance
-Plug 'majutsushi/tagbar'
-Plug 'vim-airline/vim-airline'
-"colors
-Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'flazz/vim-colorschemes'
-Plug 'rainglow/vim'
-Plug 'rakr/vim-one'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'arcticicestudio/nord-vim'
-"icons
-Plug 'ryanoasis/vim-devicons' 
 
-"--->Utils
+"-------------> Utils <------------------
 Plug 'rhysd/clever-f.vim'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
@@ -24,37 +12,33 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'honza/vim-snippets'
 Plug 'mbbill/undotree'
 Plug 'jupyter-vim/jupyter-vim', {'for': 'python'}
-
-
-
-
-"--->Language related
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'sheerun/vim-polyglot'
-Plug 'antoinemadec/coc-fzf'
-""--->Vimspector
-"let g:vimspector_enable_mappings = 'HUMAN'
-"Plug 'puremourning/vimspector'
-
-"--->FZF
+Plug 'camspiers/animate.vim'
+Plug 'camspiers/lens.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-
-"--->Sneak
 Plug 'justinmk/vim-sneak'
-
-"--->Which key
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
-
-"--->Startify
 "Plug 'mhinz/vim-startify'
 Plug 'glepnir/dashboard-nvim'
-Plug 'thaerkh/vim-workspace'
 "--->Git
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
-
-
+Plug 'mrossinek/deuterium'
+"----------> Appereance <-----------------
+Plug 'majutsushi/tagbar'
+Plug 'vim-airline/vim-airline'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'flazz/vim-colorschemes'
+Plug 'rainglow/vim'
+Plug 'rakr/vim-one'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'arcticicestudio/nord-vim'
+Plug 'ryanoasis/vim-devicons' 
+Plug 'TaDaa/vimade'
+"----------> Language related <------------
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'sheerun/vim-polyglot'
+Plug 'antoinemadec/coc-fzf'
  
 call plug#end()
 "
@@ -183,11 +167,8 @@ set termguicolors
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => FZF
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap : :Commands<CR> 
-vnoremap : :Commands<CR> 
-
-nnoremap <leader>; :CocFzfList<CR> 
-vnoremap <leader>; :CocFzfList<CR> 
+nnoremap <leader>: :Commands<CR> 
+vnoremap <leader>: :Commands<CR> 
 
 nnoremap <leader>; :CocFzfList commands<CR> 
 vnoremap <leader>; :CocFzfList commands<CR> 
@@ -201,6 +182,7 @@ nnoremap <leader>fl :Lines<CR>
 nnoremap <leader>ft :Colors<CR> 
 nnoremap <leader>fc :Commits<CR> 
 nnoremap <leader>fm :Maps<CR> 
+nnoremap <leader>f; :Commands<CR> 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => NERDCommenter
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
