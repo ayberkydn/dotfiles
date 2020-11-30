@@ -4,6 +4,7 @@
 call plug#begin()
 
 "-------------> Utils <------------------
+Plug 'benmills/vimux' "check
 Plug 'rhysd/clever-f.vim'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
@@ -18,12 +19,14 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'justinmk/vim-sneak'
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
+Plug 'SirVer/ultisnips'
 "Plug 'mhinz/vim-startify'
 Plug 'glepnir/dashboard-nvim'
 "--->Git
-Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-fugitive'
-Plug 'mrossinek/deuterium'
+Plug 'airblade/vim-gitgutter' "check
+Plug 'tpope/vim-fugitive' "check
+"Plug 'mrossinek/deuterium'
+Plug 'psliwka/vim-smoothie'
 "----------> Appereance <-----------------
 Plug 'majutsushi/tagbar'
 Plug 'vim-airline/vim-airline'

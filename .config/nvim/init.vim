@@ -182,7 +182,7 @@ nnoremap <Tab>0 <cmd> b10<CR>
 " Fast saving and quitting
 nnoremap <leader>w :w!<cr>
 nnoremap <leader>W :wa!<cr>
-nnoremap <leader>q :bd<cr>
+nnoremap <leader>q :q!<cr>
 nnoremap <leader>Q :qa!<cr>
 nnoremap <leader>WQ :wqa!<cr>
 
