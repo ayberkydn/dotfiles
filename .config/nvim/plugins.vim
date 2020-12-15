@@ -4,6 +4,8 @@
 call plug#begin()
 
 "-------------> Utils <------------------
+Plug 'sillybun/vim-repl'
+Plug 'itchyny/vim-cursorword'
 Plug 'benmills/vimux' "check
 Plug 'rhysd/clever-f.vim'
 Plug 'tpope/vim-repeat'
@@ -46,6 +48,12 @@ Plug 'antoinemadec/coc-fzf'
 call plug#end()
 "
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Airline
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:sendtorepl_invoke_key = "<leader>a"
+" => Airline
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Airline
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -153,7 +161,7 @@ let g:coc_global_extensions = [
             \'coc-highlight', 
             \'coc-json', 
             \'coc-marketplace',
-            \'coc-python', 
+            \'coc-pyright', 
             \'coc-snippets', 
             \'coc-vimlsp', 
             \'coc-yaml', 

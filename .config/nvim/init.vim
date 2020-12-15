@@ -157,8 +157,11 @@ nnoremap Y y$
 
 "use system clipboard
 set clipboard=unnamedplus
-" use  <leader>y and  <leader>p to copy and paste from " register
 
+" use <leader>v to select all
+noremap <leader>v ggVG
+
+" use  <leader>y and  <leader>p to copy and paste from " register
 noremap <leader>y ""y
 noremap <leader>Y ""Y
 noremap <leader>p :set paste<cr>""]p:set nopaste<cr>
