@@ -17,6 +17,7 @@ alias jcconfig="nvim ~/.jupyter/jupyter_console_config.py"
 alias cl='clear'
 alias open='xdg-open'
 
+#abbreviations
 abbr --add nvs nvidia-smi
 abbr --add ca conda activate
 abbr --add cda conda deactivate
@@ -24,9 +25,9 @@ abbr --add v nvim
 abbr --add jl jupyter-lab
 abbr --add jc jupyter-console
 abbr --add x tmuxinator
+abbr --add t tmux
 
 
-#abbreviations
 abbr -a gh  https://github.com/
 abbr -a gha https://github.com/ayberkydn
 
