@@ -82,7 +82,6 @@ function! s:check_back_space() abort
 endfunction
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
-
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
 
@@ -161,7 +160,7 @@ let g:coc_global_extensions = [
             \'coc-highlight', 
             \'coc-json', 
             \'coc-marketplace',
-            \'coc-pyright', 
+            \'coc-jedi', 
             \'coc-snippets', 
             \'coc-vimlsp', 
             \'coc-yaml', 
