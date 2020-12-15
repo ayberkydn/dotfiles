@@ -19,6 +19,7 @@ yay -S cmake            --noconfirm
 yay -S fzf              --noconfirm
 yay -S googler          --noconfirm
 yay -S neovim           --noconfirm
+yay -S python-pynvim    --noconfirm
 yay -S ranger           --noconfirm
 yay -S tldr             --noconfirm
 yay -S tmux             --noconfirm
