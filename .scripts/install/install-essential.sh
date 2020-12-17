@@ -16,10 +16,11 @@ yay -S base-devel       --noconfirm
 yay -S bat              --noconfirm
 yay -S chromium         --noconfirm
 yay -S cmake            --noconfirm
-yay -S fzf              --noconfirm
 yay -S googler          --noconfirm
 yay -S neovim           --noconfirm
+yay -S fzf              --noconfirm
 yay -S python-pynvim    --noconfirm
+yay -S npm              --noconfirm
 yay -S ranger           --noconfirm
 yay -S tldr             --noconfirm
 yay -S tmux             --noconfirm

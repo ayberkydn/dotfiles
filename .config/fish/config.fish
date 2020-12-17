@@ -16,6 +16,7 @@ alias jcconfig="nvim ~/.jupyter/jupyter_console_config.py"
 
 alias cl='clear'
 alias open='xdg-open'
+alias yayy='yay -Syu --noconfirm'
 
 #abbreviations
 abbr --add nvs nvidia-smi
