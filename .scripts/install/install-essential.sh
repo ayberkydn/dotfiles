@@ -7,7 +7,8 @@ fish -C "omf theme bobthefish"
 
 
 #--> set mirrors
-sudo pacman-mirrors -c Germany ;sudo pacman -Syu yay --noconfirm
+sudo pacman-mirrors -c Germany ;sudo pacman -Syu --noconfirm
+sudo pacman -S yay --noconfirm
 
 #--> install programs
 yay -S alacritty        --noconfirm
@@ -31,8 +32,11 @@ yay -S xclip            --noconfirm
 yay -S xsel             --noconfirm
 yay -S docker           --noconfirm
 yay -S nerd-fonts-inconsolata           --noconfirm
+yay -S nerd-fonts-source-code-pro           --noconfirm
 
 sudo groupadd docker
 sudo usermod -aG docker $USER
+sudo systemctl enable docker.service
+
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
