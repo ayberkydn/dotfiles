@@ -34,12 +34,15 @@ Plug 'majutsushi/tagbar'
 Plug 'vim-airline/vim-airline'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'flazz/vim-colorschemes'
+Plug 'pineapplegiant/spaceduck'
 Plug 'rainglow/vim'
 Plug 'rakr/vim-one'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'arcticicestudio/nord-vim'
 Plug 'ryanoasis/vim-devicons' 
-Plug 'TaDaa/vimade'
+
+"Fade out inactive buffers
+Plug 'TaDaa/vimade' 
 "----------> Language related <------------
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot'
@@ -59,6 +62,7 @@ let g:sendtorepl_invoke_key = "<leader>a"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:airline#extensions#coc#enabled = 1
+let g:airline_theme = 'spaceduck'
 
 let g:airline_theme='dark'
 let g:airline_powerline_fonts = 1
@@ -170,7 +174,7 @@ let g:coc_global_extensions = [
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-colorscheme dracula
+colorscheme spaceduck
 let g:airline_theme='onedark'
 set background=dark
 set termguicolors

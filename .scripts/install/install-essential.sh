@@ -30,6 +30,9 @@ yay -S ueberzug         --noconfirm
 yay -S xclip            --noconfirm
 yay -S xsel             --noconfirm
 yay -S docker           --noconfirm
+yay -S nerd-fonts-inconsolata           --noconfirm
 
 sudo groupadd docker
 sudo usermod -aG docker $USER
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'

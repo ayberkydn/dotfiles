@@ -4,22 +4,22 @@ env:
 
 font:
   normal:
-    family: Inconsolata Nerd Font
-    style: Regular
+    family: SauceCodePro Nerd Font
+    style: Medium
   bold:
-    family: Inconsolata Nerd Font
+    family: SauceCodePro Nerd Font
     style: Bold
   italic:
-    family: Inconsolata Nerd Font
+    family: SauceCodePro Nerd Font
     style: Italic
   bold_italic:
-    family: Inconsolata Nerd Font
+    family: SauceCodePro Nerd Font
     style: Bold Italic
 
   offset:
       x: 0
       y: 0
-  size: 12
+  size: 7
 
 draw_bold_text_with_bright_colors: true
 
