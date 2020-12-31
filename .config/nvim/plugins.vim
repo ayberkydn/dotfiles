@@ -5,7 +5,6 @@ call plug#begin()
 
 "-------------> Utils <------------------
 Plug 'sillybun/vim-repl'
-Plug 'itchyny/vim-cursorword'
 Plug 'benmills/vimux' "check
 Plug 'rhysd/clever-f.vim'
 Plug 'tpope/vim-repeat'
