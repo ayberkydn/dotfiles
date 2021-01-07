@@ -28,7 +28,6 @@ au FocusGained,BufEnter * checktime
 set splitbelow
 set splitright
 
-
 " Enable mouse support
 set mouse=a
 
@@ -127,6 +126,12 @@ endif
 nnoremap ; :
 cnoremap ; :
 vnoremap ; :
+
+
+" HL left right
+noremap H 0
+noremap L $
+
 
 " Visual shifting (does not exit Visual mode)
 vnoremap < <gv

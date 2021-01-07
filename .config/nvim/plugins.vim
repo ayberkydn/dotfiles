@@ -4,6 +4,7 @@
 call plug#begin()
 
 "-------------> Utils <------------------
+Plug 'Xuyuanp/scrollbar.nvim'
 Plug 'sillybun/vim-repl'
 Plug 'benmills/vimux' "check
 Plug 'rhysd/clever-f.vim'

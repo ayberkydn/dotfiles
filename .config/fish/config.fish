@@ -27,6 +27,7 @@ abbr --add jl jupyter-lab
 abbr --add jc jupyter-console
 abbr --add x tmuxinator
 abbr --add t tmux
+abbr --add dc docker-compose
 
 
 abbr -a gh  https://github.com/
