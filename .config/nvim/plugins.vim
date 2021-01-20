@@ -28,7 +28,7 @@ Plug 'glepnir/dashboard-nvim'
 Plug 'airblade/vim-gitgutter' "check
 Plug 'tpope/vim-fugitive' "check
 "Plug 'mrossinek/deuterium'
-Plug 'psliwka/vim-smoothie'
+"Plug 'psliwka/vim-smoothie' smooth scroll
 "----------> Appereance <-----------------
 Plug 'majutsushi/tagbar'
 Plug 'vim-airline/vim-airline'

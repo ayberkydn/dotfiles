@@ -5,12 +5,11 @@
 
     "diagnostic.checkCurrentLine": true,
 
+    "jedi.enable": false,
 
+    "python.pythonPath": "docker-compose -f ~/dockercomposeseyi/docker-compose.yml exec lab python",
 
-    "python.formatting.provider": "black",
-    "python.linting.pylintEnabled": false,
-    "python.linting.flake8Enabled": true,
-    "python.linting.flake8Args": ["--ignore=E722,E501,F401"],
+    
 
 
     "explorer.previewAction.onHover": false,

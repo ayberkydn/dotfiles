@@ -20,6 +20,7 @@ alias yayy='yay -Syu --noconfirm'
 
 #abbreviations
 abbr --add nvs nvidia-smi
+abbr --add nvsl nvidia-smi -lms 100
 abbr --add ca conda activate
 abbr --add cda conda deactivate
 abbr --add v nvim

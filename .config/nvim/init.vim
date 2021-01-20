@@ -128,6 +128,9 @@ cnoremap ; :
 vnoremap ; :
 
 
+"Backspace and x 
+noremap <BS> X
+
 " HL left right
 noremap H 0
 noremap L $
