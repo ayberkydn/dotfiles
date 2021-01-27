@@ -10,9 +10,10 @@ alias vconfig='nvim ~/.config/nvim/*.vim'
 alias cocconfig='nvim ~/.config/nvim/coc-settings.json'
 alias tconfig='nvim ~/.config/alacritty/alacritty.yml'
 alias rconfig='nvim ~/.config/ranger/rc.conf'
-alias muxconfig='nvim ~/.config/tmuxinator'
 alias jcconfig="nvim ~/.jupyter/jupyter_console_config.py"
 
+alias cddockerenvs="cd ~/.docker-envs/"
+alias cdtmuxinator='nvim ~/.config/tmuxinator'
 
 alias cl='clear'
 alias open='xdg-open'

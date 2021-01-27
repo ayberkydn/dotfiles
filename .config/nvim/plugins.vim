@@ -6,6 +6,7 @@ call plug#begin()
 "-------------> Utils <------------------
 Plug 'Xuyuanp/scrollbar.nvim'
 Plug 'sillybun/vim-repl'
+Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 Plug 'benmills/vimux' "check
 Plug 'rhysd/clever-f.vim'
 Plug 'tpope/vim-repeat'
