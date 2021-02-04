@@ -16,20 +16,18 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'honza/vim-snippets'
 Plug 'mbbill/undotree'
 Plug 'jupyter-vim/jupyter-vim', {'for': 'python'}
-Plug 'camspiers/animate.vim'
-Plug 'camspiers/lens.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'justinmk/vim-sneak'
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 Plug 'SirVer/ultisnips'
 "Plug 'mhinz/vim-startify'
-Plug 'glepnir/dashboard-nvim'
+"Plug 'glepnir/dashboard-nvim'
 "--->Git
 Plug 'airblade/vim-gitgutter' "check
 Plug 'tpope/vim-fugitive' "check
 "Plug 'mrossinek/deuterium'
-"Plug 'psliwka/vim-smoothie' smooth scroll
+Plug 'psliwka/vim-smoothie' "smooth scroll
 "----------> Appereance <-----------------
 Plug 'majutsushi/tagbar'
 Plug 'vim-airline/vim-airline'
