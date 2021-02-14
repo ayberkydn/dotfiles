@@ -19,6 +19,8 @@ alias cl='clear'
 alias open='xdg-open'
 alias yayy='yay -Syu --noconfirm'
 
+vpn-on openvpn3 session-start --config ~/.config/vpn/client.ovpn
+
 #abbreviations
 abbr --add nvs nvidia-smi
 abbr --add nvsl nvidia-smi -lms 100
