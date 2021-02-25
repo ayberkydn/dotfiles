@@ -55,6 +55,6 @@ windows:
   - lab:
       layout: main-vertical
       panes:
-        - docker-compose -f ~/.docker-envs/lab/docker-compose.yml up
+        - docker-compose -f ~/.docker-envs/lab/docker-compose.yml up --build
 
         
