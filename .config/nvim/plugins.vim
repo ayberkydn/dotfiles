@@ -173,7 +173,7 @@ let g:coc_global_extensions = [
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-colorscheme spaceduck
+colorscheme gruvbox
 let g:airline_theme='onedark'
 set background=dark
 set termguicolors

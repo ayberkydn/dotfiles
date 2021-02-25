@@ -19,13 +19,14 @@ alias cl='clear'
 alias open='xdg-open'
 alias yayy='yay -Syu --noconfirm'
 
-vpn-on openvpn3 session-start --config ~/.config/vpn/client.ovpn
+alias vpnup="openvpn3 session-start --config ~/.config/vpn/client.ovpn"
+alias vpndown="openvpn3 session-manage --disconnect --config ~/.config/vpn/client.ovpn"
 
 #abbreviations
 abbr --add nvs nvidia-smi
 abbr --add nvsl nvidia-smi -lms 100
-abbr --add ca conda activate
-abbr --add cda conda deactivate
+#abbr --add ca conda activate
+#abbr --add cda conda deactivate
 abbr --add v nvim
 abbr --add jl jupyter-lab
 abbr --add jc jupyter-console
@@ -38,7 +39,7 @@ abbr -a gh  https://github.com/
 abbr -a gha https://github.com/ayberkydn
 
 #conda initialize >>>
-eval /home/ayb/.local/conda/bin/conda "shell.fish" "hook" $argv | source
+#eval /home/ayb/.local/conda/bin/conda "shell.fish" "hook" $argv | source
 
 #remove greeting
 set fish_greeting

@@ -56,6 +56,5 @@ windows:
       layout: main-vertical
       panes:
         - docker-compose -f ~/.docker-envs/lab/docker-compose.yml up
-        - chromium --app="http://localhost:8888/"
 
         
