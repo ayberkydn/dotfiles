@@ -1,0 +1,14 @@
+version: "3"
+services: 
+  lab: 
+    image: ayberkydn/deep-learning
+    user: ayb
+    command: "jupyter-lab --ip 0.0.0.0 --port 8888 --no-browser --allow-root --NotebookApp.token='' --NotebookApp.password=''"
+    ports: 
+      - 8888:8888
+    volumes: 
+      - ~/:/home/
+    working_dir: /home
+    stdin_open: true 
+    tty: true  
+  

@@ -22,10 +22,10 @@ root: ~/
 
 # Run on project exit ( detaching from tmux session )
 on_project_exit: 
-    - docker-compose -f ~/.docker-envs/lab/docker-compose.yml down
+    - docker-compose -f ~/.config/docker-envs/lab.yml down &
     - tmux kill-session
 # Run on project stop
-on_project_stop: docker-compose -f ~/.docker-envs/lab/docker-compose.yml down
+on_project_stop: docker-compose -f ~/.config/docker-envs/lab.yml down &
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 #
@@ -55,6 +55,6 @@ windows:
   - container:
       layout: main-vertical
       panes:
-        - docker-compose -f ~/.docker-envs/lab/docker-compose.yml up --build &
+        - docker-compose -f ~/.config/docker-envs/lab.yml up
 
         
