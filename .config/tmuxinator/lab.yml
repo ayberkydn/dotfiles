@@ -50,11 +50,11 @@ on_project_stop: docker-compose -f ~/.docker-envs/lab/docker-compose.yml down
 # attach: false
 
 windows:
-  - terminal:
+  - host:
     layout: main-vertical
-  - lab:
+  - container:
       layout: main-vertical
       panes:
-        - docker-compose -f ~/.docker-envs/lab/docker-compose.yml up --build
+        - docker-compose -f ~/.docker-envs/lab/docker-compose.yml up --build &
 
         
