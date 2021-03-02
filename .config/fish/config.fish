@@ -12,8 +12,8 @@ alias tconfig='nvim ~/.config/alacritty/alacritty.yml'
 alias rconfig='nvim ~/.config/ranger/rc.conf'
 alias jcconfig="nvim ~/.jupyter/jupyter_console_config.py"
 
-alias cddockerenvs="cd ~/.docker-envs/"
-alias cdtmuxinator='nvim ~/.config/tmuxinator'
+alias cddockerenvs="cd ~/.config/docker-envs/"
+alias cdtmuxinator='cd ~/.config/tmuxinator'
 
 alias cl='clear'
 alias open='xdg-open'
@@ -21,6 +21,10 @@ alias yayy='yay -Syu --noconfirm'
 
 alias vpnup="openvpn3 session-start --config ~/.config/vpn/client.ovpn"
 alias vpndown="openvpn3 session-manage --disconnect --config ~/.config/vpn/client.ovpn"
+
+
+
+
 
 #abbreviations
 abbr --add nvs nvidia-smi
@@ -32,6 +36,7 @@ abbr --add jl jupyter-lab
 abbr --add jc jupyter-console
 abbr --add x tmuxinator
 abbr --add t tmux
+abbr --add dc docker-compose
 abbr --add dc docker-compose
 
 

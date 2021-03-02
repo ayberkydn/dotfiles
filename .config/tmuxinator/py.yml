@@ -1,47 +1,28 @@
-# ~/.tmuxinator/sample.yml
+# /home/ayb/.config/tmuxinator/--help.yml
 
-name: py
-root: .
+name: lab
+root: ~/
 
-# Optional tmux socket
-# socket_name: foo
+on_project_start: docker-compose -f ~/.config/docker-envs/envs/deep-learning/docker-compose.yml up --no-start
 
-# Note that the pre and post options have been deprecated and will be replaced by
-# project hooks.
+on_project_stop: docker-compose -f ~/.config/docker-envs/envs/deep-learning/docker-compose.yml down
 
-# Project hooks
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+#
+#pre_window: 
+#  - conda activate <%= @args[0] %>
+#  - clear
+#  - sleep 0.5
 
-# Runs on project start, always
-# on_project_start: command
-
-# Run on project start, the first time
-# on_project_first_start: command
-
-# Run on project start, after the first time
-# on_project_restart: command
-
-# Run on project exit ( detaching from tmux session )
-# on_project_exit: command
-
-# Run on project stop
-# on_project_stop: command
-
-pre_window: 
-#- conda activate <%= @settings["env"] %>
-  - conda activate <%= @args[0] %>
-  - clear
-  - sleep 0.5
-
-
-# Specifies (by index) which pane of the specified window will be selected on project startup. If not set, the first pane is used.
-# startup_pane: 1
 
 windows:
-  - ide:
+  - host:
+    layout: main-vertical
+  - container:
       layout: main-vertical
       panes:
-        - nvim
-        - ipython
-  - terminal: 
+        - docker-compose -f ~/.config/docker-envs/envs/deep-learning/docker-compose.yml start shell
+        - docker-compose -f ~/.config/docker-envs/envs/deep-learning/docker-compose.yml start jupyter-lab
+        - docker-compose -f ~/.config/docker-envs/envs/deep-learning/docker-compose.yml start tensorboard
 
-startup_window: ide
+      
