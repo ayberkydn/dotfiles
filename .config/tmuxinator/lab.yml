@@ -1,0 +1,27 @@
+
+name: lab
+root: ~/
+
+on_project_start: docker network prune -f; docker container prune -f; docker-compose -f ~/.config/docker-envs/envs/deep-learning/docker-compose.yml up -d
+
+on_project_stop: docker-compose -f ~/.config/docker-envs/envs/deep-learning/docker-compose.yml down
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+#
+#pre_window: 
+#  - conda activate <%= @args[0] %>
+#  - clear
+#  - sleep 0.5
+
+
+windows:
+  - host:
+    layout: main-vertical
+  - container:
+      layout: main-vertical
+      panes:
+        - docker-compose -f ~/.config/docker-envs/envs/deep-learning/docker-compose.yml exec lab sh
+        - docker-compose -f ~/.config/docker-envs/envs/deep-learning/docker-compose.yml exec lab jupyter-lab --ip 0.0.0.0 --port 8888 --no-browser --allow-root --ServerApp.token='' --ServerApp.password=''
+        - docker-compose -f ~/.config/docker-envs/envs/deep-learning/docker-compose.yml exec lab tensorboard --logdir . --port 6006 --bind_all
+
+      
