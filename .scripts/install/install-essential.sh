@@ -31,6 +31,7 @@ yay -S ueberzug         --noconfirm
 yay -S xclip            --noconfirm
 yay -S xsel             --noconfirm
 yay -S docker           --noconfirm
+yay -S nvidia-container-runtime           --noconfirm
 yay -S nerd-fonts-inconsolata           --noconfirm
 yay -S nerd-fonts-source-code-pro           --noconfirm
 

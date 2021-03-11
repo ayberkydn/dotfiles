@@ -3,3 +3,5 @@
 	name = Ayberk Aydin
 [credential]
 	helper = cache
+[pull]
+	rebase = false
