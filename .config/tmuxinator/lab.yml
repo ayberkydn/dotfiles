@@ -23,6 +23,6 @@ windows:
         - docker-compose -f ~/.config/docker-envs/envs/deep-learning/docker-compose.yml exec lab sh
         - docker-compose -f ~/.config/docker-envs/envs/deep-learning/docker-compose.yml exec lab jupyter-lab --ip 0.0.0.0 --port 8888 --no-browser --allow-root --ServerApp.token='' --ServerApp.password=''
         - docker-compose -f ~/.config/docker-envs/envs/deep-learning/docker-compose.yml exec lab tensorboard --logdir . --port 6006 --bind_all
-        - docker-compose -f ~/.config/docker-envs/envs/deep-learning/docker-compose.yml exec lab jupyter notebook --ip=0.0.0.0 --port=8080 --no-browser --allow-root 
+        - docker-compose -f ~/.config/docker-envs/envs/deep-learning/docker-compose.yml exec lab 
 
       
