@@ -5,3 +5,5 @@
 	helper = cache
 [pull]
 	rebase = false
+[core]
+	editor = nvim
