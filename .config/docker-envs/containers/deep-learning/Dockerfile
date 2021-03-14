@@ -5,6 +5,7 @@ RUN apt-get update
 RUN apt-get install -y libglib2.0-0
 RUN apt-get install -y libgl1-mesa-dev
 RUN apt-get install -y git
+
 RUN pip install pytorch-lightning  
 RUN pip install jupyterlab
 RUN pip install pandas
@@ -22,6 +23,7 @@ RUN pip install wandb
 RUN pip install kornia  
 RUN pip install torchfunc torchsummary torchlayers  
 RUN pip install hydra-core
+RUN pip install python-language-server[all]
 
 ENV NVIDIA_VISIBLE_DEVICES all
 ENV NVIDIA_DRIVER_CAPABILITIES compute,utility

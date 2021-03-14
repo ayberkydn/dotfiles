@@ -7,7 +7,6 @@
 
     "jedi.enable": false,
 
-    "python.pythonPath": "docker-compose -f ~/dockercomposeseyi/docker-compose.yml exec lab python",
 
     
 
