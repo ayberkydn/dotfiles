@@ -12,7 +12,7 @@ alias tconfig='nvim ~/.config/alacritty/alacritty.yml'
 alias rconfig='nvim ~/.config/ranger/rc.conf'
 alias jcconfig="nvim ~/.jupyter/jupyter_console_config.py"
 
-alias cddockerenvs="cd ~/.config/docker-envs/"
+alias cddocker="cd ~/.config/dockerfiles/"
 alias cdtmuxinator='cd ~/.config/tmuxinator'
 
 alias cl='clear'

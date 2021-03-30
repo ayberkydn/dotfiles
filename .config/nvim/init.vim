@@ -7,7 +7,6 @@ augroup CursorLine
   au VimEnter,WinEnter,BufWinEnter,InsertLeave * setlocal cursorline
   au WinLeave,InsertEnter * setlocal nocursorline
 augroup END
-
 "Auto reload when init file is changed
 augroup auto-source    
   au!               

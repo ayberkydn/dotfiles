@@ -4,10 +4,6 @@
 call plug#begin()
 
 "-------------> Utils <------------------
-Plug 'Xuyuanp/scrollbar.nvim'
-Plug 'sillybun/vim-repl'
-Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
-Plug 'benmills/vimux' "check
 Plug 'rhysd/clever-f.vim'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
@@ -15,33 +11,23 @@ Plug 'tpope/vim-commentary'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'honza/vim-snippets'
 Plug 'mbbill/undotree'
-Plug 'jupyter-vim/jupyter-vim', {'for': 'python'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'justinmk/vim-sneak'
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 Plug 'SirVer/ultisnips'
-"Plug 'mhinz/vim-startify'
-"Plug 'glepnir/dashboard-nvim'
-"--->Git
-Plug 'airblade/vim-gitgutter' "check
-Plug 'tpope/vim-fugitive' "check
-"Plug 'mrossinek/deuterium'
-Plug 'psliwka/vim-smoothie' "smooth scroll
+
+"----------> Git <-----------------
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+
 "----------> Appereance <-----------------
 Plug 'majutsushi/tagbar'
 Plug 'vim-airline/vim-airline'
-Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'flazz/vim-colorschemes'
-Plug 'pineapplegiant/spaceduck'
-Plug 'rainglow/vim'
-Plug 'rakr/vim-one'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'arcticicestudio/nord-vim'
+Plug 'flazz/vim-colorschemes'
 Plug 'ryanoasis/vim-devicons' 
 
-"Fade out inactive buffers
-Plug 'TaDaa/vimade' 
 "----------> Language related <------------
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot'
@@ -53,24 +39,15 @@ call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Airline
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:sendtorepl_invoke_key = "<leader>a"
-" => Airline
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Airline
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:airline#extensions#coc#enabled = 1
-let g:airline_theme = 'spaceduck'
-
-let g:airline_theme='dark'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tagbar#enabled = 1 "tagbar integration
 let g:airline#extensions#tabline#enabled = 1 "tab and buffer line
-let g:airline#extensions#tabline#buffer_nr_show = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Explorer
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 nnoremap <leader>e :CocCommand explorer<CR>
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -163,7 +140,7 @@ let g:coc_global_extensions = [
             \'coc-highlight', 
             \'coc-json', 
             \'coc-marketplace',
-            \'coc-jedi', 
+            \'coc-pyright', 
             \'coc-snippets', 
             \'coc-vimlsp', 
             \'coc-yaml', 

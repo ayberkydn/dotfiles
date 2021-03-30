@@ -5,10 +5,6 @@
 
     "diagnostic.checkCurrentLine": true,
 
-    "jedi.enable": false,
-
-
-    
 
 
     "explorer.previewAction.onHover": false,

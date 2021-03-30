@@ -102,32 +102,6 @@ colors:
   #
   indexed_colors: []
 
-# Visual Bell
-# ...
-
-###############################################################################################################
-###############################################################################################################
-  # cursor:
-  #   text: CellBackground
-  #   cursor: CellForeground
-
-  # vi_mode_cursor:
-  #   text: CellBackground
-  #   cursor: CellForeground
-
-  # selection:
-  #   text: CellBackground
-  #   background: CellForeground
-
-  # search:
-  #   matches:
-
-  #     foreground: '#000000'
-  #     background: '#ffffff'
-
-  #   bar:
-  #     background: '#c5c8c6'
-  #     foreground: '#1d1f21'
 
 background_opacity: 1
 
