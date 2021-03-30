@@ -1,8 +1,8 @@
 [user]
-	email = 
+	email = ayberkydn@gmail.com
 	name = Ayberk Aydin
 [credential]
-	helper = "!f() { /home/ayb/.vscode-server/bin/fd6f3bce6709b121a895d042d343d71f317d74e7/node /tmp/vscode-remote-containers-94a8c3379ab1499877c9714d12007a42fe981cd2.js $*; }; f"
+	helper = cache --timeout=3600
 [pull]
 	rebase = false
 [core]
