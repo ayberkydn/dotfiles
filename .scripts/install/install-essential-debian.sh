@@ -1,5 +1,5 @@
 #--> install programs
-sudo apt install -y alacritty
+sudo apt install -y openssh-server
 sudo apt install -y fish
 sudo apt install -y neovim
 sudo apt install -y tmux
