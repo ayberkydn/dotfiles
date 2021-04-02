@@ -1,19 +1,11 @@
 
-# dotfiles
-git clone --separate-git-dir=$HOME/.dotfiles https://github.com/ayberkydn/dotfiles.git tmpdotfiles
-rsync --recursive --verbose --exclude '.git' tmpdotfiles/ $HOME/
-rm -r tmpdotfiles
-git clone --bare https://www.github.com/ayberkydn/dotfiles.git $HOME/.dotfiles.git 
-
 # Tmux plugin manager
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 
 #--> shell 
 curl -L https://get.oh-my.fish | fish
-fish -c "omf install bobthefish"
-fish -c "omf install https://github.com/jhillyerd/plugin-git"
-fish -C "omf theme bobthefish"
+fish -c "omf install bobthefish; omf install https://github.com/jhillyerd/plugin-git; omf theme bobthefish"
 
 # Vim plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
@@ -28,4 +20,10 @@ git config --global credential.helper cache
 
 #cache timeout
 git config --global credential.helper 'cache --timeout=3600'
+
+# dotfiles
+git clone --separate-git-dir=$HOME/.dotfiles https://github.com/ayberkydn/dotfiles.git tmpdotfiles
+rsync --recursive --verbose --exclude '.git' tmpdotfiles/ $HOME/
+rm -r tmpdotfiles
+git clone --bare https://www.github.com/ayberkydn/dotfiles.git $HOME/.dotfiles.git 
 
