@@ -12,11 +12,13 @@ sudo apt install -y openssh-server \
                     htop \
                     npm \
                     python3-pynvim \
+                    openvpn \
+                    curl \
 
 
 distribution=$(. /etc/os-release;echo $ID$VERSION_ID) 
-distribution='ubuntu20.04'
 echo $distribution
+distribution='ubuntu20.04'
 
 sudo apt install -y docker docker-compose
 
