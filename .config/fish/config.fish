@@ -19,8 +19,8 @@ alias cl='clear'
 alias open='xdg-open'
 alias yayy='yay -Syu --noconfirm'
 
-alias vpnup="openvpn3 session-start --config ~/.config/vpn/client.ovpn"
 alias vpndown="openvpn3 session-manage --disconnect --config ~/.config/vpn/client.ovpn"
+alias vpnup="openvpn3 session-start --config ~/.config/vpn/client.ovpn && nohup bash -c 'sleep 2; vpndown'"
 
 
 
@@ -40,8 +40,8 @@ abbr --add dc docker-compose
 abbr --add dc docker-compose
 
 
-abbr -a gh  https://github.com/
-abbr -a gha https://github.com/ayberkydn
+# abbr -a gh  https://github.com/
+# abbr -a gha https://github.com/ayberkydn
 
 #conda initialize >>>
 #eval /home/ayb/.local/conda/bin/conda "shell.fish" "hook" $argv | source
