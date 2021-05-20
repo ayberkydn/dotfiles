@@ -20,7 +20,7 @@ alias open='xdg-open'
 alias yayy='yay -Syu --noconfirm'
 
 alias vpndown="openvpn3 session-manage --disconnect --config ~/.config/vpn/client.ovpn"
-alias vpnup="openvpn3 session-start --config ~/.config/vpn/client.ovpn && nohup bash -c 'sleep 2; vpndown'"
+alias vpnup="openvpn3 session-start --config ~/.config/vpn/client.ovpn"
 
 
 
