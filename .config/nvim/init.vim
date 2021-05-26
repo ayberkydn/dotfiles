@@ -116,10 +116,7 @@ set whichwrap+=h,l
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " maps
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if has("nvim")
-    " Change the leader key to <space>
-    let mapleader=" "
-endif
+let mapleader=" "
 
 " easy commands
 nnoremap ; :

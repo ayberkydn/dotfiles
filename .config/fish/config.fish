@@ -1,6 +1,6 @@
 # aliases
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias dots='dotfiles commit -am"upd" && dotfiles push'
+alias dots='dotfiles commit -am"upd"; dotfiles push'
 
 alias shconfig='nvim ~/.config/fish/config.fish'
 alias xconfig='nvim ~/.xprofile'
@@ -71,4 +71,10 @@ function fish_right_prompt; end
 
 #variables
 set DATA_PATH /home/ayb/Documents/data
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+eval /home/ayb/.local/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+# <<< conda initialize <<<
 
