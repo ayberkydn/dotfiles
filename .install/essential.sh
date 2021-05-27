@@ -16,6 +16,13 @@ sudo apt install -y openssh-server        \
                     curl                  \
 
 
+#--> install language servers
+sudo npm install -g vim-language-server                 \
+                    bash-language-server                \
+                    yaml-language-server                \
+                    dockerfile-language-server-nodejs   \
+
+
 distribution=$(. /etc/os-release;echo $ID$VERSION_ID) 
 echo $distribution
 
