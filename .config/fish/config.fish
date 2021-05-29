@@ -69,12 +69,12 @@ end
 function fish_right_prompt; end
 
 
-#variables
-set DATA_PATH /home/ayb/Documents/data
+##variables
+#set DATA_PATH /home/ayb/Documents/data
 
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-eval /home/ayb/.local/anaconda3/bin/conda "shell.fish" "hook" $argv | source
-# <<< conda initialize <<<
+## >>> conda initialize >>>
+## !! Contents within this block are managed by 'conda init' !!
+#eval /home/ayb/.local/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+## <<< conda initialize <<<
 

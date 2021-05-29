@@ -48,25 +48,30 @@ call plug#end()
 
 
 lua << EOF
-    local lspconfig = require'lspconfig'
+    local nvim_lsp = require'lspconfig'
+    nvim_lsp.pylsp.setup{
+    cmd={"docker", "run", "-i", "ayberkydn/deep-learning", "pylsp"}
+    }
     -- lspconfig.pyright.setup{
     --     cmd={"docker", "run", "-i", "ayberkydn/deep-learning", "pyright-langserver", "--stdio"}
     -- }
 
-    lspconfig.jedi_language_server.setup{
+    --lspconfig.pyls.setup{}
+
+    --lspconfig.jedi_language_server.setup{
     
     --cmd={"docker", "run", "-i", "ayberkydn/deep-learning", "jedi-language-server"}
     --cmd={"docker run -i ayberkydn/deep-learning jedi-language-server"}
-    }
+    --}
 
-    lspconfig.dockerls.setup{}
-    lspconfig.yamlls.setup{}
+    nvim_lsp.dockerls.setup{}
+    nvim_lsp.yamlls.setup{}
 
 
     local treesitterconfig = require'nvim-treesitter.configs'
 
     treesitterconfig.setup {
-        ensure_installed={"python", "c", "cpp"},
+        ensure_installed={"python", "c", "cpp", "dockerfile", "bash", "yaml"},
         highlight = { enable = true },
         incremental_selection = { enable = true },
         indent = { enable = true },
@@ -75,6 +80,8 @@ lua << EOF
     }
 
 EOF
+
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Airline
