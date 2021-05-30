@@ -17,7 +17,6 @@ alias cdtmuxinator='cd ~/.config/tmuxinator'
 
 alias cl='clear'
 alias open='xdg-open'
-alias yayy='yay -Syu --noconfirm'
 
 alias vpndown="openvpn3 session-manage --disconnect --config ~/.config/vpn/client.ovpn"
 alias vpnup="openvpn3 session-start --config ~/.config/vpn/client.ovpn"

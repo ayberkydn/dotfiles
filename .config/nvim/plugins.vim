@@ -48,24 +48,11 @@ call plug#end()
 
 
 lua << EOF
-    local nvim_lsp = require'lspconfig'
-    nvim_lsp.pylsp.setup{
-    cmd={"docker", "run", "-i", "ayberkydn/deep-learning", "pylsp"}
-    }
-    -- lspconfig.pyright.setup{
-    --     cmd={"docker", "run", "-i", "ayberkydn/deep-learning", "pyright-langserver", "--stdio"}
-    -- }
-
-    --lspconfig.pyls.setup{}
-
-    --lspconfig.jedi_language_server.setup{
-    
-    --cmd={"docker", "run", "-i", "ayberkydn/deep-learning", "jedi-language-server"}
-    --cmd={"docker run -i ayberkydn/deep-learning jedi-language-server"}
-    --}
-
-    nvim_lsp.dockerls.setup{}
-    nvim_lsp.yamlls.setup{}
+    local lspconfig = require'lspconfig'
+    lspconfig.pyright.setup{}
+    lspconfig.dockerls.setup{}
+    lspconfig.yamlls.setup{}
+    lspconfig.jsonls.setup{}
 
 
     local treesitterconfig = require'nvim-treesitter.configs'

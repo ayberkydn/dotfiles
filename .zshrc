@@ -7,39 +7,42 @@ antigen bundle git
 antigen bundle docker
 antigen bundle olets/zsh-abbr
 
+antigen apply
 
 # aliases
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias dots='dotfiles commit -am"upd" && dotfiles push'
-alias nvs='nvidia-smi'
+alias dots='dotfiles commit -am"upd"; dotfiles push'
 
-alias shconfig='nvim ~/.zshrc'
+alias shconfig='nvim ~/.config/fish/config.fish'
 alias xconfig='nvim ~/.xprofile'
-#alias iconfig='nvim ~/.config/i3/config'
-#alias bconfig='nvim ~/.config/polybar/config'
-alias vconfig='vim ~/.vimrc'
+alias vimconfig='vim ~/.vimrc'
 alias tmuxconfig='nvim ~/.tmux.conf'
-alias nvimconfig='nvim ~/.config/nvim/*.{vim,json}'
+alias vconfig='nvim ~/.config/nvim/*.vim'
+alias cocconfig='nvim ~/.config/nvim/coc-settings.json'
 alias tconfig='nvim ~/.config/alacritty/alacritty.yml'
 alias rconfig='nvim ~/.config/ranger/rc.conf'
+alias jcconfig="nvim ~/.jupyter/jupyter_console_config.py"
 
+alias cddocker="cd ~/.dockerfiles/"
+alias cdtmuxinator='cd ~/.config/tmuxinator'
 
 alias cl='clear'
 alias open='xdg-open'
-alias ca='conda activate'
-alias cda='conda deactivate'
+
+alias vpndown="openvpn3 session-manage --disconnect --config ~/.config/vpn/client.ovpn"
+alias vpnup="openvpn3 session-start --config ~/.config/vpn/client.ovpn"
 
 
-alias vimm='/usr/bin/vim'
-alias vim='nvim'
-alias mux='tmuxinator'
+#abbr add nvs='nvidia-smi'
+#abbr add nvsl='nvidia-smi -lms 100'
+#abbr add v='nvim'
+#abbr add x='tmuxinator'
+#abbr add dc='docker-compose'
+#abbr add --global gh='https://github.com'
+#abbr add --global gha='https://github.com/ayberkydn'
 
 
 
 
 
-
-
-
-antigen apply
 
