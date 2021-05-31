@@ -10,7 +10,7 @@ augroup END
 "Auto reload when init file is changed
 augroup auto-source    
   au!               
-  au BufWritePost *.vim,coc-settings.json source $MYVIMRC
+  au BufWritePost *.vim source $MYVIMRC
 augroup END            
 
 "open help in right window
