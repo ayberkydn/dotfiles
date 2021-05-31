@@ -1,6 +1,6 @@
 #--> install programs
 sudo apt install -y openssh-server        \
-                    fish                  \
+                    zsh                   \
                     neovim                \
                     tmux                  \
                     urlview               \
@@ -22,6 +22,8 @@ sudo npm install -g vim-language-server                 \
                     yaml-language-server                \
                     dockerfile-language-server-nodejs   \
                     vscode-json-languageserver
+
+sudo apt-get install clangd-9
 
 distribution=$(. /etc/os-release;echo $ID$VERSION_ID) 
 echo $distribution
