@@ -1,0 +1,8 @@
+abbr -g gh="https://github.com"
+abbr -g gha="https://github.com/ayberkydn"
+abbr dc="docker-compose"
+abbr nvs="nvidia-smi"
+abbr nvsl="nvidia-smi -lms 100"
+abbr t="tmux"
+abbr v="nvim"
+abbr x="tmuxinator"
