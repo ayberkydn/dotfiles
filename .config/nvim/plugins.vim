@@ -1,8 +1,3 @@
-if empty(glob('~/.config/nvim/autoload/plug.vim'))
-    silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
-                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    autocmd VimEnter * PlugInstall | source $MYVIMRC
-endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Load Plugins
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -38,7 +33,6 @@ Plug 'flazz/vim-colorschemes'
 Plug 'ryanoasis/vim-devicons' 
 
 "----------> Language related <------------
-"Plug 'sheerun/vim-polyglot'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
@@ -50,15 +44,23 @@ call plug#end()
 lua << EOF
     local lspconfig = require'lspconfig'
     lspconfig.pyright.setup{}
+    lspconfig.clangd.setup{}
     lspconfig.dockerls.setup{}
     lspconfig.yamlls.setup{}
     lspconfig.jsonls.setup{}
+    lspconfig.bashls.setup{}
 
 
     local treesitterconfig = require'nvim-treesitter.configs'
-
     treesitterconfig.setup {
-        ensure_installed={"python", "c", "cpp", "dockerfile", "bash", "yaml"},
+        ensure_installed={
+            "python",
+            "c", "cpp",
+            "dockerfile",
+            "yaml",
+            "json",
+            "bash",
+        },
         highlight = { enable = true },
         incremental_selection = { enable = true },
         indent = { enable = true },
