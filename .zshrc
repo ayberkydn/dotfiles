@@ -8,6 +8,7 @@ antigen bundle docker
 antigen bundle olets/zsh-abbr
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
+
 antigen apply
 
 # aliases
@@ -28,16 +29,6 @@ alias open='xdg-open'
 
 alias vpndown="openvpn3 session-manage --disconnect --config ~/.config/vpn/client.ovpn"
 alias vpnup="openvpn3 session-start --config ~/.config/vpn/client.ovpn"
-
-
-# abbr add nvs='nvidia-smi'
-# abbr add nvsl='nvidia-smi -lms 100'
-# abbr add v='nvim'
-# abbr add x='tmuxinator'
-# abbr add --force dc='docker-compose'
-# abbr add --global gh='https://github.com'
-# abbr add --global gha='https://github.com/ayberkydn'
-#
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
