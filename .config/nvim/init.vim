@@ -109,10 +109,6 @@ set relativenumber
 
 set whichwrap+=h,l
 
-" Don't redraw while executing macros (good performance config)
-"set lazyredraw 
-"
-"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " maps
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -200,6 +196,78 @@ noremap <silent> <leader><cr> :noh<cr>
 inoremap <C-v> <C-r>+
 
 
-if has("nvim")
-    source ~/.config/nvim/plugins.vim
-endif
+lua << EOF
+
+require("plugins")
+
+local lspconfig = require'lspconfig'
+ 
+lspconfig.pyright.setup{}
+lspconfig.clangd.setup{}
+lspconfig.dockerls.setup{}
+lspconfig.yamlls.setup{}
+lspconfig.jsonls.setup{}
+lspconfig.bashls.setup{}
+
+require'nvim-treesitter.configs'.setup {
+    ensure_installed={
+        "python",
+        "c", "cpp",
+        "dockerfile",
+        "yaml",
+        "json",
+        "bash",
+    },
+    highlight = { enable = true },
+    incremental_selection = { enable = true },
+    indent = { enable = true },
+    textobjects = { enable = true },
+    playground = { enable = true },
+
+}
+
+EOF
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Airline
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tagbar#enabled = 1 "tagbar integration
+let g:airline#extensions#tabline#enabled = 1 "tab and buffer line
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Colors
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+colorscheme tokyonight
+let g:airline_theme='onedark'
+set background=dark
+set termguicolors
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Telescope
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <leader>fb :Telescope buffers<CR> 
+nnoremap <leader>ff :Telescope file_browser<CR> 
+nnoremap <leader>f; :Telescope commands<CR> 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Sneak
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:sneak#label = 1
+let g:sneak#s_next = 1
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Tagbar
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" autocmd FileType python,c,cpp,cu TagbarOpen
+let g:tagbar_position = 'topleft vertical'
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Whichkey
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set timeoutlen=200
+lua << EOF
+  require("which-key").setup {
+    -- your configuration comes here
+    -- or leave it empty to use the default settings
+    -- refer to the configuration section below
+  }
+EOF

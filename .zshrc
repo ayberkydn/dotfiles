@@ -17,7 +17,12 @@ alias dots='dotfiles commit -am"upd"; dotfiles push'
 
 alias shconfig='nvim ~/.zshrc'
 alias tmuxconfig='nvim ~/.tmux.conf'
-alias vconfig='nvim ~/.config/nvim/*.vim'
+alias vconfig='nvim \
+                ~/.config/nvim/init.vim \
+                ~/.config/nvim/lua/plugins.lua \
+              '
+
+
 alias tconfig='nvim ~/.config/alacritty/alacritty.yml'
 alias rconfig='nvim ~/.config/ranger/rc.conf'
 

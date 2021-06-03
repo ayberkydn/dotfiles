@@ -4,16 +4,16 @@ env:
 
 font:
   normal:
-    family: JetbrainsMono Nerd Font
-    style: Regular
+    family: Source Code Pro
+    style: Medium
   bold:
-    family: JetbrainsMono Nerd Font
+    family: Source Code Pro
     style: Bold
   italic:
-    family: JetbrainsMono Nerd Font
+    family: Source Code Pro
     style: Italic
   bold_italic:
-    family: JetbrainsMono Nerd Font
+    family: Source Code Pro
     style: Bold Italic
 
   offset:

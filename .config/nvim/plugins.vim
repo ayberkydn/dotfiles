@@ -111,8 +111,3 @@ let g:tagbar_position = 'topleft vertical'
 nnoremap <silent> <space> :WhichKey '<Space>'<CR>
 nnoremap <silent> , :WhichKey ','<CR>
 set timeoutlen=500
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Jupyter
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" inoremap <F5> <cmd> JupyterRunFile<CR>
-" nnoremap <F5> <cmd> JupyterRunFile<CR>
