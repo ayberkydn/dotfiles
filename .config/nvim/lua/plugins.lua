@@ -12,11 +12,12 @@ return require('packer').startup(
         use 'christoomey/vim-tmux-navigator'
         use 'mbbill/undotree'
         use 'justinmk/vim-sneak'
-        use 'SirVer/ultisnips'
 
         use 'nvim-lua/popup.nvim'
         use 'nvim-lua/plenary.nvim'
         use 'nvim-telescope/telescope.nvim'
+        use 'kyazdani42/nvim-web-devicons'
+        use 'kyazdani42/nvim-tree.lua'
 
         ----------> Git <-----------------
         use 'airblade/vim-gitgutter'

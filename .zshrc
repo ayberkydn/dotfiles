@@ -8,6 +8,7 @@ antigen bundle docker
 antigen bundle olets/zsh-abbr
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle jeffreytse/zsh-vi-mode
 
 antigen apply
 
@@ -34,6 +35,8 @@ alias open='xdg-open'
 
 alias vpndown="openvpn3 session-manage --disconnect --config ~/.config/vpn/client.ovpn"
 alias vpnup="openvpn3 session-start --config ~/.config/vpn/client.ovpn"
+
+ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

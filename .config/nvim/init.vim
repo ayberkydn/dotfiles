@@ -202,8 +202,6 @@ require("plugins")
 
 local lspconfig = require'lspconfig'
  
-lspconfig.pyright.setup{}
-lspconfig.clangd.setup{}
 lspconfig.dockerls.setup{}
 lspconfig.yamlls.setup{}
 lspconfig.jsonls.setup{}
@@ -271,3 +269,5 @@ lua << EOF
     -- refer to the configuration section below
   }
 EOF
+
+nnoremap <C-n> :NvimTreeToggle<CR>
