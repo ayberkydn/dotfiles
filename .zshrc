@@ -5,10 +5,10 @@ antigen theme bira
 antigen bundle command-not-found
 antigen bundle git
 antigen bundle docker
+# antigen bundle jeffreytse/zsh-vi-mode
 antigen bundle olets/zsh-abbr
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle jeffreytse/zsh-vi-mode
 
 antigen apply
 
