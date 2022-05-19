@@ -2,7 +2,7 @@
 	email = ayberkydn@gmail.com
 	name = Ayberk Aydin
 [credential]
-	helper = "!f() { /home/ayb/.vscode-server/bin/054a9295330880ed74ceaedda236253b4f39a335/node /tmp/vscode-remote-containers-85c5f2b2192aca108cc2b7380ddbeabbb13fc063.js $*; }; f"
+	helper = manager-core
 [pull]
 	rebase = false
 [core]

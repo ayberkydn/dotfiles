@@ -200,12 +200,6 @@ lua << EOF
 
 require("plugins")
 
-local lspconfig = require'lspconfig'
- 
-lspconfig.dockerls.setup{}
-lspconfig.yamlls.setup{}
-lspconfig.jsonls.setup{}
-lspconfig.bashls.setup{}
 
 require'nvim-treesitter.configs'.setup {
     ensure_installed={
