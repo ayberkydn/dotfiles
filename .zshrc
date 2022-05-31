@@ -1,5 +1,12 @@
-source $(brew --prefix)/share/antigen/antigen.zsh
-# source $HOME/.antigen.zsh 
+
+case "$OSTYPE" in
+  darwin*)
+    source $(brew --prefix)/share/antigen/antigen.zsh
+  ;;
+  linux*)
+    source $HOME/.antigen.zsh 
+  ;;
+esac
 
 antigen use oh-my-zsh
 antigen theme bira
