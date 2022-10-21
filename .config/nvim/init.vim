@@ -1,3 +1,40 @@
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+call plug#begin()
+Plug 'junegunn/vim-easy-align'
+""------------------------------------------------------------------------------
+""----------> Utils <------------------
+Plug 'wbthomason/packer.nvim'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'mbbill/undotree'
+Plug 'justinmk/vim-sneak'
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'kyazdani42/nvim-tree.lua'
+""-------> Git <-----------------
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+""-------> Appereance <-----------------
+Plug 'majutsushi/tagbar'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'ryanoasis/vim-devicons' 
+Plug 'folke/tokyonight.nvim'
+""-------> Language related <------------
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/playground'
+Plug 'folke/which-key.nvim'
+
+call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 ">>>>>>>>>>>>>> autocommands >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -198,9 +235,8 @@ inoremap <C-v> <C-r>+
 
 lua << EOF
 
-require("plugins")
-
-
+--
+--
 require'nvim-treesitter.configs'.setup {
     ensure_installed={
         "python",
@@ -218,13 +254,18 @@ require'nvim-treesitter.configs'.setup {
 
 }
 
+require("which-key").setup {
+    -- your configuration comes here
+    -- or leave it empty to use the default settings
+    -- refer to the configuration section below
+  }
 EOF
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Airline
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
 let g:airline#extensions#tagbar#enabled = 1 "tagbar integration
 let g:airline#extensions#tabline#enabled = 1 "tab and buffer line
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -256,12 +297,3 @@ let g:tagbar_position = 'topleft vertical'
 " => Whichkey
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set timeoutlen=200
-lua << EOF
-  require("which-key").setup {
-    -- your configuration comes here
-    -- or leave it empty to use the default settings
-    -- refer to the configuration section below
-  }
-EOF
-
-nnoremap <C-n> :NvimTreeToggle<CR>

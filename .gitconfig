@@ -1,8 +1,9 @@
 [user]
 	email = ayberkydn@gmail.com
 	name = Ayberk Aydin
+	username = ayberkydn
 [credential]
-	helper = manager-core
+	helper = store
 [pull]
 	rebase = false
 [core]

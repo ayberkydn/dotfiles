@@ -1,5 +1,7 @@
 abbr -g gh="https://github.com"
 abbr -g gha="https://github.com/ayberkydn"
+abbr bi="brew install"
+abbr bs="brew search"
 abbr dc="docker-compose"
 abbr nvs="nvidia-smi"
 abbr nvsl="nvidia-smi -lms 100"
