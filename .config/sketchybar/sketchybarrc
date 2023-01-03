@@ -14,11 +14,12 @@ PLUGIN_DIR="$HOME/.config/sketchybar/plugins"
 
 sketchybar --bar height=32        \
                  blur_radius=50   \
+                 y_offset=0 \
                  position=bottom     \
-                 sticky=off       \
-                 padding_left=10  \
-                 padding_right=10 \
-                 color=0x15ffffff
+                 sticky=on       \
+                 padding_left=0  \
+                 padding_right=0 \
+                 color=0x000000
 
 ##### Changing Defaults #####
 # We now change some default values that are applied to all further items
@@ -91,10 +92,25 @@ sketchybar --add item clock right                        \
                          update_freq=10                  \
            --subscribe battery system_woke
 
+# sketchybar -m --add item yabai right
+# sketchybar -m --set yabai update_freq=3
+# sketchybar -m --set yabai script="$PLUGIN_DIR/yabai.sh"
+# sketchybar -m --subscribe yabai space_change
+# sketchybar -m --set yabai click_script="$PLUGIN_DIR/yabai_click.sh"
+#
+#
+sketchybar -m --add item vpn right \
+              --set vpn icon= \
+                    update_freq=10\
+                    script="$PLUGIN_DIR/vpn.sh"
+
+
+
+
+
+
 ##### Finalizing Setup #####
 # The below command is only needed at the end of the initial configuration and
 # should never be run in an item script.
-
 sketchybar --update
-
 echo "sketchybar configuration loaded.."

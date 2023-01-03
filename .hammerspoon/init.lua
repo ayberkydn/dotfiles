@@ -8,4 +8,4 @@ hs.loadSpoon("SpoonInstall")
 spoon.SpoonInstall:andUse("ReloadConfiguration")
 spoon.ReloadConfiguration:start()
 
-print("init.lua loadsdasded")
+print("init.lua loaded")
