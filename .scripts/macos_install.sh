@@ -5,6 +5,7 @@ brew install tmux
 brew install neovim
 brew install git
 brew install gh
+brew install node
 #sketchybar
 brew tap FelixKratz/formulae
 brew install sketchybar
