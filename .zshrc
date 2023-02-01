@@ -149,6 +149,8 @@ alias vpnup="openvpn3 session-start --config ~/.config/vpn/client.ovpn"
 
 ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
 
+#thefuck
+eval $(thefuck --alias)
 
 
 # >>> conda initialize >>>
