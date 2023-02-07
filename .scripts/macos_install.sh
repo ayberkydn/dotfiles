@@ -2,10 +2,13 @@
 brew install neovim
 brew install tldr
 brew install tmux
+brew install alacritty
 brew install neovim
 brew install git
 brew install gh
 brew install node
+brew install thefuck
+brew install mas #mac app store
 #sketchybar
 brew tap FelixKratz/formulae
 brew install sketchybar
@@ -27,13 +30,25 @@ brew install --cask microsoft-teams
 brew tap homebrew/cask-fonts
 brew install --cask font-hack-nerd-font
 
+#mac app store
+mas install 1435957248 #drafts
+mas install 93798470 #amphetamine
+
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 sh ~/.tmux/plugins/tpm/scripts/install_plugins.sh
 
 #btt ayarlari
-#iterm2 ayarlari
 #rectangle pro ayarlari
 #
 #
+#iterm2 ayarlari
 #iTerm2 animation disable
 defaults write com.googlecode.iterm2 HotkeyTermAnimationDuration -float 0.0001
+#iTerm2 hotkeys dropleft dropright
+#exclude iTerm2 from alttab and dock
+#
+#VSCode key repeat 
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+
+#Raycast ayarlari
+#
