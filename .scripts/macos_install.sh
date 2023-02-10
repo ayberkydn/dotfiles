@@ -8,6 +8,7 @@ brew install git
 brew install gh
 brew install node
 brew install thefuck
+brew install youtube-dl
 brew install mas #mac app store
 #sketchybar
 brew tap FelixKratz/formulae
