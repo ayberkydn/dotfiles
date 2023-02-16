@@ -9,6 +9,7 @@ brew install gh
 brew install node
 brew install thefuck
 brew install youtube-dl
+brew install wget
 brew install mas #mac app store
 #sketchybar
 brew tap FelixKratz/formulae
@@ -17,6 +18,7 @@ brew services start sketchybar
 #cask
 brew install --cask raycast 
 brew install --cask visual-studio-code
+brew install --cask docker
 brew install --cask karabiner-elements
 brew install --cask google-chrome
 brew install --cask spotify
