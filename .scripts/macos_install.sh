@@ -17,6 +17,7 @@ brew install sketchybar
 brew services start sketchybar
 #cask
 brew install --cask raycast 
+brew install --cask transmission 
 brew install --cask visual-studio-code
 brew install --cask docker
 brew install --cask karabiner-elements
