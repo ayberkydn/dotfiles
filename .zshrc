@@ -22,7 +22,7 @@ antigen apply
 
 alias shconfig='nvim ~/.zshrc'
 alias tmuxconfig='nvim ~/.tmux.conf'
-alias vconfig='nvim ~/.config/nvim/init.lua'
+alias vconfig='nvim ~/.config/nvim/init.lua ~/.config/nvim/lua/*.lua'
 
 
 alias tconfig='nvim ~/.config/alacritty/alacritty.yml'
