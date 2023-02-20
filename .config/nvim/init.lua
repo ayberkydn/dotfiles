@@ -1,14 +1,14 @@
 -- [[ Setting options ]]
-vim.o.hlsearch = false      -- Set highlight on search
-vim.wo.number = true        -- Make line numbers default
-vim.o.mouse = 'a'           -- Enable mouse mode
-vim.o.breakindent = true    -- Enable break indent
-vim.o.undofile = true       -- Save undo history
-vim.o.ignorecase = true     -- Case insensitive searching 
-vim.o.smartcase = true      -- UNLESS /C or capital in search
-vim.o.updatetime = 250      -- Decrease update time (for swap file generation)
-vim.wo.signcolumn = 'yes'   -- the column at the left always on
-vim.o.termguicolors = true  -- set colorscheme
+vim.o.hlsearch = false -- Set highlight on search
+vim.wo.number = true -- Make line numbers default
+vim.o.mouse = 'a' -- Enable mouse mode
+vim.o.breakindent = true -- Enable break indent
+vim.o.undofile = true -- Save undo history
+vim.o.ignorecase = true -- Case insensitive searching
+vim.o.smartcase = true -- UNLESS /C or capital in search
+vim.o.updatetime = 250 -- Decrease update time (for swap file generation)
+vim.wo.signcolumn = 'yes' -- the column at the left always on
+vim.o.termguicolors = true -- set colorscheme
 vim.cmd [[colorscheme tokyonight]]
 vim.o.completeopt = 'menuone,noselect'
 -- menuone: show menu even with one candidate
@@ -19,7 +19,7 @@ vim.g.maplocalleader = ' '
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
--- Highlight on yank 
+-- Highlight on yank
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
 vim.api.nvim_create_autocmd('TextYankPost', {
   callback = function()
@@ -60,6 +60,7 @@ require('packer').startup(function(use)
   use 'tpope/vim-rhubarb'
   use 'lewis6991/gitsigns.nvim'
   -- cosmetics
+  use 'goolord/alpha-nvim' -- start screen
   use 'navarasu/onedark.nvim' -- theme
   use 'folke/tokyonight.nvim' -- theme
   use 'kyazdani42/nvim-web-devicons'
@@ -118,6 +119,7 @@ end
 ------------------------------------------------------------------------
 ------------------------ Setup plugins ---------------------------------
 ------------------------------------------------------------------------
+require 'alpha'.setup(require 'alpha.themes.startify'.config)
 require("toggleterm").setup()
 require("nvim-tree").setup()
 require('lualine').setup {
@@ -150,8 +152,8 @@ vim.o.timeout = true
 vim.o.timeoutlen = 1000
 require("which-key").setup {}
 
-require("better_escape").setup{
-  mapping = {"jk", "kj"},
+require("better_escape").setup {
+  mapping = { "jk", "kj" },
   timeout = 200,
   keys = "<Esc>",
 }
@@ -168,4 +170,3 @@ vim.api.nvim_create_autocmd('BufWritePost', {
   group = packer_group,
   pattern = vim.fn.expand '$MYVIMRC',
 })
-
