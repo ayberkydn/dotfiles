@@ -1,11 +1,12 @@
-case "$OSTYPE" in
-  darwin*)
-    source $(brew --prefix)/share/antigen/antigen.zsh
-  ;;
-  linux*)
-    source $HOME/.antigen.zsh 
-  ;;
-esac
+# case "$OSTYPE" in
+#   darwin*)
+#     source $(brew --prefix)/share/antigen/antigen.zsh
+#   ;;
+#   linux*)
+#     source $HOME/.antigen.zsh 
+#   ;;
+# esac
+source $HOME/.antigen.zsh 
 
 antigen use oh-my-zsh
 antigen theme bira

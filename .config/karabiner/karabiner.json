@@ -81,19 +81,25 @@
                         ]
                     },
                     {
-                        "description": "VSCode switch fn keys",
+                        "description": "Swap fn keys in VSCode",
                         "manipulators": [
                             {
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.microsoft\\.VSCode"
+                                            "^com\\.microsoft\\.VSCode",
+                                            "^com\\.microsoft\\.VSCodeInsiders"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "f1"
+                                    "key_code": "f1",
+                                    "modifiers": {
+                                        "optional": [
+                                            "shift"
+                                        ]
+                                    }
                                 },
                                 "to": [
                                     {
@@ -109,13 +115,19 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.microsoft\\.VSCode"
+                                            "^com\\.microsoft\\.VSCode",
+                                            "^com\\.microsoft\\.VSCodeInsiders"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "f2"
+                                    "key_code": "f2",
+                                    "modifiers": {
+                                        "optional": [
+                                            "shift"
+                                        ]
+                                    }
                                 },
                                 "to": [
                                     {
@@ -131,13 +143,19 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.microsoft\\.VSCode"
+                                            "^com\\.microsoft\\.VSCode",
+                                            "^com\\.microsoft\\.VSCodeInsiders"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "f3"
+                                    "key_code": "f3",
+                                    "modifiers": {
+                                        "optional": [
+                                            "shift"
+                                        ]
+                                    }
                                 },
                                 "to": [
                                     {
@@ -153,13 +171,19 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.microsoft\\.VSCode"
+                                            "^com\\.microsoft\\.VSCode",
+                                            "^com\\.microsoft\\.VSCodeInsiders"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "f4"
+                                    "key_code": "f4",
+                                    "modifiers": {
+                                        "optional": [
+                                            "shift"
+                                        ]
+                                    }
                                 },
                                 "to": [
                                     {
@@ -175,13 +199,19 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.microsoft\\.VSCode"
+                                            "^com\\.microsoft\\.VSCode",
+                                            "^com\\.microsoft\\.VSCodeInsiders"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "f5"
+                                    "key_code": "f5",
+                                    "modifiers": {
+                                        "optional": [
+                                            "shift"
+                                        ]
+                                    }
                                 },
                                 "to": [
                                     {
@@ -197,13 +227,19 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.microsoft\\.VSCode"
+                                            "^com\\.microsoft\\.VSCode",
+                                            "^com\\.microsoft\\.VSCodeInsiders"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "f6"
+                                    "key_code": "f6",
+                                    "modifiers": {
+                                        "optional": [
+                                            "shift"
+                                        ]
+                                    }
                                 },
                                 "to": [
                                     {
@@ -219,13 +255,19 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.microsoft\\.VSCode"
+                                            "^com\\.microsoft\\.VSCode",
+                                            "^com\\.microsoft\\.VSCodeInsiders"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "f7"
+                                    "key_code": "f7",
+                                    "modifiers": {
+                                        "optional": [
+                                            "shift"
+                                        ]
+                                    }
                                 },
                                 "to": [
                                     {
@@ -241,13 +283,19 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.microsoft\\.VSCode"
+                                            "^com\\.microsoft\\.VSCode",
+                                            "^com\\.microsoft\\.VSCodeInsiders"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "f8"
+                                    "key_code": "f8",
+                                    "modifiers": {
+                                        "optional": [
+                                            "shift"
+                                        ]
+                                    }
                                 },
                                 "to": [
                                     {
@@ -263,13 +311,19 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.microsoft\\.VSCode"
+                                            "^com\\.microsoft\\.VSCode",
+                                            "^com\\.microsoft\\.VSCodeInsiders"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "f9"
+                                    "key_code": "f9",
+                                    "modifiers": {
+                                        "optional": [
+                                            "shift"
+                                        ]
+                                    }
                                 },
                                 "to": [
                                     {
@@ -285,13 +339,19 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.microsoft\\.VSCode"
+                                            "^com\\.microsoft\\.VSCode",
+                                            "^com\\.microsoft\\.VSCodeInsiders"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "f10"
+                                    "key_code": "f10",
+                                    "modifiers": {
+                                        "optional": [
+                                            "shift"
+                                        ]
+                                    }
                                 },
                                 "to": [
                                     {
@@ -307,13 +367,19 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.microsoft\\.VSCode"
+                                            "^com\\.microsoft\\.VSCode",
+                                            "^com\\.microsoft\\.VSCodeInsiders"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "f11"
+                                    "key_code": "f11",
+                                    "modifiers": {
+                                        "optional": [
+                                            "shift"
+                                        ]
+                                    }
                                 },
                                 "to": [
                                     {
@@ -329,13 +395,19 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.microsoft\\.VSCode"
+                                            "^com\\.microsoft\\.VSCode",
+                                            "^com\\.microsoft\\.VSCodeInsiders"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "f12"
+                                    "key_code": "f12",
+                                    "modifiers": {
+                                        "optional": [
+                                            "shift"
+                                        ]
+                                    }
                                 },
                                 "to": [
                                     {
@@ -969,28 +1041,7 @@
                 "delay_milliseconds_before_open_device": 1000
             },
             "selected": true,
-            "simple_modifications": [
-                {
-                    "from": {
-                        "key_code": "grave_accent_and_tilde"
-                    },
-                    "to": [
-                        {
-                            "key_code": "non_us_backslash"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "non_us_backslash"
-                    },
-                    "to": [
-                        {
-                            "key_code": "grave_accent_and_tilde"
-                        }
-                    ]
-                }
-            ],
+            "simple_modifications": [],
             "virtual_hid_keyboard": {
                 "country_code": 0,
                 "indicate_sticky_modifier_keys_state": true,

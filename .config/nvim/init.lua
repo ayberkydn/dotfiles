@@ -1,34 +1,3 @@
--- [[ Setting options ]]
-vim.o.hlsearch = false -- Set highlight on search
-vim.wo.number = true -- Make line numbers default
-vim.o.mouse = 'a' -- Enable mouse mode
-vim.o.breakindent = true -- Enable break indent
-vim.o.undofile = true -- Save undo history
-vim.o.ignorecase = true -- Case insensitive searching
-vim.o.smartcase = true -- UNLESS /C or capital in search
-vim.o.updatetime = 250 -- Decrease update time (for swap file generation)
-vim.wo.signcolumn = 'yes' -- the column at the left always on
-vim.o.termguicolors = true -- set colorscheme
-vim.cmd [[colorscheme tokyonight]]
-vim.o.completeopt = 'menuone,noselect'
--- menuone: show menu even with one candidate
--- noselect: do not automatically select the completion candidate
-vim.g.mapleader = ' ' -- leader is space
-vim.g.maplocalleader = ' '
--- Remap for dealing with word wrap
-vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
-vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
-
--- Highlight on yank
-local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
-vim.api.nvim_create_autocmd('TextYankPost', {
-  callback = function()
-    vim.highlight.on_yank()
-  end,
-  group = highlight_group,
-  pattern = '*',
-})
-
 ------------------------------------------------------------------------
 ------------------------ Install plugins ---------------------------------
 ------------------------------------------------------------------------
@@ -158,6 +127,37 @@ require("better_escape").setup {
   keys = "<Esc>",
 }
 
+
+-- [[ Setting options ]]
+vim.o.hlsearch = false -- Set highlight on search
+vim.wo.number = true -- Make line numbers default
+vim.o.mouse = 'a' -- Enable mouse mode
+vim.o.breakindent = true -- Enable break indent
+vim.o.undofile = true -- Save undo history
+vim.o.ignorecase = true -- Case insensitive searching
+vim.o.smartcase = true -- UNLESS /C or capital in search
+vim.o.updatetime = 250 -- Decrease update time (for swap file generation)
+vim.wo.signcolumn = 'yes' -- the column at the left always on
+vim.o.termguicolors = true -- set colorscheme
+vim.cmd [[colorscheme tokyonight]]
+vim.o.completeopt = 'menuone,noselect'
+-- menuone: show menu even with one candidate
+-- noselect: do not automatically select the completion candidate
+vim.g.mapleader = ' ' -- leader is space
+vim.g.maplocalleader = ' '
+-- Remap for dealing with word wrap
+vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+
+-- Highlight on yank
+local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
+vim.api.nvim_create_autocmd('TextYankPost', {
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+  group = highlight_group,
+  pattern = '*',
+})
 
 require("lsp-setup")
 require("telescope-setup")
