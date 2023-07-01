@@ -15,12 +15,12 @@ font:
       y: 0
   size: 12
 
-shell:
-  program: /bin/zsh
-  args:
-    - -l
-    - -c
-    - "tmux attach || tmux" 
+# shell:
+#   program: /bin/zsh
+#   args:
+#     - -l
+#     - -c
+#     - "tmux attach || tmux" 
 
 ## Colors (Dracula)
 colors:
@@ -84,7 +84,9 @@ colors:
 
 
 # background_opacity: 1 %deprecated
-window.opacity: 1
+window:
+  opacity: 1
+  option_as_alt: Both
 
 selection:
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
