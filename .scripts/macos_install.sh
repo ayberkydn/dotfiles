@@ -17,6 +17,7 @@ brew install sketchybar
 brew services start sketchybar
 #cask
 brew install --cask raycast 
+brew install --cask alt-tab 
 brew install --cask transmission 
 brew install --cask visual-studio-code
 brew install --cask docker
@@ -28,7 +29,7 @@ brew install --cask github
 brew install --cask bettertouchtool
 brew install --cask rectangle-pro
 brew install --cask shottr
-brew install --cask mission-control-plus
+brew install --cask MonitorControl
 brew install --cask microsoft-teams
 #fonts
 brew tap homebrew/cask-fonts
