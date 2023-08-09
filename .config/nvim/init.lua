@@ -20,16 +20,16 @@ require('packer').startup(function(use)
   use 'tpope/vim-surround'
   use 'tpope/vim-repeat'
   use 'justinmk/vim-sneak'
-  use 'kyazdani42/nvim-tree.lua' --- file tree ---
+  -- use 'kyazdani42/nvim-tree.lua' --- file tree ---
   use 'lukas-reineke/indent-blankline.nvim' -- Add indentation guides even on blank lines
   use 'numToStr/Comment.nvim' -- "gc" to comment visual regions/lines
   use 'tpope/vim-sleuth' -- Detect tabstop and shiftwidth automatically
   -- Git related plugins
   use 'tpope/vim-fugitive'
   use 'tpope/vim-rhubarb'
-  use 'lewis6991/gitsigns.nvim'
+  -- use 'lewis6991/gitsigns.nvim'
   -- cosmetics
-  use 'goolord/alpha-nvim' -- start screen
+  -- use 'goolord/alpha-nvim' -- start screen
   use 'navarasu/onedark.nvim' -- theme
   use 'folke/tokyonight.nvim' -- theme
   use 'kyazdani42/nvim-web-devicons'
@@ -88,9 +88,9 @@ end
 ------------------------------------------------------------------------
 ------------------------ Setup plugins ---------------------------------
 ------------------------------------------------------------------------
-require 'alpha'.setup(require 'alpha.themes.startify'.config)
+-- require 'alpha'.setup(require 'alpha.themes.startify'.config)
 require("toggleterm").setup()
-require("nvim-tree").setup()
+-- require("nvim-tree").setup()
 require('lualine').setup {
   options = {
     icons_enabled = true,
@@ -106,15 +106,15 @@ require('indent_blankline').setup {
   char = '┊',
   show_trailing_blankline_indent = false,
 }
-require('gitsigns').setup {
-  signs = {
-    add = { text = '+' },
-    change = { text = '~' },
-    delete = { text = '_' },
-    topdelete = { text = '‾' },
-    changedelete = { text = '~' },
-  },
-}
+-- require('gitsigns').setup {
+--   signs = {
+--     add = { text = '+' },
+--     change = { text = '~' },
+--     delete = { text = '_' },
+--     topdelete = { text = '‾' },
+--     changedelete = { text = '~' },
+--   },
+-- }
 
 
 vim.o.timeout = true

@@ -1,20 +1,18 @@
-# case "$OSTYPE" in
-#   darwin*)
-#     source $(brew --prefix)/share/antigen/antigen.zsh
-#   ;;
-#   linux*)
-#     source $HOME/.antigen.zsh 
-#   ;;
-# esac
+
+if [ ! -f ~/.antigen.zsh ]; then
+    curl -L git.io/antigen > ~/.antigen.zsh
+fi
+
+
 source $HOME/.antigen.zsh 
 
 antigen use oh-my-zsh
 antigen theme bira
 antigen bundle command-not-found
-antigen bundle git
-antigen bundle docker
+# antigen bundle git
+# antigen bundle docker
 # antigen bundle jeffreytse/zsh-vi-mode
-antigen bundle olets/zsh-abbr
+antigen bundle zsh-abbr
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
 
@@ -56,6 +54,18 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+ 
+ 
+# -- rust --
+# affix colons on either side of $PATH to simplify matching
+case ":${PATH}:" in
+    *:"$HOME/.cargo/bin":*)
+        ;;
+    *)
+        # Prepending path in case a system-installed rustc needs to be overridden
+        export PATH="$HOME/.cargo/bin:$PATH"
+        ;;
+esac
 
 
 PATH="/Users/ayb/perl5/bin${PATH:+:${PATH}}"; export PATH;
