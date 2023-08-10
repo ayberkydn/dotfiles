@@ -23,6 +23,9 @@ alias shconfig='nvim ~/.zshrc'
 alias sshconfig='nvim ~/.ssh/config'
 alias tmuxconfig='nvim ~/.tmux.conf'
 alias vconfig='nvim ~/.config/nvim/init.lua ~/.config/nvim/lua/*.lua'
+alias nixconfig='nvim ~/.config/nix/default.nix'
+alias nixx='sudo nixos-rebuild -I nixos-config=/home/ayb/.config/nix/ test'
+alias nixxx='sudo nixos-rebuild -I nixos-config=/home/ayb/.config/nix/ switch'
 
 
 alias tconfig='nvim ~/.config/alacritty/alacritty.yml'
