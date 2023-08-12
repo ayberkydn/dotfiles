@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      # <home-manager/nixos>
     ];
 
   # List packages installed in system profile. To search, run:
@@ -30,6 +31,7 @@
     bitwarden-cli
     python3
     anydesk
+    home-manager
     # pipewire
     # easyeffects
     # librespot
