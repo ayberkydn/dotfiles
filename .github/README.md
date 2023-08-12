@@ -28,5 +28,10 @@ Misc:
 - `spotifyd` config
 - PulseEffects Equalizer Presets 🎵
 - EasyEffects Impulse Responses
+- Dockerfiles for devcontainers
+
+#TODO
+- add project templates
+- add Latex devcontainer dockerfile
   
 This repo is managed using `yadm` dotfile manager.
