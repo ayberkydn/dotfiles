@@ -8,11 +8,11 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      # <home-manager/nixos>
     ];
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
+  nix.settings.experimental-features ="nix-command flakes";
+
+  #installed packages
   environment.systemPackages = with pkgs; [
     vim 
     neovim
@@ -32,47 +32,9 @@
     python3
     anydesk
     home-manager
-    # pipewire
-    # easyeffects
-    # librespot
-    # pulseaudio
     pulseeffects-legacy
   ];
 
-  # systemd.user.services.librespotDaemon = {
-  #   description = "Librespot daemon";
-  #
-  #   wantedBy = [ "multi-user.target" ];
-  #   after = [ "network.target" ];
-  #
-  #   serviceConfig = {
-  #     Type = "simple";
-  #     ExecStart = "${pkgs.bash}/bin/bash -c '${pkgs.librespot}/bin/librespot -B alsa'";
-  #     Restart = "always";
-  #     User = "ayb";
-  #     Group = "audio";
-  #   };
-  # };
-
-  # boot.blacklistedKernelModules = [ "snd_pcsp" ];
-
-  services.spotifyd = {
-    enable = false;
-    settings = { 
-      global = {
-        bitrate = 320;
-        backend = "pulseaudio";
-        # device = "ALC897 Analog";
-        use_mpris = false;
-        dbus_type = "system";
-        initial_volume = "50";
-        volume_normalization = true;
-        normalization_pregain = 5;
-        autoplay = false;
-        device_name = "AYBBO";
-      };
-    };
-  };
     
   sound.enable = true;
   hardware.pulseaudio.enable = true;
@@ -81,32 +43,16 @@
   nixpkgs.config.pulseaudio = true;
   programs.dconf.enable = true;
   security.rtkit.enable = true;
-  #services.pulseeffects.enable = true;
   
   services.pipewire = {
     enable = false;
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
-    #media-session.enable = true;
   };
 
-  # services.librespot.enable = true;
   services.openssh.enable = true;
   networking.firewall.enable = false;
-  # networking.extraHosts = 
-  # ''
-  #   ap-gew1.spotify.com  ap-gew4.spotify.com
-  #   ap-guc3.spotify.com  ap-gew4.spotify.com
-  # '';
-  
-  # networking.firewall.allowedTCPPorts = [ 57621 ];
-
-  # programs.anydesk.enable = true;
 
   users.users.ayb = {
     isNormalUser = true;
@@ -118,11 +64,11 @@
       "audio"
     ];
     packages = with pkgs; [
-      spotifyd
+
     ];
   };
 
-
+  #shell
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
   environment.shells = with pkgs; [
@@ -130,11 +76,12 @@
     zsh
   ];
 
+  #enable docker and nvidia docker
   virtualisation.docker.enable = true;
   virtualisation.docker.enableNvidia = true;
 
 
-  # Bootloader.
+  #bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.systemd-boot.configurationLimit = 3;
   boot.loader.efi.canTouchEfiVariables = true;

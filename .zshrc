@@ -18,6 +18,7 @@ antigen bundle zsh-users/zsh-autosuggestions
 
 antigen apply
 
+EDITOR=nvim
 
 alias shconfig='nvim ~/.zshrc'
 alias sshconfig='nvim ~/.ssh/config'
@@ -38,6 +39,8 @@ alias vpndown="openvpn3 session-manage --disconnect --config ~/.config/vpn/clien
 alias vpnup="openvpn3 session-start --config ~/.config/vpn/client.ovpn"
 
 ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
+
+
 
 #thefuck
 eval $(thefuck --alias)
