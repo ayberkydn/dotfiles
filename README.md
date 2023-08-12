@@ -29,3 +29,4 @@ Misc:
 - PulseEffects Equalizer Presets 🎵
 - EasyEffects Impulse Responses
   
+This repo is managed using `yadm` dotfile manager.
