@@ -9,7 +9,8 @@ My personal dotfiles and installation/setup scripts for following environments;
 Packages configured/installed;
 - Docker 🐳
 - Nvidia Container Toolkit
-- Vim/Neovim 
+- Vim/Neovim
+- Packer
 - `zsh`
 - Fish (removed)
 - `tldr`/`thefuck`
@@ -30,8 +31,9 @@ Misc:
 - EasyEffects Impulse Responses
 - Dockerfiles for devcontainers
 
-#TODO
-- add project templates
-- add Latex devcontainer dockerfile
-  
 This repo is managed using `yadm` dotfile manager.
+
+# TODO
+- [ ] add project templates
+- [ ] add Latex devcontainer dockerfile
+  
