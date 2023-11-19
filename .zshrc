@@ -9,9 +9,6 @@ source $HOME/.antigen.zsh
 antigen use oh-my-zsh
 antigen theme bira
 antigen bundle command-not-found
-# antigen bundle git
-# antigen bundle docker
-# antigen bundle jeffreytse/zsh-vi-mode
 antigen bundle zsh-abbr
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
@@ -38,24 +35,22 @@ alias cl='clear'
 alias vpndown="openvpn3 session-manage --disconnect --config ~/.config/vpn/client.ovpn"
 alias vpnup="openvpn3 session-start --config ~/.config/vpn/client.ovpn"
 
-ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
-
-
 
 #thefuck
 eval $(thefuck --alias)
 
 
+CONDA_PATH='/home/ayb/miniconda3'
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/homebrew/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('${CONDA_PATH}/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/opt/homebrew/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/opt/homebrew/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "${CONDA_PATH}/etc/profile.d/conda.sh" ]; then
+        . "${CONDA_PATH}/etc/profile.d/conda.sh"
     else
-        export PATH="/opt/homebrew/anaconda3/bin:$PATH"
+        export PATH="${CONDA_PATH}/bin:$PATH"
     fi
 fi
 unset __conda_setup
