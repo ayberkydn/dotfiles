@@ -38,6 +38,7 @@ brew install --cask font-hack-nerd-font
 #mac app store
 mas install 1435957248 #drafts
 mas install 93798470 #amphetamine
+mas install 904280696 #things 3
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 sh ~/.tmux/plugins/tpm/scripts/install_plugins.sh

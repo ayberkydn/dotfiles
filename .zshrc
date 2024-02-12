@@ -26,6 +26,8 @@ alias sshconfig='nvim ~/.ssh/config'
 alias tmuxconfig='nvim ~/.tmux.conf'
 alias vconfig='nvim ~/.config/nvim/init.lua ~/.config/nvim/lua/*.lua'
 
+alias vim='nvim'
+alias vimm='vim'
 
 alias tconfig='nvim ~/.config/alacritty/alacritty.yml'
 alias rconfig='nvim ~/.config/ranger/rc.conf'
@@ -65,3 +67,9 @@ PERL_MB_OPT="--install_base \"/Users/ayb/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/Users/ayb/perl5"; export PERL_MM_OPT;
 
   
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/ayb/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ayb/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/ayb/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ayb/google-cloud-sdk/completion.zsh.inc'; fi
