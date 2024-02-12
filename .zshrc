@@ -28,7 +28,7 @@ alias nixxx='sudo nixos-rebuild -I nixos-config=/home/ayb/.config/nix/ switch'
 alias vim='nvim'
 alias vimm='vim'
 
-alias tconfig='nvim ~/.config/alacritty/alacritty.yml'
+alias tconfig='nvim ~/.config/alacritty/alacritty.toml'
 alias rconfig='nvim ~/.config/ranger/rc.conf'
 
 alias cl='clear'
