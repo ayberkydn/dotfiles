@@ -420,6 +420,34 @@
                                 "type": "basic"
                             }
                         ]
+<<<<<<< HEAD
+=======
+                    },
+                    {
+                        "description": "Right Option Key → Hyper Key (⌃⌥⌘)",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "right_option",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_command",
+                                        "modifiers": [
+                                            "left_control",
+                                            "left_option"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+>>>>>>> e6886ede54bd660b669117caaee8104cec579258
                     }
                 ]
             },

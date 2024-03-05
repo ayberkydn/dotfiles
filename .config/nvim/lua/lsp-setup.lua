@@ -47,7 +47,7 @@ end
 -- See `:help nvim-treesitter`
 require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
-  ensure_installed = { 'c', 'cpp', 'jsonc', 'python', 'rust', 'typescript', 'help', 'vim' },
+  ensure_installed = { 'c', 'cpp', 'jsonc', 'python', 'rust', 'typescript',  'vim' },
 
   highlight = { enable = true },
   indent = { enable = true, disable = { 'python' } },
@@ -132,7 +132,7 @@ local servers = {
   pyright = {},
   dockerls = {},
   lua_ls = {},
-  pylsp = {},
+  -- pylsp = {},
   -- rust_analyzer = {},
   -- tsserver = {},
 

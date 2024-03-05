@@ -15,12 +15,12 @@ font:
       y: 0
   size: 12
 
-shell:
-  program: /bin/zsh
-  args:
-    - -l
-    - -c
-    - "tmux attach || tmux" 
+# shell:
+#   program: /bin/zsh
+#   args:
+#     - -l
+#     - -c
+#     - "tmux attach || tmux" 
 
 ## Colors (Dracula)
 colors:
@@ -83,19 +83,15 @@ colors:
   indexed_colors: []
 
 
-# background_opacity: 1 %deprecated
-window.opacity: 1
-
-selection:
-  #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
-  save_to_clipboard: true
-
-
+window:
+  startup_mode: Maximized
+  decorations: none
+  option_as_alt: Both
+  opacity: 1
 
 mouse:
   double_click: { threshold: 300 }
   triple_click: { threshold: 300 }
-
   # hide_when_typing: true
 
 
@@ -119,22 +115,10 @@ key_bindings:
 selection:
   save_to_clipboard: true
 
-mouse:
-  double_click: { threshold: 300 }
-  triple_click: { threshold: 300 }
 
-  # hide_when_typing: true
-
-
-mouse_bindings:
-  - { mouse: Middle, action: PasteSelection }
 
 live_config_reload: true
 
-window:
-  startup_mode: Maximized
-  decorations: none
-  opacity: 1
 
 scrolling:
   history: 10000

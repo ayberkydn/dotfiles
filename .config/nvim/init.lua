@@ -20,41 +20,41 @@ require('packer').startup(function(use)
   use 'tpope/vim-surround'
   use 'tpope/vim-repeat'
   use 'justinmk/vim-sneak'
-  use 'kyazdani42/nvim-tree.lua' --- file tree ---
-  use 'lukas-reineke/indent-blankline.nvim' -- Add indentation guides even on blank lines
+  -- use 'kyazdani42/nvim-tree.lua' --- file tree ---
+  -- use 'lukas-reineke/indent-blankline.nvim' -- Add indentation guides even on blank lines
   use 'numToStr/Comment.nvim' -- "gc" to comment visual regions/lines
   use 'tpope/vim-sleuth' -- Detect tabstop and shiftwidth automatically
   -- Git related plugins
   use 'tpope/vim-fugitive'
   use 'tpope/vim-rhubarb'
-  use 'lewis6991/gitsigns.nvim'
+  -- use 'lewis6991/gitsigns.nvim'
   -- cosmetics
-  use 'goolord/alpha-nvim' -- start screen
+  -- use 'goolord/alpha-nvim' -- start screen
   use 'navarasu/onedark.nvim' -- theme
-  use 'folke/tokyonight.nvim' -- theme
+  -- use 'folke/tokyonight.nvim' -- theme
   use 'kyazdani42/nvim-web-devicons'
   use 'nvim-lualine/lualine.nvim'
   use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
   use { 'nvim-telescope/telescope.nvim', branch = '0.1.x', requires = { 'nvim-lua/plenary.nvim' } }
   -- Fuzzy Finder Algorithm which requires local dependencies to be built. Only load if `make` is available
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable 'make' == 1 }
-  use { -- LSP Configuration & Plugins
-    'neovim/nvim-lspconfig',
-    requires = {
-      'williamboman/mason.nvim',
-      'williamboman/mason-lspconfig.nvim',
-      'j-hui/fidget.nvim',
-      'folke/neodev.nvim',
-    },
-  }
-  use {
-    'hrsh7th/nvim-cmp',
-    requires = {
-      'hrsh7th/cmp-nvim-lsp',
-      'L3MON4D3/LuaSnip',
-      'saadparwaiz1/cmp_luasnip'
-    },
-  }
+  -- use { -- LSP Configuration & Plugins
+  --   'neovim/nvim-lspconfig',
+  --   requires = {
+  --     'williamboman/mason.nvim',
+  --     'williamboman/mason-lspconfig.nvim',
+  --     'j-hui/fidget.nvim',
+  --     'folke/neodev.nvim',
+  --   },
+  -- }
+  -- use {
+  --   'hrsh7th/nvim-cmp',
+  --   requires = {
+  --     'hrsh7th/cmp-nvim-lsp',
+  --     'L3MON4D3/LuaSnip',
+  --     'saadparwaiz1/cmp_luasnip'
+  --   },
+  -- }
   use {
     'nvim-treesitter/nvim-treesitter',
     run = function()
@@ -88,9 +88,9 @@ end
 ------------------------------------------------------------------------
 ------------------------ Setup plugins ---------------------------------
 ------------------------------------------------------------------------
-require 'alpha'.setup(require 'alpha.themes.startify'.config)
+-- require 'alpha'.setup(require 'alpha.themes.startify'.config)
 require("toggleterm").setup()
-require("nvim-tree").setup()
+-- require("nvim-tree").setup()
 require('lualine').setup {
   options = {
     icons_enabled = true,
@@ -102,19 +102,19 @@ require('lualine').setup {
 require("bufferline").setup {}
 -- require('devcontainer').setup {}
 require('Comment').setup()
-require('indent_blankline').setup {
-  char = '┊',
-  show_trailing_blankline_indent = false,
-}
-require('gitsigns').setup {
-  signs = {
-    add = { text = '+' },
-    change = { text = '~' },
-    delete = { text = '_' },
-    topdelete = { text = '‾' },
-    changedelete = { text = '~' },
-  },
-}
+-- require('indent_blankline').setup {
+--   char = '┊',
+--   show_trailing_blankline_indent = false,
+-- }
+-- require('gitsigns').setup {
+--   signs = {
+--     add = { text = '+' },
+--     change = { text = '~' },
+--     delete = { text = '_' },
+--     topdelete = { text = '‾' },
+--     changedelete = { text = '~' },
+--   },
+-- }
 
 
 vim.o.timeout = true
@@ -139,7 +139,7 @@ vim.o.smartcase = true -- UNLESS /C or capital in search
 vim.o.updatetime = 250 -- Decrease update time (for swap file generation)
 vim.wo.signcolumn = 'yes' -- the column at the left always on
 vim.o.termguicolors = true -- set colorscheme
-vim.cmd [[colorscheme tokyonight]]
+vim.cmd [[colorscheme onedark]]
 vim.o.completeopt = 'menuone,noselect'
 -- menuone: show menu even with one candidate
 -- noselect: do not automatically select the completion candidate
@@ -159,7 +159,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   pattern = '*',
 })
 
-require("lsp-setup")
+-- require("lsp-setup")
 require("telescope-setup")
 
 

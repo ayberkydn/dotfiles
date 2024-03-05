@@ -13,34 +13,34 @@ sudo apt install -y openssh-server        \
                     python3-pynvim        \
                     openvpn               \
                     curl                  \
+                    python-is-python3     \
 		    yadm                  \
+                    neovim
+                    docker.io
 		    thefuck
 
-# neovim
-sudo add-apt-repository -y ppa:neovim-ppa/stable
-sudo apt update -y
-sudo apt install -y neovim
+sudo systemctl enable --now ssh.service
+
 
 # Tmux plugin manager
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-sh ~/.tmux/plugins/tpm/scripts/install_plugins.sh
+# start a server but don't attach to it
+tmux start-server
+# create a new session but don't attach to it either
+tmux new-session -d
+# install the plugins
+~/.tmux/plugins/tpm/scripts/install_plugins.sh
+# killing the server is not required, I guess
+tmux kill-server
 
-# Dotfiles
-yadm clone https://github.com/ayberkydn/dotfiles
+#--> Dotfiles
+# yadm clone https://github.com/ayberkydn/dotfiles
 
-#--> docker
-sudo apt install -y docker
-sudo groupadd docker
-sudo usermod -aG docker $USER
-sudo systemctl enable docker.service
+#--> docker permissions if necessary
+# sudo groupadd docker
+# sudo usermod -aG docker $USER
+# sudo systemctl enable docker.service
 
-#nvidia docker
-distribution=$(. /etc/os-release;echo $ID$VERSION_ID) 
-echo $distribution
-curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add - 
-curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
-sudo apt update
-sudo apt install -y nvidia-docker2
+#--> nvidia container runtime
+#--> change shell
 
-
-#chsh -s zsh
