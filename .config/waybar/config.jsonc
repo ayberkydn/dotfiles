@@ -1,12 +1,19 @@
 // -*- mode: json -*-
 
 {
+	"reload_style_on_change": true,
+
 	"layer": "top",
 	"position": "bottom",
+	"height": 20,
+	"margin-top": 1,
+	"margin-bottom": 0,
 
 	"modules-left": [
-		// "sway/workspaces",
-		"custom/right-arrow-dark"
+		"custom/right-arrow-dark",
+		"hyprland/workspaces"
+		// "wlr/taskbar"
+
 	],
 	"modules-center": [
 		"custom/left-arrow-dark",
@@ -39,6 +46,13 @@
 		"tray"
 	],
 
+	"hyprland/workspaces": {
+		"icon-size": 10,
+		"spacing": 0,
+		"on-scroll-up": "hyprctl dispatch workspace r+1",
+		"on-scroll-down": "hyprctl dispatch workspace r-1"
+	},
+
 	"custom/left-arrow-dark": {
 		"format": "",
 		"tooltip": false
@@ -56,10 +70,6 @@
 		"tooltip": false
 	},
 
-	"sway/workspaces": {
-		"disable-scroll": true,
-		"format": "{name}"
-	},
 
 	"clock#1": {
 		"format": "{:%a}",

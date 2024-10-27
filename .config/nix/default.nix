@@ -25,6 +25,7 @@
 
   #installed packages
   environment.systemPackages = with pkgs; [
+    hyprpaper
     nerdfonts
     kitty
     waybar
