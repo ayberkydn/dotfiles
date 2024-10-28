@@ -11,24 +11,30 @@
     pkgs.pulseeffects-legacy
   ];
 
-  services.vscode-server.enable = true;
+  # programs.kitty.enable = true;
+  # wayland.windowManager.hyprland = {
+  #   enable = true; # enable Hyprland
+  #
+  # };
 
-  services.spotifyd = {
-    enable = true;
-    settings = { 
-      global = {
-        bitrate = 320;
-        backend = "alsa";
-        use_mpris = false;
-        dbus_type = "system";
-        initial_volume = "50";
-        volume_normalization = true;
-        normalization_pregain = 5;
-        autoplay = false;
-        device_name = "ayb-homemanager";
-      };
-    };
-  };
+  # services.vscode-server.enable = true;
+  #
+  # services.spotifyd = {
+  #   enable = true;
+  #   settings = { 
+  #     global = {
+  #       bitrate = 320;
+  #       backend = "alsa";
+  #       use_mpris = false;
+  #       dbus_type = "system";
+  #       initial_volume = "50";
+  #       volume_normalization = true;
+  #       normalization_pregain = 5;
+  #       autoplay = false;
+  #       device_name = "ayb-homemanager";
+  #     };
+  #   };
+  # };
 
 
 	

@@ -16,7 +16,7 @@ require('packer').startup(function(use)
   -- use 'github/copilot.vim'
   use 'akinsho/toggleterm.nvim'
   use "folke/which-key.nvim"
-  use "max397574/better-escape.nvim"
+  -- use "max397574/better-escape.nvim"
   use 'tpope/vim-surround'
   use 'tpope/vim-repeat'
   use 'justinmk/vim-sneak'
@@ -121,11 +121,11 @@ vim.o.timeout = true
 vim.o.timeoutlen = 1000
 require("which-key").setup {}
 
-require("better_escape").setup {
-  mapping = { "jk", "kj" },
-  timeout = 200,
-  keys = "<Esc>",
-}
+-- require("better_escape").setup {
+--   mapping = { "jk", "kj" },
+--   timeout = 200,
+--   keys = "<Esc>",
+-- }
 
 
 -- [[ Setting options ]]

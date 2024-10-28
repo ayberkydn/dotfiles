@@ -24,7 +24,7 @@ alias vconfig='nvim ~/.config/nvim/init.lua ~/.config/nvim/lua/*.lua'
 alias hyprconfig='nvim ~/.config/hypr/hyprland.conf'
 alias kittyconfig='nvim ~/.config/kitty/kitty.conf'
 alias barconfig='nvim ~/.config/waybar/config.jsonc ~/.config/waybar/style.css'
-alias nixconfig='nvim ~/.config/nix/default.nix'
+alias nixconfig='nvim ~/.config/nix/default.nix ~/.config/home-manager/home.nix'
 alias nixx='sudo nixos-rebuild -I nixos-config=/home/ayb/.config/nix/ test'
 alias nixxx='sudo nixos-rebuild -I nixos-config=/home/ayb/.config/nix/ switch'
 
