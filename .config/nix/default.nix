@@ -131,6 +131,7 @@
 
   
   # Enable audio through pipewire
+  sound.enable = true;
   services.pipewire = {
     enable = true;
     alsa.enable = true;
