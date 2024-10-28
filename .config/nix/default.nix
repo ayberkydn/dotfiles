@@ -15,10 +15,10 @@
 
   #installed packages
   environment.systemPackages = with pkgs; [
-    hyprpaper
     nerdfonts
     kitty
     waybar
+    hyprpaper
     wofi
     vim 
     neovim
@@ -126,12 +126,17 @@
   services.printing.enable = true;
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
-  hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
-  services.pipewire.enable = true;
   services.openssh.enable = true;
 
   
+  # Enable audio through pipewire
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+  };
 
   system.stateVersion = "24.05"; # Did you read the comment?
 
