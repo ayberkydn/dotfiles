@@ -17,9 +17,6 @@
   environment.systemPackages = with pkgs; [
     nerdfonts
     kitty
-    waybar
-    hyprpaper
-    wofi
     vim 
     neovim
     wget
@@ -30,7 +27,6 @@
     gh
     gcc
     zsh
-    thefuck
     unzip
     nodejs
     bitwarden
@@ -76,14 +72,14 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # Enable the XFCE Desktop Environment.
-  # services.xserver.displayManager.lightdm.enable = true;
-  # services.xserver.desktopManager.xfce.enable = true;
 
   # Enable the KDE Plasma 6 Desktop Environment.
   services.displayManager.sddm.enable = true;
   services.displayManager.sddm.wayland.enable = true;
   services.desktopManager.plasma6.enable = true;
+
+
+
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -96,6 +92,15 @@
   users.users.ayb = {
     isNormalUser = true;
     description = "ayb";
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    packages = with pkgs; [
+    #  thunderbird
+    ];
+  };
+  users.users.aybnix = {
+    isNormalUser = true;
+    description = "aybnix";
+    initialPassword = "aybnix";
     extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
     #  thunderbird
@@ -132,6 +137,7 @@
   
   # Enable audio through pipewire
   sound.enable = true;
+  hardware.pulseaudio.enable = false;
   services.pipewire = {
     enable = true;
     alsa.enable = true;
