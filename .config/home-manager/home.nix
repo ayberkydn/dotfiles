@@ -18,11 +18,12 @@
 
 
 
-  # wayland.windowManager.hyprland.enable = true;
-
-  # home.file.".config/hypr/hyprland.conf".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/.config/hypr/hyprland.conf";
-
+  wayland.windowManager.hyprland.enable = true;
   home.sessionVariables.NIXOS_OZONE_WL = "1";
+  wayland.windowManager.hyprland.extraConfig = ''
+    source = ~/.config/hypr/myconfig.conf
+  '' ;
+
 
   # home.file.".config/hypr" = {
   #  source = ./dotfiles/.config/hypr;

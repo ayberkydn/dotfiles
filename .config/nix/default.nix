@@ -97,15 +97,6 @@
     #  thunderbird
     ];
   };
-  users.users.aybnix = {
-    isNormalUser = true;
-    description = "aybnix";
-    initialPassword = "aybnix";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
-    packages = with pkgs; [
-    #  thunderbird
-    ];
-  };
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
 

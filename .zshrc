@@ -21,7 +21,7 @@ alias shconfig='nvim ~/.zshrc'
 alias sshconfig='nvim ~/.ssh/config'
 alias tmuxconfig='nvim ~/.tmux.conf'
 alias vconfig='nvim ~/.config/nvim/init.lua ~/.config/nvim/lua/*.lua'
-alias hyprconfig='nvim ~/.config/hypr/hyprland.conf'
+alias hyprconfig='nvim ~/.config/hypr/myconfig.conf'
 alias kittyconfig='nvim ~/.config/kitty/kitty.conf'
 alias barconfig='nvim ~/.config/waybar/config.jsonc ~/.config/waybar/style.css'
 alias nixconfig='nvim ~/.config/nix/default.nix ~/.config/home-manager/home.nix'
@@ -38,6 +38,4 @@ alias rconfig='nvim ~/.config/ranger/rc.conf'
 alias cl='clear'
 #alias open='xdg-open'
 
-#thefuck
-eval $(thefuck --alias)
 
