@@ -12,8 +12,8 @@ Packages configured/installed;
 - Vim/Neovim
 - Packer
 - `zsh`
-- Fish (removed)
-- `tldr`/`thefuck`
+- ~~Fish~~
+- `tldr`
 - Antigen/ohmyzsh
 - Git
 - Tmux
@@ -21,9 +21,9 @@ Packages configured/installed;
 - OpenSSH server
 - BetterTouchTool (MacOS only)
 - Karabiner Elements (MacOS only)
-- Hammerspoon (removed)
-- Yabai (removed)
-- `i3wm` (removed)
+- ~~Hammerspoon~~ 
+- ~~Yabai~~
+- ~~`i3wm`~~
 
 Misc:
 - `spotifyd` config
