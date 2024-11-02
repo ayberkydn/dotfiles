@@ -3,7 +3,7 @@
 My personal dotfiles and installation/setup scripts for following environments;
 - MacOS 💻 (main PC)
 - Ubuntu (home/work server)
-- Arch Linux (removed)
+- ~~Arch Linux~~
 - NixOS ❄️(home/homeassistant server)
 
 Packages configured/installed;
@@ -21,8 +21,7 @@ Packages configured/installed;
 - OpenSSH server
 - BetterTouchTool (MacOS only)
 - Karabiner Elements (MacOS only)
-- ~~Hammerspoon~~ 
-- ~~Yabai~~
+- ~~Hammerspoon~~
 - ~~`i3wm`~~
 
 Misc:
