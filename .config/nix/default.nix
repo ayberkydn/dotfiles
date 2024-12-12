@@ -7,13 +7,16 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+      /etc/nixos/hardware-configuration.nix
     ];
 
-  nix.settings.experimental-features ="nix-command flakes";
+  
+  programs.hyprland.enable = true;
 
   #installed packages
   environment.systemPackages = with pkgs; [
+    nerdfonts
+    kitty
     vim 
     neovim
     wget
@@ -24,77 +27,29 @@
     gh
     gcc
     zsh
-    thefuck
     unzip
     nodejs
     bitwarden
     bitwarden-cli
     python3
-    anydesk
     home-manager
-    pulseeffects-legacy
+    google-chrome
+    spotify
+    wezterm
+    openvpn
+    networkmanager-openvpn
   ];
 
-    
-  sound.enable = true;
-  hardware.pulseaudio.enable = true;
-  hardware.pulseaudio.support32Bit = true;
-  hardware.pulseaudio.package = pkgs.pulseaudioFull;
-  nixpkgs.config.pulseaudio = true;
-  programs.dconf.enable = true;
-  security.rtkit.enable = true;
-  
-  services.pipewire = {
-    enable = false;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-  };
+  # services.flatpak.enable = true;
 
-  services.openssh.enable = true;
-  networking.firewall.enable = false;
-
-  users.users.ayb = {
-    isNormalUser = true;
-    description = "ayb";
-    extraGroups = [ 
-      "networkmanager" 
-      "wheel" 
-      "docker" 
-      "audio"
-    ];
-    packages = with pkgs; [
-
-    ];
-  };
-
-  #shell
-  programs.zsh.enable = true;
-  users.defaultUserShell = pkgs.zsh;
-  environment.shells = with pkgs; [
-    bash
-    zsh
-  ];
-
-  #enable docker and nvidia docker
-  virtualisation.docker.enable = true;
-  virtualisation.docker.enableNvidia = true;
-
-
-  #bootloader.
+  # Bootloader.
   boot.loader.systemd-boot.enable = true;
-  boot.loader.systemd-boot.configurationLimit = 3;
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Enable networking
   networking.networkmanager.enable = true;
+
+
 
   # Set your time zone.
   time.timeZone = "Europe/Istanbul";
@@ -114,59 +69,73 @@
     LC_TIME = "tr_TR.UTF-8";
   };
 
-
-  # Enable the KDE Plasma Desktop Environment.
+  # Enable the X11 windowing system.
   services.xserver.enable = true;
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.displayManager.autoLogin.enable = true;
-  services.xserver.displayManager.autoLogin.user = "ayb";
-  services.xserver.desktopManager.plasma5.enable = true;
+
+
+  # Enable the KDE Plasma 6 Desktop Environment.
+  services.displayManager.sddm.enable = true;
+  services.displayManager.sddm.wayland.enable = true;
+  services.desktopManager.plasma6.enable = true;
+
+
+
 
   # Configure keymap in X11
-  services.xserver = {
+  services.xserver.xkb = {
     layout = "us";
-    xkbVariant = "";
+    variant = "";
   };
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
 
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
+  users.users.ayb = {
+    isNormalUser = true;
+    description = "ayb";
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    packages = with pkgs; [
+    #  thunderbird
+    ];
+  };
+  programs.zsh.enable = true;
+  users.defaultUserShell = pkgs.zsh;
+
+  fonts.packages = with pkgs; [
+    fira-code
+    fira-code-symbols
+  ];
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+  
+  # Open ports in the firewall.
+  # networking.firewall.allowedTCPPorts = [ ... ];
+  # networking.firewall.allowedUDPPorts = [ ... ];
+  # Or disable the firewall altogether.
+  # networking.firewall.enable = false;
 
 
-  # This value determines the NixOS release from which the default
-  # settings for stateful data, like file locations and database versions
-  # on your system were taken. It‘s perfectly fine and recommended to leave
-  # this value at the release version of the first install of this system.
-  # Before changing this value read the documentation for this option
-  # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "23.05"; # Did you read the comment?
-
-
-    # Make sure opengl is enabled
-  hardware.opengl = {
-    enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
-  };
-
-  # Tell Xorg to use the nvidia driver (also valid for Wayland)
-  services.xserver.videoDrivers = ["nvidia" "modesetting"];
-  boot.extraModulePackages = [ config.boot.kernelPackages.nvidia_x11 ];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  services.flatpak.enable = true;
+  virtualisation.docker.enable = true;
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  services.printing.enable = true;
+  hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true;
+  security.rtkit.enable = true;
+  services.openssh.enable = true;
 
   
-
-
-  hardware.nvidia = {
-    modesetting.enable = false;
-    open = false;
-    nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
+  # Enable audio through pipewire
+  sound.enable = true;
+  hardware.pulseaudio.enable = false;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
   };
 
+  system.stateVersion = "24.05"; # Did you read the comment?
+
 }
-
-
