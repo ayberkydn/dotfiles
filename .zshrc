@@ -38,21 +38,21 @@ alias vpndown="openvpn3 session-manage --disconnect --config ~/.config/vpn/clien
 alias vpnup="openvpn3 session-start --config ~/.config/vpn/client.ovpn"
 
 
-#thefuck
-eval $(thefuck --alias)
+# #thefuck
+# eval $(thefuck --alias)
 
 
 CONDA_PATH='/home/ayb/miniconda3'
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('${CONDA_PATH}/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/opt/homebrew/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "${CONDA_PATH}/etc/profile.d/conda.sh" ]; then
-        . "${CONDA_PATH}/etc/profile.d/conda.sh"
+    if [ -f "/opt/homebrew/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/homebrew/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="${CONDA_PATH}/bin:$PATH"
+        export PATH="/opt/homebrew/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
