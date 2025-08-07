@@ -39,3 +39,8 @@ alias cl='clear'
 #alias open='xdg-open'
 
 
+
+. "$HOME/.local/bin/env"
+
+# opencode
+export PATH=/Users/ayb/.opencode/bin:$PATH
