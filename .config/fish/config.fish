@@ -8,6 +8,7 @@ alias shconfig='nvim ~/.config/fish/config.fish'
 alias tmuxconfig='nvim ~/.tmux.conf'
 alias vimconfig='nvim ~/.config/nvim/*.vim'
 alias tconfig='nvim ~/.config/alacritty/alacritty.yml'
+alias vim='nvim'
 
 alias cl='clear'
 alias open='xdg-open'
@@ -15,25 +16,14 @@ alias open='xdg-open'
 
 #abbreviations
 abbr --add oc opencode
+abbr --add ocr opencode run
 
 #remove greeting
 set fish_greeting
+set -gx EDITOR nvim
 
-#default is vi bindings
 #fish_vi_key_bindings
 fish_default_key_bindings
-
-function fish_user_key_bindings
-    ##avoid esc in insert mode
-    bind -M insert jk 'set fish_bind_mode default; commandline -f repaint'
-    bind -M insert kj 'set fish_bind_mode default; commandline -f repaint'
-
-    ##c-f is forward movement (so it also accepts autosuggest)
-    for mode in insert default visual
-        bind -M $mode \cf forward-char
-    end
-end
-
 
 #disable right prompt
 function fish_right_prompt; end
