@@ -1,17 +1,12 @@
 fish_add_path /opt/homebrew/bin/
 
 # aliases
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias dots='dotfiles commit -am"upd"; dotfiles push'
-
 alias shconfig='nvim ~/.config/fish/config.fish'
 alias tmuxconfig='nvim ~/.tmux.conf'
 alias vimconfig='nvim ~/.config/nvim/*.vim'
 alias tconfig='nvim ~/.config/alacritty/alacritty.yml'
 alias vim='nvim'
 
-alias cl='clear'
-alias open='xdg-open'
 
 
 #abbreviations
