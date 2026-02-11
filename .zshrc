@@ -39,3 +39,5 @@ alias cl='clear'
 #alias open='xdg-open'
 
 
+
+. "$HOME/.local/bin/env"
