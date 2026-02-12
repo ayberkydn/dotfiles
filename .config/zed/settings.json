@@ -1,0 +1,184 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "languages": {
+    "Python": {
+      "language_servers": ["ty", "!basedpyright"],
+    },
+  },
+  "which_key": {
+    "enabled": true,
+    "delay_ms": 0,
+  },
+  "ssh_connections": [
+    {
+      "host": "metu",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/ayb"
+          ]
+        },
+        {
+          "paths": [
+            "/home/ayb/chessrepgen"
+          ]
+        }
+      ]
+    },
+    {
+      "host": "ayb-4090",
+      "username": "ayb",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/ayb/gsplattin"
+          ]
+        }
+      ]
+    },
+    {
+      "host": "enf-server",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/ayb/gsplattin"
+          ]
+        }
+      ]
+    }
+  ],
+  "agent_servers": {
+    "opencode": {
+      "type": "extension",
+      "favorite_models": [
+        "google/antigravity-claude-opus-4-6-thinking/low"
+      ],
+      "default_config_options": {},
+      "favorite_config_option_values": {}
+    },
+    "claude": {
+      "default_mode": "bypassPermissions",
+    },
+    "codex": {
+      "favorite_models": [
+        "gpt-5.3-codex/high"
+      ],
+      "default_mode": "full-access",
+    },
+  },
+  // "features": {
+  //   "edit_prediction_provider": "copilot"
+  // },
+  "edit_predictions": {
+    "provider": "zed",
+    "mode": "eager",
+  },
+  "vim_mode": true,
+  "inlay_hints": {
+    "enabled": true,
+  },
+  "buffer_font_features": {
+    "calt": 0,
+  },
+  "terminal": {
+    "font_size": 14.0,
+    "font_family": "Hack Nerd Font Mono",
+  },
+  "gutter": {
+    "line_numbers": true,
+  },
+  "minimap": {
+    "show": "never",
+  },
+  "cursor_shape": "bar",
+  "autosave": "on_focus_change",
+  "show_edit_predictions": true,
+  "soft_wrap": "none",
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+  "base_keymap": "VSCode",
+  "ui_font_size": 16,
+  "buffer_font_size": 14.0,
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Ayu Mirage",
+  },
+  // "language_models": {
+  //   "anthropic": {
+  //     "api_url": "https://api.z.ai/api/anthropic",
+  //     "available_models": [
+  //       {
+  //         "name": "GLM-4.6",
+  //         "display_name": "GLM 4.6",
+  //         "max_tokens": 200000
+  //       },
+  //       {
+  //         "name": "GLM-4.5",
+  //         "display_name": "GLM 4.5",
+  //         "max_tokens": 131072
+  //       },
+  //       {
+  //         "name": "GLM-4.5-air",
+  //         "display_name": "GLM 4.5 Air",
+  //         "max_tokens": 131072
+  //       }
+  //     ]
+  //   }
+  // }
+  "language_models": {
+    "anthropic": {
+      "api_url": "https://api.z.ai/api/anthropic",
+      "available_models": [
+        {
+          "name": "GLM-4.6",
+          "display_name": "GLM 4.6 (Z.ai Anthropic)",
+          "max_tokens": 200000,
+        },
+        {
+          "name": "GLM-4.7",
+          "display_name": "GLM 4.7 (Z.ai Anthropic)",
+          "max_tokens": 200000,
+        },
+      ],
+    },
+  },
+  "agent": {
+    "favorite_models": [
+      {
+        "provider": "anthropic",
+        "model": "GLM-4.7",
+      },
+      {
+        "provider": "copilot_chat",
+        "model": "claude-sonnet-4.5",
+      },
+      {
+        "provider": "copilot_chat",
+        "model": "gpt-5.1-codex",
+      },
+      {
+        "provider": "copilot_chat",
+        "model": "gemini-3-pro-preview",
+      },
+    ],
+    "default_profile": "write",
+    "always_allow_tool_actions": true,
+    "default_model": {
+      "provider": "anthropic",
+      "model": "GLM-4.7",
+    },
+  },
+}
